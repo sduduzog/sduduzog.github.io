@@ -6,5 +6,3 @@ layout: home
 ---
 
 # Site under construction!
-
-# This is a Jekyll generated page
