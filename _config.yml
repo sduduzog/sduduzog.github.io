@@ -16,12 +16,15 @@
 title: Beautus S. Gumede
 email: gumedesduduzo@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  I'm a web and mobile software developer. I have a B.Sc degree in Computer Science from 
-  the University of Zululand. I started programming in 2014 and never stopped ever since.
+  I'm a web and mobile software developer. I specialise in front-end and android programming.
+  I have a B.Sc degree in Computer Science from the University of Zululand.
+  I started programming in 2014 and never stopped ever since.
 baseurl: '' # the subpath of your site, e.g. /blog
 url: '' # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: sduduzog
 github_username: sduduzog
+instagram_username: sduduzog
+linkedin_username: sduduzog
 
 # Build settings
 markdown: kramdown
