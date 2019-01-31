@@ -355,9 +355,13 @@ table {
   .post-list > li {
     margin-bottom: 30px; }
 
-.post-meta {
+.post-meta,
+.post-description {
   font-size: 14px;
   color: #828282; }
+
+.post-title {
+  margin-bottom: 5px; }
 
 .post-link {
   display: block;
