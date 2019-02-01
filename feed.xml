@@ -1,1 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-02-01T09:55:17+00:00</updated><id>/feed.xml</id><title type="html">Beautus S. Gumede</title><subtitle>I'm a web and mobile software developer. I specialise in front-end and android programming. I have a B.Sc degree in Computer Science from the University of Zululand. I started programming in 2014 and never stopped ever since.</subtitle></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-02-01T14:25:59+00:00</updated><id>/feed.xml</id><title type="html">Beautus S. Gumede</title><subtitle>I'm a web and mobile software developer. I specialise in front-end and android programming. I have a B.Sc degree in Computer Science from the University of Zululand. I started programming in 2014 and never stopped ever since.</subtitle><entry><title type="html">Side Project Success 🎉 🎉 🎉</title><link href="/blog/2019/02/01/side-project-success.html" rel="alternate" type="text/html" title="Side Project Success 🎉 🎉 🎉" /><published>2019-02-01T00:00:00+00:00</published><updated>2019-02-01T00:00:00+00:00</updated><id>/blog/2019/02/01/side-project-success</id><content type="html" xml:base="/blog/2019/02/01/side-project-success.html">&lt;p&gt;Ahh, side projects, side projects… We code and code but the damn things never get done 😌. When you’re just about to finish, a great feature idea comes up, even worse a whole new project idea!&lt;/p&gt;
+
+&lt;p&gt;I’m sure we’ve all been there, scope creep habitats lie on our git repositories. And when that happens, we slowly abandon these projects as interest in them diminishes. Like everyone else, I have a couple of these, hell I have a 3 year project that I haven’t even come close to finishing. First built with AngularJS 😣, then Angular 🙆, now Vuejs 😌 I still work on it till this day.&lt;/p&gt;
+
+&lt;h1 id=&quot;ok-heres-why-i-wrote-this-post&quot;&gt;Ok here’s why I wrote this post.&lt;/h1&gt;
+&lt;p&gt;Months back I created an Android app. Why? Because I didn’t have anything to showcase my android skills and my Google Play console was lonely, it had been almost 3 years since I paid for it.&lt;/p&gt;
+
+&lt;p&gt;I needed something light enough to be finished too. I couldn’t afford to have another unfinished project haunting me. So I made a launcher. Something I actually use, it was inspired by &lt;a href=&quot;https://play.google.com/store/apps/details?id=me.aswinmohan.nophone&quot;&gt;LessPhone&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Days into dev, I released in beta, a week in, a full rollout to production 😤&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/its-alive-meme.jpg&quot; alt=&quot;It's alive meme&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I stood on top of desks shouting out my app on campus, emphasis on 5 star reviews. I needed that for it to stand out on search lists and suggestions. I even gave myself a boost for a good average. This didn’t work. I had about 20-25 downloads and around 10 active installs. Not as impressive as I anticipated.&lt;/p&gt;
+
+&lt;p&gt;At least some people were kind enough to give me a couple of 5 star boosts :)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/Review-Screenshot.png&quot; alt=&quot;Screenshot of google play review&quot; /&gt;
+&lt;em&gt;Google user! show yourself!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I had 7 reviews from my friends, one of them is a 4 out of 5 🙆 I think this person had some grudge against me. This wasn’t good at all, I had to improve UX to at least keep people from uninstalling my app. I shifted my focus greatly into making it better, I’m even using it myself, and if I can tolerate it, so do other users who install it.&lt;/p&gt;
+
+&lt;p&gt;Its completion is not so complete though. The repository looks lonely. I’m not really good with expressing myself and that shows with my dry README. Ow its also in version 2 ✌️ It will soon be available on&lt;a href=&quot;https://f-droid.org&quot;&gt; F-Droid!&lt;/a&gt; an alternative to the play store. That one excites me a lot. Last year, I wrote about &lt;a href=&quot;https://dev.to/sduduzog/side-project-success--2i3k&quot;&gt;my side project in dev.to&lt;/a&gt; and as I was patting myself on the back for its short success, something amazing happened again! :)&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Something amazing happened this week. A short spike in downloads and some reviews, all 5 stars. Best part is, they’re completely organic.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ever since that post, I indirectly created trafic for my app. Dev.to users who read my post would check out my repo and my app. It was well received and it has evolved so much from then.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/Screenshot-installs.png&quot; alt=&quot;Screenshot of install stats from the app&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;My post went live between the 10th-15th of December, everything went uphill from there.  I moved from about 30 installs daily to about 100 installs. From this time period, I have noticed a trend which is really intriguing. I do not really market my application. It’s free, it is serving its purpose &lt;em&gt;being a tool for showcasing&lt;/em&gt; and I can’t really pay for marketing a free tool.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/installs-before-and-after.png&quot; alt=&quot;Install before and after&quot; /&gt;
+&lt;em&gt;Progress!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Of course this is not much. Although there’s still work to be done i.e. landing page, tests, &lt;del&gt;CI intetgation for README badges&lt;/del&gt;, but it is a complete project! A working entity that I can show of on my portfolio. So &lt;del&gt;a handful of&lt;/del&gt; over 1k downloads is a cherry on top.&lt;/p&gt;
+
+&lt;h2 id=&quot;side-note&quot;&gt;Side note:&lt;/h2&gt;
+&lt;p&gt;This is a first of many posts I will be publishing. Thank you for reading up to this far.&lt;/p&gt;
+
+&lt;p&gt;Cheers&lt;/p&gt;</content><author><name></name></author><category term="[&quot;blog&quot;]" /><summary type="html">Ahh, side projects, side projects… We code and code but the damn things never get done 😌. When you’re just about to finish, a great feature idea comes up, even worse a whole new project idea!</summary></entry></feed>
