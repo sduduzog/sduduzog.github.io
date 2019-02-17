@@ -1,9 +1,22 @@
 /**
  * Reset some basic elements
  */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
   margin: 0;
   padding: 0; }
 
@@ -15,10 +28,10 @@ body {
   color: #111;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
-  -webkit-font-feature-settings: "kern" 1;
-  -moz-font-feature-settings: "kern" 1;
-  -o-font-feature-settings: "kern" 1;
-  font-feature-settings: "kern" 1;
+  -webkit-font-feature-settings: 'kern' 1;
+  -moz-font-feature-settings: 'kern' 1;
+  -o-font-feature-settings: 'kern' 1;
+  font-feature-settings: 'kern' 1;
   font-kerning: normal;
   display: flex;
   min-height: 100vh;
@@ -27,9 +40,19 @@ body {
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
 .highlight {
   margin-bottom: 15px; }
 
@@ -59,7 +82,8 @@ figcaption {
 /**
  * Lists
  */
-ul, ol {
+ul,
+ol {
   margin-left: 30px; }
 
 li > ul,
@@ -69,7 +93,12 @@ li > ol {
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 400; }
 
 /**
@@ -143,7 +172,7 @@ pre {
  * Clearfix
  */
 .wrapper:after, .footer-col-wrapper:after {
-  content: "";
+  content: '';
   display: table;
   clear: both; }
 
@@ -173,7 +202,8 @@ table {
   border: 1px solid #e8e8e8; }
   table tr:nth-child(even) {
     background-color: #f7f7f7; }
-  table th, table td {
+  table th,
+  table td {
     padding: 10px 15px; }
   table th {
     background-color: #f0f0f0;
@@ -355,6 +385,13 @@ table {
   list-style: none; }
   .post-list > li {
     margin-bottom: 30px; }
+
+.cover-image {
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: 840px;
+  padding-bottom: 30px; }
 
 .post-meta,
 .post-description {
