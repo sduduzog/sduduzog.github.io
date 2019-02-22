@@ -50,6 +50,8 @@ body { background-color: #fff; font-family: Product Sans, Arial, Helvetica, sans
 
 #devto { background-color: #0a0a0a; }
 
+#buymeacoffee { background-color: #ff813f; }
+
 @media screen and (max-width: 768px) { .main-content { margin-left: auto; }
   .intro { font-size: 5.5em; } }
 @media screen and (max-width: 450px) { .site-header { padding: 5px; }
