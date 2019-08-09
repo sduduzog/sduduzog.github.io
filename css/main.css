@@ -114,7 +114,7 @@ body {
 .intro {
   color: var(--secondary-color);
   font-size: 8em;
-  margin-top: 170px;
+  margin-top: 270px;
   margin-bottom: 30px;
 }
 
@@ -165,10 +165,6 @@ body {
 
 #devto {
   background-color: #0a0a0a;
-}
-
-#buymeacoffee {
-  background-color: #ff813f;
 }
 
 @media screen and (max-width: 768px) {
