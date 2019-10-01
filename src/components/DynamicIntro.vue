@@ -20,7 +20,6 @@ export default Vue.extend({
 
   h1 {
     margin: 0;
-    margin-top: 200px;
     font-size: 5em;
 
     span {
@@ -33,12 +32,6 @@ export default Vue.extend({
         font-weight: lighter;
         color: var(--accent-color);
       }
-    }
-  }
-
-  @media screen and (max-width: 450px) {
-    h1 {
-      margin-top: 80px;
     }
   }
 }
