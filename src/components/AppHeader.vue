@@ -26,7 +26,7 @@ header {
 
   nav {
     display: grid;
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: repeat(auto-fit, max-content);
     grid-column-gap: 20px;
 
     a {
