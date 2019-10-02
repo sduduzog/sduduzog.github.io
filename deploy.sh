@@ -10,6 +10,8 @@ echo 'sduduzog.com'
 
 git init
 
+git checkout -b release
+
 git add -A
 
 git commit -m 'release'
