@@ -2,7 +2,7 @@
   <section class="intro">
     <h1>
       <span>I write code</span>
-      <span class="fake-cursor">|</span>
+      <span class="fake-cursor active">|</span>
     </h1>
   </section>
 </template>
@@ -15,6 +15,21 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
+@keyframes blinker {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .intro {
   padding: 5px;
 
@@ -31,6 +46,11 @@ export default Vue.extend({
         transform: translate(-10px, -8px) scale(1.4);
         font-weight: lighter;
         color: var(--accent-color);
+        &.active {
+          animation-name: blinker;
+          animation-duration: 0.93s;
+          animation-iteration-count: infinite;
+        }
       }
     }
   }
