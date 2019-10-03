@@ -2,7 +2,7 @@
   <section class="intro">
     <h1>
       <span>{{ displayedTitle }}</span>
-      <span class="fake-cursor active">|</span>
+      <span class="fake-cursor" :class="{ active: cursorActive }">|</span>
     </h1>
     <p></p>
   </section>
@@ -14,6 +14,7 @@ export default Vue.extend({
   name: "DynamicIntro",
   data() {
     return {
+      cursorActive: true,
       index: 0,
       displayedTitle: "",
       content: [{ title: "I write code" }]
@@ -25,10 +26,12 @@ export default Vue.extend({
     },
     async emulateTyping() {
       let title = this.content[this.index].title.split("");
+      this.cursorActive = false;
       for (let i = 0; i < title.length; i++) {
         this.displayedTitle += title[i];
         await this.sleep(50);
       }
+      this.cursorActive = true;
     },
     async initAnimation() {
       await this.sleep(1500);
