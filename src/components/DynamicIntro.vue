@@ -76,6 +76,11 @@ export default Vue.extend({
         transform: translate(-10px, -8px) scale(1.4);
         font-weight: lighter;
         color: var(--accent-color);
+        user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
         &.active {
           animation-name: blinker;
           animation-duration: 0.93s;
