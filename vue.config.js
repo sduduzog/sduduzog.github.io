@@ -10,7 +10,7 @@ module.exports = {
     appleMobileWebAppCapable: "yes",
     appleMobileWebAppStatusBarStyle: "white",
     workboxOptions: {
-      exclude: [/\.html$/]
+      exclude: [/\.html$/, /\.map$/]
     }
   }
 };
