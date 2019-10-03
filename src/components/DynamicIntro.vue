@@ -1,16 +1,43 @@
 <template>
   <section class="intro">
     <h1>
-      <span>I write code</span>
+      <span>{{ displayedTitle }}</span>
       <span class="fake-cursor active">|</span>
     </h1>
+    <p></p>
   </section>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 export default Vue.extend({
-  name: "DynamicIntro"
+  name: "DynamicIntro",
+  data() {
+    return {
+      index: 0,
+      displayedTitle: "",
+      content: [{ title: "I write code" }]
+    };
+  },
+  methods: {
+    sleep(ms: number) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    },
+    async emulateTyping() {
+      let title = this.content[this.index].title.split("");
+      for (let i = 0; i < title.length; i++) {
+        this.displayedTitle += title[i];
+        await this.sleep(50);
+      }
+    },
+    async initAnimation() {
+      await this.sleep(1500);
+      this.emulateTyping();
+    }
+  },
+  mounted: function() {
+    this.initAnimation();
+  }
 });
 </script>
 
@@ -53,6 +80,11 @@ export default Vue.extend({
         }
       }
     }
+  }
+  p {
+    font-size: 1.5em;
+    margin: 0;
+    padding: 20px 5px;
   }
 }
 </style>
