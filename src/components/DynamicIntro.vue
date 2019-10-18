@@ -40,6 +40,11 @@
 
 .intro {
   padding: 140px 5px 5px;
+  background-color: red;
+
+  @media screen and (max-width: 450px) {
+    padding: 5px;
+  }
 
   h1 {
     margin: 0;
