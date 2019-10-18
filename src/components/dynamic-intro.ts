@@ -36,7 +36,7 @@ export default Vue.extend({
       await this.typeText();
       this.index++;
       while (this.index < this.content.length) {
-        await this.sleep(5000);
+        await this.sleep(6500);
         await this.untypeText();
         await this.sleep(1000);
         await this.typeText();
