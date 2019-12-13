@@ -1,21 +1,22 @@
 #!/usr/bin/env sh
-
+echo $PATH
 set -e
 
-npm run build
 
-cd dist
+# npm run build
 
-echo 'sduduzog.com'
+# cd dist
 
-git init
+# echo 'sduduzog.com'
 
-git checkout -b release
+# git init
 
-git add -A
+# git checkout -b release
 
-git commit -m 'release'
+# git add -A
 
-git push -f ssh://ubuntu@41.79.79.187/var/repo/sduduzog.git release
+# git commit -m 'release'
 
-cd -
+# git push -f ssh://ubuntu@41.79.79.187/var/repo/sduduzog.git release
+
+# cd -
