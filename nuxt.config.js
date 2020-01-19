@@ -11,7 +11,9 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content:
+          "I'm a Junior QA Engineer turned Junior Software Developer at Codeo. When I'm not writting pretty cool code at work," +
+          ' I spend my free time writting pretty cool code at home. Google me!'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
