@@ -24,8 +24,12 @@ export default {}
 <style lang="scss">
 .container {
   max-width: 1024px;
-  padding: 150px 50px 0;
+  padding: 70px 50px 0;
   margin: auto;
+
+  @media screen and (min-width: 449px) {
+    padding-top: 150px;
+  }
 
   img.face {
     height: 200px;
