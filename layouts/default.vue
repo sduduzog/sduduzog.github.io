@@ -13,7 +13,9 @@
 }
 
 html {
-  font-family: 'Ubuntu Mono', monospace;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;

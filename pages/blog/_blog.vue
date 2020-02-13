@@ -1,8 +1,10 @@
 <template>
-  <article>
-    <h1>{{ blogPost.title }}</h1>
-    <div v-html="$md.render(blogPost.body)" />
-  </article>
+  <div class="bg-gray-100">
+    <article class="max-w-screen-md m-auto p-4 bg-white">
+      <h1>{{ blogPost.title }}</h1>
+      <div v-html="$md.render(blogPost.body)" />
+    </article>
+  </div>
 </template>
 <script>
 import Prism from 'prismjs'
