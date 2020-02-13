@@ -5,6 +5,8 @@
   </article>
 </template>
 <script>
+import Prism from 'prismjs'
+import 'prismjs/themes/prism-tomorrow.css'
 export default {
   async asyncData({ params, payload }) {
     if (payload) return { blogPost: payload }
@@ -12,6 +14,9 @@ export default {
       return {
         blogPost: await require(`~/assets/content/blog/${params.blog}.json`)
       }
+  },
+  mounted() {
+    Prism.highlightAll()
   }
 }
 </script>
