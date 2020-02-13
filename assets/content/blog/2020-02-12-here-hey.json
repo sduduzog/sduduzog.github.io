@@ -1,6 +1,0 @@
-{
-  "title": "Here hey ",
-  "date": "2020-02-12T20:58:03.593Z",
-  "description": "This is a blog",
-  "body": "So I was walking to town this other day\n\n![Image](https://thepracticaldev.s3.amazonaws.com/i/mm3r4jkt5gm6kqp57nug.jpg)\n\n```js\npublic funcName(test: Data) {\n  console.log(\"Her there\");\n  // this is a comment\n}"
-}
