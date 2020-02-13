@@ -1,10 +1,8 @@
 <template>
-  <div class="bg-gray-100">
-    <article class="max-w-screen-md m-auto p-4 bg-white">
-      <h1>{{ blogPost.title }}</h1>
-      <div v-html="$md.render(blogPost.body)" />
-    </article>
-  </div>
+  <article class="max-w-screen-md m-auto p-4">
+    <h1>{{ blogPost.title }}</h1>
+    <div v-html="$md.render(blogPost.body)" />
+  </article>
 </template>
 <script>
 import Prism from 'prismjs'
@@ -22,3 +20,14 @@ export default {
   }
 }
 </script>
+<style>
+h1 {
+  @apply text-4xl;
+  @apply font-semibold;
+  @apply my-4;
+}
+
+p {
+  @apply text-lg;
+}
+</style>
