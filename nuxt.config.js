@@ -42,10 +42,11 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/markdownit'],
+  modules: ['@nuxtjs/markdownit', '@nuxtjs/feed'],
   markdownit: {
     injected: true
   },
+  feed: [],
   /*
    ** Build configuration
    */
