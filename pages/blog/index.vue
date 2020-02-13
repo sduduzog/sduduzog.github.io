@@ -1,7 +1,7 @@
 <template>
   <div>
     <div @click="tray" v-for="blog in blogPosts" :key="blog.slug">
-      <a :href="'blog/' + blog.slug">{{ blog.slug }}</a>
+      <a :href="blog.slug">{{ blog.slug }}</a>
     </div>
   </div>
 </template>
