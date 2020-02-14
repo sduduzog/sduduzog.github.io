@@ -20,6 +20,9 @@ export const actions = {
       res.slug = key.slice(2, -5)
       return res
     })
-    await commit('setBlogPosts', blogPosts)
+    await commit(
+      'setBlogPosts',
+      blogPosts.filter((post) => !post.draft)
+    )
   }
 }

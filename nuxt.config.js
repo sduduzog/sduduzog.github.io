@@ -46,7 +46,6 @@ export default {
   markdownit: {
     injected: true
   },
-  feed: [],
   /*
    ** Build configuration
    */
@@ -67,5 +66,42 @@ export default {
         }
       })
     }
-  }
+  },
+  feed: [
+    {
+      path: '/feed.xml',
+      create(feed) {
+        const link = 'https://sduduzog.com'
+        feed.options = {
+          title: 'My blog',
+          link: link + '/feed.xml',
+          description: 'This is my personal feed!'
+        }
+
+        const fs = require('fs')
+        const path = require('path')
+        const posts = fs.readdirSync('./assets/content/blog').map((file) => {
+          return {
+            slug: `${path.parse(file).name}`,
+            post: require(`./assets/content/blog/${file}`)
+          }
+        })
+
+        posts.forEach((item) => {
+          const ln = `${link}/blog/${item.slug}`
+          if (!item.post.draft)
+            feed.addItem({
+              title: item.post.title,
+              id: ln,
+              link: ln,
+              date: new Date(item.post.date),
+              description: item.post.description,
+              content: item.post.body
+            })
+        })
+      },
+      cacheTime: 1000 * 60 * 15,
+      type: 'rss2'
+    }
+  ]
 }
