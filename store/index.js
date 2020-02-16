@@ -17,7 +17,7 @@ export const actions = {
     )
     const blogPosts = files.keys().map((key) => {
       const res = files(key)
-      res.slug = key.slice(2, -5)
+      res.slug = `blog/${key.slice(2, -5)}`
       return res
     })
     await commit(

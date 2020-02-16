@@ -80,23 +80,24 @@ export default {
 
         const fs = require('fs')
         const path = require('path')
-        const posts = fs.readdirSync('./assets/content/blog').map((file) => {
-          return {
-            slug: `${path.parse(file).name}`,
-            post: require(`./assets/content/blog/${file}`)
-          }
-        })
+        const posts = fs
+          .readdirSync('./assets/content/blog')
+          .map(async (file) => {
+            const post = await require(`./assets/content/blog/${file}`)
+            post.slug = `${path.parse(file).name}`
+            return post
+          })
 
-        posts.forEach((item) => {
-          const ln = `${link}/blog/${item.slug}`
-          if (!item.post.draft)
+        posts.forEach((post) => {
+          const ln = `${link}/blog/${post.slug}`
+          if (!post.draft)
             feed.addItem({
-              title: item.post.title,
+              title: post.title,
               id: ln,
               link: ln,
-              date: new Date(item.post.date),
-              description: item.post.description,
-              content: item.post.body
+              date: new Date(post.date),
+              description: post.description,
+              content: post.body
             })
         })
       },
