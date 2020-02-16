@@ -98,7 +98,8 @@ export default {
               ],
               date: new Date(post.date),
               description: post.description,
-              content: post.body
+              content: post.body,
+              image: `${link}/${post.image}`
             })
         })
       },
