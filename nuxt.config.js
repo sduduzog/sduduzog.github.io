@@ -80,17 +80,11 @@ export default {
 
         const fs = require('fs')
         const path = require('path')
-        const posts = fs
-          .readdirSync('./assets/content/blog')
-          .map(async (file) => {
-            const post = await require(`./assets/content/blog/${file}`)
-            post.slug = `${path.parse(file).name}`
-            return post
-          })
-
-        posts.forEach((post) => {
+        fs.readdirSync('./assets/content/blog').forEach(async (file) => {
+          const post = await require(`./assets/content/blog/${file}`)
+          post.slug = `${path.parse(file).name}`
           const ln = `${link}/blog/${post.slug}`
-          if (!post.draft)
+          if (post.published)
             feed.addItem({
               title: post.title,
               id: ln,

@@ -22,7 +22,7 @@ export const actions = {
     })
     await commit(
       'setBlogPosts',
-      blogPosts.filter((post) => !post.draft)
+      blogPosts.filter((post) => post.published)
     )
   }
 }

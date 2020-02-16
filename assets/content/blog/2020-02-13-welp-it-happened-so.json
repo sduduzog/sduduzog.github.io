@@ -2,6 +2,6 @@
   "title": "Welp... it happened, so",
   "date": "2020-02-13T18:58:03.593Z",
   "description": "I don't even know where to start",
-  "draft": true,
+  "published": true,
   "body": "When I wrote this. I was still putting together bits and pieces of the site. In fact the very reason why I started writing it is because Nuxtjs didn't want to compile as it couldn't find any entries."
 }
