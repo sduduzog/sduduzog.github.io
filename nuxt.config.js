@@ -89,6 +89,13 @@ export default {
               title: post.title,
               id: ln,
               link: ln,
+              category: [
+                ...post.tags.map((tag) => {
+                  return {
+                    name: tag
+                  }
+                })
+              ],
               date: new Date(post.date),
               description: post.description,
               content: post.body

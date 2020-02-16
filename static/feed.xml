@@ -4,16 +4,16 @@
         <title>My blog</title>
         <link>https://sduduzog.com/feed.xml</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Sun, 16 Feb 2020 12:12:03 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 16 Feb 2020 12:59:10 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <item>
-            <title><![CDATA[Welp... it happened, so]]></title>
-            <link>https://sduduzog.com/blog/2020-02-13-welp-it-happened-so</link>
-            <guid>https://sduduzog.com/blog/2020-02-13-welp-it-happened-so</guid>
-            <pubDate>Thu, 13 Feb 2020 18:58:03 GMT</pubDate>
-            <description><![CDATA[I don't even know where to start]]></description>
-            <content:encoded><![CDATA[When I wrote this. I was still putting together bits and pieces of the site. In fact the very reason why I started writing it is because Nuxtjs didn't want to compile as it couldn't find any entries.]]></content:encoded>
+            <title><![CDATA[Two truths and a lie]]></title>
+            <link>https://sduduzog.com/blog/2020-02-15-two-truths-and-a-lie</link>
+            <guid>https://sduduzog.com/blog/2020-02-15-two-truths-and-a-lie</guid>
+            <pubDate>Sat, 15 Feb 2020 10:07:33 GMT</pubDate>
+            <description><![CDATA[Ok lets see]]></description>
+            <content:encoded><![CDATA[Ya]]></content:encoded>
         </item>
     </channel>
 </rss>
