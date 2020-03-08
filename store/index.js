@@ -15,14 +15,19 @@ export const actions = {
       false,
       /\.json$/
     )
-    const blogPosts = files.keys().map((key) => {
-      const res = files(key)
-      res.slug = key.slice(2, -5)
-      return res
-    })
+    const blogPosts = files
+      .keys()
+      .reverse()
+      .map((key) => {
+        const res = files(key)
+        res.slug = key.slice(2, -5)
+        return res
+      })
     await commit(
       'setBlogPosts',
-      blogPosts.filter((post) => post.published)
+      blogPosts.filter(
+        (post) => process.env.NODE_ENV === 'development' || post.published
+      )
     )
   }
 }

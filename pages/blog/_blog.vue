@@ -1,6 +1,9 @@
 <template>
-  <article class="max-w-screen-md m-auto p-4">
-    <h1>{{ blogPost.title }}</h1>
+  <article class="m-auto p-4">
+    <h1 class="text-accent-color font-bold text-4xl m-0">
+      {{ blogPost.title }}
+    </h1>
+    <img v-if="blogPost.image" :src="blogPost.image" />
     <div v-html="$md.render(blogPost.body)" />
   </article>
 </template>
@@ -29,5 +32,11 @@ h1 {
 
 p {
   @apply text-lg;
+  @apply text-primary-color;
+}
+
+pre {
+  @apply shadow-lg;
+  @apply rounded-lg;
 }
 </style>

@@ -59,12 +59,15 @@ export default {
     routes() {
       const fs = require('fs')
       const path = require('path')
-      return fs.readdirSync('./assets/content/blog').map((file) => {
-        return {
-          route: `/blog/${path.parse(file).name}`, // Return the slug
-          payload: require(`./assets/content/blog/${file}`)
-        }
-      })
+      return fs
+        .readdirSync('./assets/content/blog')
+        .reverse()
+        .map((file) => {
+          return {
+            route: `/blog/${path.parse(file).name}`, // Return the slug
+            payload: require(`./assets/content/blog/${file}`)
+          }
+        })
     }
   },
   feed: [
@@ -80,28 +83,30 @@ export default {
 
         const fs = require('fs')
         const path = require('path')
-        fs.readdirSync('./assets/content/blog').forEach(async (file) => {
-          const post = await require(`./assets/content/blog/${file}`)
-          post.slug = `${path.parse(file).name}`
-          const ln = `${link}/blog/${post.slug}`
-          if (post.published)
-            feed.addItem({
-              title: post.title,
-              id: ln,
-              link: ln,
-              category: [
-                ...post.tags.map((tag) => {
-                  return {
-                    name: tag
-                  }
-                })
-              ],
-              date: new Date(post.date),
-              description: post.description,
-              content: post.body,
-              image: `${link}/${post.image}`
-            })
-        })
+        fs.readdirSync('./assets/content/blog')
+          .reverse()
+          .forEach(async (file) => {
+            const post = await require(`./assets/content/blog/${file}`)
+            post.slug = `${path.parse(file).name}`
+            const ln = `${link}/blog/${post.slug}`
+            if (process.env.NODE_ENV === 'development' || post.published)
+              feed.addItem({
+                title: post.title,
+                id: ln,
+                link: ln,
+                category: [
+                  ...post.tags.map((tag) => {
+                    return {
+                      name: tag
+                    }
+                  })
+                ],
+                date: new Date(post.date),
+                description: post.description,
+                content: post.body,
+                image: `${link}/${post.image}`
+              })
+          })
       },
       cacheTime: 1000 * 60 * 15,
       type: 'rss2'

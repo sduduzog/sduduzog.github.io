@@ -1,34 +1,57 @@
 <template>
-  <div>
-    <nuxt />
+  <div
+    :class="{ dark: darkMode }"
+    class="layout p-1 bg-background min-h-screen"
+  >
+    <div class="max-w-screen-lg m-auto relative">
+      <div
+        @click="toggleMode"
+        class="cursor-pointer p-2 absolute right-0 text-primary-color"
+      >
+        <Moon v-if="!darkMode" /><Sun v-else />
+      </div>
+      <nuxt />
+    </div>
   </div>
 </template>
-
+<script>
+import Sun from '../components/icons/Sun.vue'
+import Moon from '../components/icons/Moon.vue'
+export default {
+  components: { Sun, Moon },
+  data() {
+    return { darkMode: false }
+  },
+  mounted() {
+    const mode = localStorage.getItem('mode')
+    this.darkMode = mode === 'dark'
+    this.applyMode(this.darkMode)
+  },
+  methods: {
+    applyMode(darkMode) {
+      // const background = darkMode ? '#2f363d' : '#fafafa'
+      // const root = document.documentElement
+      // root.style.setProperty('--color-background', background)
+    },
+    toggleMode() {
+      localStorage.setItem('mode', this.darkMode ? 'light' : 'dark')
+      this.darkMode = !this.darkMode
+      this.applyMode(this.darkMode)
+    }
+  }
+}
+</script>
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap');
-:root {
-  --primary-color: #ffa000;
-  --secondary-color: #ff6f00;
-  --accent-color: #ff3d00;
-}
+.layout {
+  --color-background: #fafafa;
+  --color-primary: #263238;
+  --color-secondary: #546e7a;
+  --color-accent: #ff8f00;
 
-html {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
-    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
+  &.dark {
+    --color-background: #2f363d;
+    --color-primary: #e0e0e0;
+    --color-secondary: #bdbdbd;
+  }
 }
 </style>

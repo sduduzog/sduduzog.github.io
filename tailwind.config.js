@@ -6,7 +6,14 @@
  */
 module.exports = {
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        background: 'var(--color-background)',
+        'primary-color': 'var(--color-primary)',
+        'secondary-color': 'var(--color-secondary)',
+        'accent-color': 'var(--color-accent)'
+      }
+    }
   },
   variants: {},
   plugins: []

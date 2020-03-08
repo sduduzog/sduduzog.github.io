@@ -1,9 +1,17 @@
 <template>
-  <div class="container">
-    <img class="face" src="~/assets/img/sdu.jpg" alt="My face " />
-    <h1 class="title">Beautus S. Gumede</h1>
-    <h2>Junior Software Developer</h2>
-    <div class="social">
+  <div class="container m-auto max-w-md pt-8">
+    <img
+      class="face h-32 m-auto rounded-lg mt-24 shadow-lg"
+      src="~/assets/img/sdu.jpg"
+      alt="My face "
+    />
+    <h1
+      class="title text-lg p-4 mt-6 font-semibold text-center text-primary-color"
+    >
+      Beautus S. Gumede
+    </h1>
+    <h2 class="text-center text-secondary-color mb-4">Software Developer</h2>
+    <div class="social flex justify-center">
       <a id="github" href="https://github.com/sduduzog"
         ><img src="~/assets/img/github.svg" alt="Github icon"
       /></a>
@@ -14,6 +22,13 @@
         ><img src="~/assets/img/devto.svg" alt="Dev to icon"
       /></a>
     </div>
+    <h2 class="text-center my-8 text-xl">
+      <n-link
+        to="/blog"
+        class="text-secondary-color hover:text-primary-color hover:underline"
+        >Blog</n-link
+      >
+    </h2>
   </div>
 </template>
 
@@ -31,42 +46,7 @@ export default {
 
 <style lang="scss">
 .container {
-  max-width: 1024px;
-  padding: 70px 0 0;
-  margin: auto;
-
-  @media screen and (min-width: 449px) {
-    padding: 150px 50px 0;
-  }
-
-  img.face {
-    height: 200px;
-    width: auto;
-    border-radius: 20px;
-    display: block;
-    margin: auto;
-    box-shadow: 0 1px 3px 1px #607d8bab;
-  }
-
-  h1,
-  h2 {
-    padding: 15px;
-    text-align: center;
-    margin: auto;
-  }
-
-  h1 {
-    margin-top: 20px;
-    color: #263238;
-  }
-  h2 {
-    color: #455a64;
-  }
   .social {
-    padding-top: 10px;
-    display: flex;
-    justify-content: center;
-
     a {
       display: block;
       width: 50px;
