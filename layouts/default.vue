@@ -25,18 +25,11 @@ export default {
   mounted() {
     const mode = localStorage.getItem('mode')
     this.darkMode = mode === 'dark'
-    this.applyMode(this.darkMode)
   },
   methods: {
-    applyMode(darkMode) {
-      // const background = darkMode ? '#2f363d' : '#fafafa'
-      // const root = document.documentElement
-      // root.style.setProperty('--color-background', background)
-    },
     toggleMode() {
       localStorage.setItem('mode', this.darkMode ? 'light' : 'dark')
       this.darkMode = !this.darkMode
-      this.applyMode(this.darkMode)
     }
   }
 }
