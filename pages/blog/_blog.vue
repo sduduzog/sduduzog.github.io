@@ -1,10 +1,10 @@
 <template>
   <article class="m-auto lg:py-4 lg:px-12">
     <img v-if="blogPost.image" :src="blogPost.image" class="w-full" />
-    <h1 class="text-accent-color font-bold text-4xl m-0">
+    <h1 class="text-accent-color font-bold text-4xl m-0 p-1">
       {{ blogPost.title }}
     </h1>
-    <div v-html="$md.render(blogPost.body)" />
+    <div v-html="$md.render(blogPost.body)" class="p-2" />
   </article>
 </template>
 <script>
