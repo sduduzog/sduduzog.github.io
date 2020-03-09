@@ -7,6 +7,6 @@
   "date": "2020-03-08T21:26:37.670Z",
   "title": "Blogging as a dev",
   "description": "Ever since",
-  "body": "Welp\n\nThis is a picture\n\nAnd this is a code snippet\n\n```typescript\nimport {createComponent, ref} from \"@vue/composition-api\";\n\nexport default createComponent({\n  setup() {\n    const counter = ref(0);\n    const increment = () => counter.value++\n    return {counter, increment}\n  }\n});\n```",
+  "body": "Paragraph\n\n# heading 1\n\n## heading 2\n\n### heading 3\n\n#### heading 4\n\n- unordered list item 1\n\n- unordered list item 2\n\n1. ordered list item _some texting text, I think italic_\n\n```typescript\nimport {createComponent, ref} from \"@vue/composition-api\";\n\nexport default createComponent({\n  setup() {\n    const counter = ref(0);\n    const increment = () => counter.value++\n    return {counter, increment}\n  }\n});\n```",
   "image": ""
 }

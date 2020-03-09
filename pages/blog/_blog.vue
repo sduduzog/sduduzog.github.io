@@ -4,7 +4,7 @@
     <h1 class="text-accent-color font-bold text-4xl m-0 p-1">
       {{ blogPost.title }}
     </h1>
-    <div v-html="$md.render(blogPost.body)" class="p-2" />
+    <div v-html="$md.render(blogPost.body)" class="p-2 content" />
   </article>
 </template>
 <script>
@@ -24,20 +24,16 @@ export default {
   }
 }
 </script>
-<style>
-h1 {
-  @apply text-4xl;
-  @apply font-semibold;
-  @apply my-4;
-}
+<style lang="scss">
+.content {
+  p {
+    @apply text-lg;
+    @apply text-primary-color;
+  }
 
-p {
-  @apply text-lg;
-  @apply text-primary-color;
-}
-
-pre {
-  @apply shadow-x;
-  @apply rounded-lg;
+  pre {
+    @apply shadow-x;
+    @apply rounded-lg;
+  }
 }
 </style>
