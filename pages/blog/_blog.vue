@@ -1,14 +1,15 @@
 <template>
-  <article class="m-auto p-4">
+  <article class="m-auto lg:py-4 lg:px-12">
+    <img v-if="blogPost.image" :src="blogPost.image" class="w-full" />
     <h1 class="text-accent-color font-bold text-4xl m-0">
       {{ blogPost.title }}
     </h1>
-    <img v-if="blogPost.image" :src="blogPost.image" />
     <div v-html="$md.render(blogPost.body)" />
   </article>
 </template>
 <script>
 import Prism from 'prismjs'
+import 'prismjs/components/prism-typescript'
 import 'prismjs/themes/prism-tomorrow.css'
 export default {
   async asyncData({ params, payload }) {
@@ -36,7 +37,7 @@ p {
 }
 
 pre {
-  @apply shadow-lg;
+  @apply shadow-x;
   @apply rounded-lg;
 }
 </style>

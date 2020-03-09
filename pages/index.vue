@@ -22,11 +22,11 @@
         ><img src="~/assets/img/devto.svg" alt="Dev to icon"
       /></a>
     </div>
-    <h2 class="text-center my-8 text-xl">
+    <h2 class="text-center mt-6 text-lg">
       <n-link
         to="/blog"
         class="text-secondary-color hover:text-primary-color hover:underline"
-        >Blog</n-link
+        >My Blog</n-link
       >
     </h2>
   </div>

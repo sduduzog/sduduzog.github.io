@@ -11,7 +11,12 @@ module.exports = {
         background: 'var(--color-background)',
         'primary-color': 'var(--color-primary)',
         'secondary-color': 'var(--color-secondary)',
-        'accent-color': 'var(--color-accent)'
+        'accent-color': 'var(--color-accent)',
+        'overlay-color': 'var(--color-overlay)'
+      },
+      boxShadow: {
+        x:
+          '0 20px 25px -5px rgba(0, 0, 0, .4), 0 10px 10px -5px rgba(0, 0, 0, .4)'
       }
     }
   },
