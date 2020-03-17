@@ -39,10 +39,16 @@ collections:
     format: 'json'
     folder: 'assets/content/projects'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{slug}}'
     editor:
       preview: false
     fields:
-      - { label: 'Live', name: 'title', widget: 'boolean', default: false }
+      - { label: 'Live', name: 'live', widget: 'boolean', default: false }
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Description', name: 'body', widget: 'markdown' }
+      - { label: 'Repo', name: 'repo', widget: 'string' }
+      - {
+          label: 'Description',
+          name: 'body',
+          widget: 'markdown',
+          required: false,
+        }
