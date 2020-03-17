@@ -1,7 +1,7 @@
 <template>
   <div class="container m-auto max-w-md pt-8">
     <img
-      class="face h-32 m-auto rounded-lg mt-48 shadow-lg"
+      class="face h-32 m-auto rounded-lg mt-20 md:mt-48 shadow-lg"
       src="~/assets/img/sdu.jpg"
       alt="My face "
     />
