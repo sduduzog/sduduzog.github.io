@@ -1,7 +1,7 @@
 <template>
   <div class="container m-auto max-w-md pt-8">
     <img
-      class="face h-32 m-auto rounded-lg mt-24 shadow-lg"
+      class="face h-32 m-auto rounded-lg mt-48 shadow-lg"
       src="~/assets/img/sdu.jpg"
       alt="My face "
     />
@@ -22,13 +22,6 @@
         ><img src="~/assets/img/devto.svg" alt="Dev to icon"
       /></a>
     </div>
-    <h2 class="text-center mt-6 text-lg">
-      <n-link
-        to="/blog"
-        class="text-secondary-color hover:text-primary-color hover:underline"
-        >My Blog</n-link
-      >
-    </h2>
   </div>
 </template>
 

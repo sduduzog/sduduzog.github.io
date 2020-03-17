@@ -1,5 +1,5 @@
 <template>
-  <article class="m-auto lg:py-4 lg:px-12">
+  <article class="m-auto lg:py-4 lg:px-12 max-w-screen-md">
     <img v-if="blogPost.image" :src="blogPost.image" class="w-full" />
     <h1 class="text-accent-color font-bold text-4xl m-0 p-1">
       {{ blogPost.title }}

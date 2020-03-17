@@ -6,10 +6,11 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
+    "dev-cms-proxy": "npx netlify-cms-proxy-server",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore . --fix",
     "test": "jest"
   },
   "devDependencies": {

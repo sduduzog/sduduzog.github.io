@@ -34,3 +34,15 @@ collections:
           media_library: { config: { multiple: false } },
         }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'project'
+    label: 'Project'
+    format: 'json'
+    folder: 'assets/content/projects'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Live', name: 'title', widget: 'boolean', default: false }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'body', widget: 'markdown' }
