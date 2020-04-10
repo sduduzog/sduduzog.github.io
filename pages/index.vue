@@ -1,7 +1,7 @@
 <template>
-  <div class="container m-auto max-w-md pt-8">
+  <div class="m-auto max-w-md pt-8">
     <img
-      class="face h-32 m-auto rounded-lg mt-20 md:mt-48 shadow-lg"
+      class="face h-32 m-auto rounded-lg mt-12 md:mt-18 shadow-lg"
       src="~/assets/img/sdu.jpg"
       alt="My face "
     />
@@ -38,30 +38,28 @@ export default {
 </script>
 
 <style lang="scss">
-.container {
-  .social {
-    a {
-      display: block;
-      width: 50px;
-      height: 50px;
-      border-radius: 25px;
-      overflow: hidden;
-      margin: 20px;
-      padding: 10px;
+.social {
+  a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 20px;
+    padding: 10px;
 
-      img {
-        filter: invert(1);
-      }
+    img {
+      filter: invert(1);
+    }
 
-      &#twitter {
-        background-color: #1da1f2;
-      }
-      &#github {
-        background-color: #181717;
-      }
-      &#devto {
-        background-color: #0a0a0a;
-      }
+    &#twitter {
+      background-color: #1da1f2;
+    }
+    &#github {
+      background-color: #181717;
+    }
+    &#devto {
+      background-color: #0a0a0a;
     }
   }
 }
