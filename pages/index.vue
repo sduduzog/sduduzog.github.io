@@ -22,6 +22,11 @@
         ><img src="~/assets/img/devto.svg" alt="Dev to icon"
       /></a>
     </div>
+    <div class="text-center">
+      <a href="https://slimlauncher.sduduzog.com">
+        Slim Launcher
+      </a>
+    </div>
   </div>
 </template>
 
