@@ -18,7 +18,6 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-  vendor: ['prismjs'],
   /*
    ** Customize the progress-bar color
    */
@@ -42,10 +41,6 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/markdownit', '@nuxtjs/feed'],
-  markdownit: {
-    injected: true
-  },
   /*
    ** Build configuration
    */
@@ -55,61 +50,5 @@ export default {
      */
     extend(config, ctx) {}
   },
-  generate: {
-    routes() {
-      const fs = require('fs')
-      const path = require('path')
-      return fs
-        .readdirSync('./assets/content/blog')
-        .reverse()
-        .map((file) => {
-          return {
-            route: `/blog/${path.parse(file).name}`, // Return the slug
-            payload: require(`./assets/content/blog/${file}`)
-          }
-        })
-    }
-  },
-  feed: [
-    {
-      path: '/feed.xml',
-      create(feed) {
-        const link = 'https://sduduzog.com'
-        feed.options = {
-          title: 'My blog',
-          link: link + '/feed.xml',
-          description: 'This is my personal feed!'
-        }
-
-        const fs = require('fs')
-        const path = require('path')
-        fs.readdirSync('./assets/content/blog')
-          .reverse()
-          .forEach(async (file) => {
-            const post = await require(`./assets/content/blog/${file}`)
-            post.slug = `${path.parse(file).name}`
-            const ln = `${link}/blog/${post.slug}`
-            if (process.env.NODE_ENV === 'development' || post.published)
-              feed.addItem({
-                title: post.title,
-                id: ln,
-                link: ln,
-                category: [
-                  ...post.tags.map((tag) => {
-                    return {
-                      name: tag
-                    }
-                  })
-                ],
-                date: new Date(post.date),
-                description: post.description,
-                content: post.body,
-                image: `${link}/${post.image}`
-              })
-          })
-      },
-      cacheTime: 1000 * 60 * 15,
-      type: 'rss2'
-    }
-  ]
+  generate: {}
 }
