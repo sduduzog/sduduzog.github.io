@@ -17,6 +17,9 @@ module.exports = {
       boxShadow: {
         x:
           '0 20px 25px -5px rgba(0, 0, 0, .4), 0 10px 10px -5px rgba(0, 0, 0, .4)'
+      },
+      gridTemplateColumns: {
+        layout: '24rem 1fr'
       }
     }
   },

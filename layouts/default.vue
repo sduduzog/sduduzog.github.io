@@ -1,25 +1,14 @@
 <template>
   <div
-    :class="{ dark: darkMode }"
-    class="min-h-screen grid md:grid-cols-2 bg-background"
+    class="min-h-screen grid md:grid-cols-layout md:grid-rows-2 bg-background"
   >
-    <!--div
-      class="flex justify-end p-2 m-auto text-lg font-light text-primary-color max-w-screen-xl"
-    >
-      <span @click="toggleMode" class="p-2">
-        <Sun v-if="darkMode" />
-        <Moon v-else />
-      </span>
-    </div-->
-    <div class="md:pt-32 md:max-w-sm">
+    <div class="md:pt-32">
       <img
         class="h-32 m-auto mt-12 rounded-lg shadow-lg md:mt-18"
         src="~/assets/img/sdu.jpg"
         alt="My face"
       />
-      <h1
-        class="p-4 mt-6 text-lg font-semibold text-center title text-primary-color"
-      >
+      <h1 class="p-4 mt-6 text-lg font-semibold text-center text-primary-color">
         Beautus S. Gumede
       </h1>
       <h2 class="mb-4 text-center text-secondary-color">
@@ -37,9 +26,12 @@
         /></a>
       </div>
     </div>
-    <div>
+    <div class="p-12 row-start-2"></div>
+    <div class="row-span-2">
       <!--nuxt /-->
-      <h1 class="">Nothing to see here... just yet.</h1>
+      <h1 class="pt-64 text-6xl font-bold text-center text-gray-600 opacity-25">
+        Nothing to see just yet...
+      </h1>
     </div>
   </div>
 </template>
