@@ -1,5 +1,6 @@
 export default {
   mode: 'universal',
+  target: 'static',
   /*
    ** Headers of the page
    */
@@ -13,10 +14,10 @@ export default {
         name: 'description',
         content:
           "I'm a Junior QA Engineer turned Junior Software Developer at Codeo. When I'm not writting pretty cool code at work," +
-          ' I spend my free time writting pretty cool code at home. Google me!'
-      }
+          ' I spend my free time writting pretty cool code at home. Google me!',
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   /*
    ** Customize the progress-bar color
@@ -34,9 +35,9 @@ export default {
    ** Nuxt.js dev-modules
    */
   buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/axios',
   ],
   /*
    ** Nuxt.js modules
@@ -48,7 +49,16 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) {
+      if (ctx.isDev && ctx.isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/,
+        })
+      }
+    },
   },
-  generate: {}
+  generate: {},
 }
