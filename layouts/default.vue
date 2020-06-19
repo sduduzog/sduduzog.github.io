@@ -18,7 +18,7 @@
         <a id="github" href="https://github.com/sduduzog">
           <img src="~/assets/img/github.svg" alt="Github icon" />
         </a>
-        <a id="twitter" href="https://twitter.com/sduduzog">
+        <a id="twitter" href="https://twitter.com/sduduzo_g">
           <img src="~/assets/img/twitter.svg" alt="Twitter icon" />
         </a>
         <a id="devto" href="https://dev.to/sduduzog">
