@@ -11,6 +11,7 @@
       <div class="p-2 grid text-secondary-color">
         <a
           :href="article.url"
+          rel="noreferrer"
           target="_blank"
           class="text-xl font-bold md:text-3xl"
         >
