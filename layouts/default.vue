@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen grid md:grid-cols-layout md:grid-rows-2 bg-background"
+    class="bg-background md:max-h-screen md:overflow-hidden grid md:grid-cols-layout md:grid-rows-layout"
   >
     <div class="md:pt-32">
       <img
@@ -11,6 +11,9 @@
       <h1 class="p-4 mt-6 text-lg font-semibold text-center text-primary-color">
         Beautus S. Gumede
       </h1>
+      <h3 class="mb-4 text-center text-secondary-color">
+        My friends call me <i>Sdu</i>
+      </h3>
       <h2 class="mb-4 text-center text-secondary-color">
         I write code. Lots and lots of code.
       </h2>
@@ -27,7 +30,7 @@
       </div>
     </div>
     <div class="p-12 row-start-2"></div>
-    <div class="row-span-2">
+    <div class="overflow-y-auto row-span-2">
       <nuxt />
     </div>
   </div>

@@ -24,13 +24,13 @@
     "eslint": "^7.3.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-loader": "^4.0.2",
-    "eslint-plugin-nuxt": ">=0.4.2",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-vue": "^6.2.2",
     "node-sass": "^4.13.1",
     "nuxt": "^2.13.0",
     "prettier": "^2.0.5",
     "sass-loader": "^8.0.2",
+    "vue-eslint-parser": "^7.1.0",
     "vue-jest": "^4.0.0-0"
   },
   "dependencies": {}

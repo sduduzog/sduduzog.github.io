@@ -1,11 +1,23 @@
 <template>
-  <div class="space-y-4">
-    <div v-for="article in articles" :key="article.id" class="p-6 bg-blue-300">
-      <div class="m-4 bg-red-400">
-        <a :href="article.url" target="_blank" class="text-3xl font-bold">
+  <div class="max-w-screen-lg space-y-4">
+    <h1 class="p-2 text-4xl font-bold md:p-8 text-accent-color">
+      My latest articles
+    </h1>
+    <div
+      v-for="article in articles"
+      :key="article.id"
+      class="p-1 shadow-sm hover:shadow md:p-6"
+    >
+      <div class="p-2 grid text-secondary-color">
+        <a
+          :href="article.url"
+          target="_blank"
+          class="text-xl font-bold md:text-3xl"
+        >
           {{ article.title }}
         </a>
-        <p>{{ article.description }}</p>
+        <span class="opacity-50">{{ article.readable_publish_date }}</span>
+        <p class="text-secondary-color">{{ article.description }}</p>
       </div>
     </div>
   </div>
@@ -15,16 +27,19 @@
 export default {
   async asyncData({ $axios }) {
     const articles = await $axios.$get(
-      'https://dev.to/api/articles/?username=sduduzog&per_page=3'
+      'https://dev.to/api/articles/?username=sduduzog&per_page=4'
     )
-    return { articles: [] }
+    return { articles }
   },
   data() {
     return {
-      message: 'Hello world',
-      user: { first_name: 'waiting' },
       articles: [],
     }
+  },
+  methods: {
+    niceDate: (date) => {
+      return date
+    },
   },
 }
 </script>

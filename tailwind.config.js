@@ -29,6 +29,9 @@ module.exports = {
       gridTemplateColumns: {
         layout: '24rem 1fr',
       },
+      gridTemplateRows: {
+        layout: 'auto 1fr',
+      },
     },
   },
   variants: {},
