@@ -1,2 +1,2 @@
-# Portfolio build with Nuxt
-Find it hosted here: https://sduduzog.com
+# So I've moved from gh pages
+Find it hosted here: [https://sduduzog.com](https://sduduzog.com)
