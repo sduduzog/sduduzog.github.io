@@ -1,2 +1,2 @@
-# So I've moved from gh pages
+# So I've moved from gh pages to a custom domain... 
 Find it hosted here: [https://sduduzog.com](https://sduduzog.com)
