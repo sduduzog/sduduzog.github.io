@@ -13,8 +13,8 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          "I'm a Junior QA Engineer turned Junior Software Developer at Codeo. When I'm not writting pretty cool code at work," +
-          ' I spend my free time writting pretty cool code at home. Google me!',
+          'I write code. Lots and lots of code. To be honest I also delete most of it too ,' +
+          "but hey, that's how programming is, I guess",
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -61,5 +61,8 @@ export default {
       }
     },
   },
-  generate: {},
+  generate: {
+    // I write code. Lots and lots of code. To be honest, I delete most of it
+    // too. But hey, thats how programing is, I guess.
+  },
 }

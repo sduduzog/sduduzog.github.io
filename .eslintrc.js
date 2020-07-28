@@ -17,9 +17,10 @@ module.exports = {
     'plugin:prettier/recommended',
   ],
   // add your custom rules here
-  plugins: [],
+  plugins: ['prettier'],
   globals: { $nuxt: true },
   rules: {
+    'prettier/prettier': 'error',
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'vue/max-attributes-per-line': [
       'error',
