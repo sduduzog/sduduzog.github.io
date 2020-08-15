@@ -41,7 +41,7 @@
         <span class="opacity-50">{{ article.readable_publish_date }}</span>
         <p class="text-secondary-color">{{ article.description }}</p>
       </div>
-    </div> -->
+    </div>-->
   </section>
 </template>
 
@@ -62,6 +62,13 @@ export default {
     niceDate: (date) => {
       return date
     },
+  },
+  head() {
+    return {
+      script: [
+        { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
+      ],
+    }
   },
 }
 </script>
