@@ -8,7 +8,9 @@
         src="~/assets/img/sdu.jpg"
         alt="My face"
       />
-      <h1 class="p-4 mt-6 text-lg font-semibold text-center text-primary-color">
+      <h1
+        class="p-4 mt-6 text-lg font-semibold text-center text-secondary-color"
+      >
         Beautus S. Gumede
       </h1>
     </div>
