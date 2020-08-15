@@ -1,6 +1,6 @@
 <template>
   <section class="max-w-screen-md space-y-4">
-    <h1 class="text-xl font-semibold">
+    <h1 class="text-xl md:text-4xl font-bold text-accent-color">
       I write code. Lots and lots of code. To be honest, I also delete most of
       it too, but hey, that's how programming is, I guess.
     </h1>
@@ -8,7 +8,7 @@
       I'm a software developer at
       <a class="underline" href="https://codeo.co.za/team">Codeo_</a> where I've
       contributed in building and breaking really cool stuff. We eventually fix
-      most of it.
+      most of it I swear.
     </p>
     <p>
       I completed a BSc Computer Science degree at the University of Zululand.

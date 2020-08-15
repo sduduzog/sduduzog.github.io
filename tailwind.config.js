@@ -17,7 +17,6 @@ module.exports = {
     extend: {
       colors: {
         background: '#fafafa',
-        'primary-color': 'var(--color-primary)',
         'secondary-color': '#263238',
         'accent-color': '#ff8f00',
         'overlay-color': 'rgba(255, 255, 255, 0.4)',
