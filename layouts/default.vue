@@ -8,14 +8,13 @@
         src="~/assets/img/sdu.jpg"
         alt="My face"
       />
-      <h1
-        class="p-4 mt-6 text-lg font-semibold text-center text-secondary-color"
-      >
+      <h1 class="p-4 mt-6 text-lg font-semibold text-center text-gray-700">
         Beautus S. Gumede
       </h1>
     </div>
     <nav class="p-3 row-start-2 flex justify-evenly">
       <nuxt-link to="/">Me</nuxt-link>
+      <nuxt-link to="/blog">Blog</nuxt-link>
       <!-- <nuxt-link to="/projects">Projects</nuxt-link> -->
       <!-- <nuxt-link to="/articles">Articles</nuxt-link> -->
     </nav>

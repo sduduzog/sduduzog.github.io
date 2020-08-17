@@ -1,28 +1,28 @@
 export default {
-  mode: 'universal',
-  target: 'static',
+  mode: "universal",
+  target: "static",
   /*
    ** Headers of the page
    */
   head: {
-    title: 'Beautus S. Gumede' || process.env.npm_package_name,
+    title: "Beautus S. Gumede" || process.env.npm_package_name,
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
-        hid: 'description',
-        name: 'description',
+        hid: "description",
+        name: "description",
         content:
-          'I write code. Lots and lots of code. To be honest I also delete most of it too ,' +
+          "I write code. Lots and lots of code. To be honest I also delete most of it too ," +
           "but hey, that's how programming is, I guess",
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: "#fff" },
   /*
    ** Global CSS
    */
@@ -35,14 +35,14 @@ export default {
    ** Nuxt.js dev-modules
    */
   buildModules: [
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/axios',
+    "@nuxtjs/eslint-module",
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/axios",
   ],
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxt/content'],
+  modules: ["@nuxt/content"],
   /*
    ** Build configuration
    */
@@ -53,9 +53,9 @@ export default {
     extend(config, ctx) {
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
-          enforce: 'pre',
+          enforce: "pre",
           test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
+          loader: "eslint-loader",
           exclude: /(node_modules)/,
         })
       }
