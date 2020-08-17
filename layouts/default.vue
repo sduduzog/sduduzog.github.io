@@ -14,7 +14,7 @@
     </div>
     <nav class="p-3 row-start-2 flex justify-evenly">
       <nuxt-link to="/">Me</nuxt-link>
-      <nuxt-link to="/blog">Blog</nuxt-link>
+      <!-- <nuxt-link to="/blog">Blog</nuxt-link> -->
       <!-- <nuxt-link to="/projects">Projects</nuxt-link> -->
       <!-- <nuxt-link to="/articles">Articles</nuxt-link> -->
     </nav>

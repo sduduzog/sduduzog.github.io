@@ -7,7 +7,7 @@
     <p class="lg:text-2xl">
       I'm a software developer at
       <a class="underline" href="https://codeo.co.za/team">Codeo_</a> where I've
-      contributed in building and breaking really cool stuff. We eventually fix
+      contributed to building and breaking really cool stuff. We eventually fix
       most of it I swear.
     </p>
     <p class="lg:text-2xl">
