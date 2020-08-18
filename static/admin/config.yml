@@ -19,9 +19,21 @@ collections:
     editor:
       preview: false
     fields:
+      - {
+          label: "Published",
+          name: "published",
+          widget: "boolean",
+          default: false,
+        }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
+      - label: "Cover Image"
+        name: "coverImage"
+        widget: "image"
+        media_library:
+          config:
+            multiple: false
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "projects"
     label: "Projects"

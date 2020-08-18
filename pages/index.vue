@@ -1,6 +1,6 @@
 <template>
   <section class="max-w-screen-md space-y-8">
-    <h1 class="text-xl lg:text-4xl font-bold text-accent-color">
+    <h1 class="text-xl lg:text-3xl font-bold text-accent-color">
       I write code. Lots and lots of code. To be honest, I also delete most of
       it too, but hey, that's how programming is, I guess.
     </h1>
@@ -22,47 +22,11 @@
       tech blogs and I'm gradually getting myself to write more. I hope to one
       day speak in front of an audience about my experiences.
     </p>
-    <!-- <h1 class="p-2 text-4xl font-bold md:p-8 text-accent-color">
-      My dev.to posts
-    </h1>
-    <div
-      v-for="article in articles"
-      :key="article.id"
-      class="p-1 shadow-sm hover:shadow md:p-6"
-    >
-      <div class="p-2 grid text-secondary-color">
-        <a
-          :href="article.url"
-          rel="noreferrer"
-          target="_blank"
-          class="text-xl font-bold md:text-3xl"
-          >{{ article.title }}</a
-        >
-        <span class="opacity-50">{{ article.readable_publish_date }}</span>
-        <p class="text-secondary-color">{{ article.description }}</p>
-      </div>
-    </div>-->
   </section>
 </template>
 
 <script>
 export default {
-  async asyncData({ $axios }) {
-    const articles = await $axios.$get(
-      "https://dev.to/api/articles/?username=sduduzog&per_page=4"
-    )
-    return { articles }
-  },
-  data() {
-    return {
-      articles: [],
-    }
-  },
-  methods: {
-    niceDate: (date) => {
-      return date
-    },
-  },
   head() {
     return {
       script: [

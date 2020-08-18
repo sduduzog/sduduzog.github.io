@@ -12,11 +12,10 @@
         Beautus S. Gumede
       </h1>
     </div>
-    <nav class="p-3 row-start-2 flex justify-evenly">
+    <nav class="p-3 self-start row-start-2 flex justify-evenly">
       <nuxt-link to="/">Me</nuxt-link>
-      <!-- <nuxt-link to="/blog">Blog</nuxt-link> -->
-      <!-- <nuxt-link to="/projects">Projects</nuxt-link> -->
-      <!-- <nuxt-link to="/articles">Articles</nuxt-link> -->
+      <nuxt-link to="/blog">Blog</nuxt-link>
+      <nuxt-link to="/nothing">Nothing</nuxt-link>
     </nav>
     <div class="p-2 lg:p-12 overflow-y-auto row-span-2">
       <nuxt />
