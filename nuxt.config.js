@@ -61,8 +61,15 @@ export default {
       }
     },
   },
-  generate: {
-    // I write code. Lots and lots of code. To be honest, I delete most of it
-    // too. But hey, thats how programing is, I guess.
-  },
+  // generate: {
+  //   async routes() {
+  //     const { $content } = require("@nuxt/content")
+  //     const files = await $content()
+  //       .sortBy("createdAt", "desc")
+  //       .only(["path"])
+  //       .fetch()
+
+  //     return files.map((file) => (file.path === "/index" ? "/" : file.path))
+  //   },
+  // },
 }

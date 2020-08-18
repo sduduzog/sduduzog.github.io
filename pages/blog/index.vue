@@ -16,7 +16,7 @@
 <script>
 export default {
   async asyncData({ $content }) {
-    const posts = await $content("blog").fetch()
+    const posts = await $content("blog").sortBy("createdAt", "desc").fetch()
     const isDev = process.env.NODE_ENV === "development"
     return {
       posts: isDev ? posts : posts.filter((post) => post.published),

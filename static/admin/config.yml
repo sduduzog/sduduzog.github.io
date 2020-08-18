@@ -12,7 +12,7 @@ publish_mode: editorial_workflow
 collections:
   - name: "blog"
     label: "Blog"
-    format: "json"
+    format: "frontmatter"
     folder: "content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -43,7 +43,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "projects"
     label: "Projects"
-    format: "json"
+    format: "frontmatter"
     folder: "content/projects"
     create: true
     slug: "{{slug}}"
