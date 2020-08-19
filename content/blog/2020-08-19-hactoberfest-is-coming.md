@@ -11,4 +11,4 @@ date: 2020-08-19T08:49:15.690Z
 
 ### So What's Hactoberfest?
 
-It's not a month long beer festival, I first thought it was, but no. It is a month long festival of code organized by DigitalOcean. Participating is really really easy and every one is welcome,
+It's not a month long beer festival, I first thought it was, but no 😒. It is a month long festival of code organized by DigitalOcean where you participate by simply opening a pull request and contributing to any open source project.
