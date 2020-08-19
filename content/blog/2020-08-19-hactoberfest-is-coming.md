@@ -20,4 +20,4 @@ Now to be fully immersed in the experience I really recommend you to follow the 
 
 ***"I've never contributed to open source before, I don't even know where to start"***
 
-Have I got news for you. That alone makes you the perfect participant all on its own. Many people believe that contributing to open source means writing super complex code and/or fixing issues the author of the project could have never figured out. Which in so many lengths is not true.
+Have I got news for you. That alone makes you the perfect participant all on its own. Many people believe that contributing to open source means writing super complex code and/or fixing issues the author of the project could have never figured out. Which, in so many lengths, is not true.
