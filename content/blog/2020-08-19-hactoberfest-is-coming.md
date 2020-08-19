@@ -5,6 +5,6 @@ date: 2020-08-19T08:49:15.690Z
 ---
 # Hactoberfest is coming!
 
-I'm actually super excited about it, I can't wait to participate again.
-
 ***But what is hactoberfest? what's the big deal?***
+
+To be honest, when I first heard the term, I thought it had something to do with the Gernam festival Octoberfest, but in fact, its way different
