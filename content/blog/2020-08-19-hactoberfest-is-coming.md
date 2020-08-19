@@ -12,9 +12,9 @@ coverImage: /img/rxnknzpjn6yga0wjoofm.jpeg
 
 ### So What's Hactoberfest?
 
-It's not a month long beer festival, I first thought it was, but no 😒. It is a month long festival of code organized by DigitalOcean where you participate by simply opening a pull request and contributing to any open source project. All backgrounds and skills levels are encouraged to complete the challenge.
+It's not a month long beer festival, I first thought it was, but no 😒. It is a month long festival of code organized by DigitalOcean where you participate by simply opening a pull request and contributing to any open source project. All backgrounds and skills levels are encouraged to complete the challenge. In every year, you're given instructions in how to complete the challenge, for the past year, it was to submit at least four pull requests
 
-
+Now to be fully immersed in the experience I really recommend you to follow the [\#hactoberfest tag](https://dev.to/t/hacktoberfest) on [dev.to](https://dev.to) and don't be shy to share you journey with the world there.
 
 ***"I've never contributed to open source before, I don't even know where to start"***
 
