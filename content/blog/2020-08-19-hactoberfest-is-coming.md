@@ -23,3 +23,5 @@ Now to be fully immersed in the experience I really recommend you to follow the 
 Have I got news for you. That alone makes you the perfect participant all on its own. Many people believe that contributing to open source means writing super complex code and/or fixing issues the author of the project could have never figured out. Which, in so many lengths, is **not** true.
 
 To put this simply, with a quick example. One of the pull requests I submitted for the 2019 hactoberfest challenge was editing a README for just explaining steps to setup firebase on an android app. Just that one page, and I had contributed to open source, 3 more similar pull requests sent out and I had completed the challenge thus receiving my 2019 hactoberfest swag.
+
+![A screenshot from a merged pull request showing edits on a readme file on github](/img/2020-08-19-16_49_14-added-firebase-setup-steps-for-android-by-sduduzog-·-pull-request-21-·-janoodle.png "One of the pull requests submitted")
