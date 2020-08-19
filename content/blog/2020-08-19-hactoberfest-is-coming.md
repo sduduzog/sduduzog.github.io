@@ -12,7 +12,7 @@ coverImage: /img/rxnknzpjn6yga0wjoofm.jpeg
 
 *Do open source stuff on the internet, get free stuff.*
 
-### So What's Hacktoberfest?
+## So What's Hacktoberfest?
 
 It's not a month long beer festival, I first thought it was, but no 😒. It is a month long festival of code organized by DigitalOcean where you participate by simply opening a pull request and contributing to any open source project. All backgrounds and skill levels are encouraged to complete the challenge. In every year, you're given instructions in how to complete the challenge, last year, it was to submit at least four pull requests to any public repository on Github and you're done. Last year, the first 50 000 contributors received limited edition T-shirts and a bunch of cool stickers. This year though, the first 75 000 participants can earn a T-shirt.
 
@@ -26,6 +26,14 @@ To put this simply, with a quick example. One of the pull requests I submitted f
 
 ![A screenshot from a merged pull request showing edits on a readme file on github](/img/2020-08-19-16_49_14-added-firebase-setup-steps-for-android-by-sduduzog-·-pull-request-21-·-janoodle.png "One of the pull requests submitted")
 
+## A few tips on how to find projects to contribute to
 
+* #### Search for the keyword hacktoberfest on Github
 
-Now I don't know about you guys, but I love free stuff.
+A trick to get contributors on board by project maintainers is that they label some github issues with 'hacktoberfest', especially during these times of the festival which makes it very easy to filter down to repositories who are looking for help or looking to help you contribute. Other labels to look out for are 'good first issue' and 'beginner' which imply that you do not need to be an expert or super skilled and even versed on a certain project to take a jab in solving that issue.
+
+This is 
+
+Now I don't know about you guys, but I love free stuff. Now for m
+
+ore detailed information (because I'm writing this out of excitement) please see <https://hacktoberfest.digitalocean.com> for more details.
