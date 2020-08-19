@@ -25,3 +25,7 @@ Have I got news for you. That alone makes you the perfect participant all on its
 To put this simply, with a quick example. One of the pull requests I submitted for the 2019 hacktoberfest challenge was editing a README for just explaining steps to setup firebase on an android app. Just that one page, and I had contributed to open source, 3 more similar pull requests sent out and I had completed the challenge thus receiving my 2019 hacktoberfest swag.
 
 ![A screenshot from a merged pull request showing edits on a readme file on github](/img/2020-08-19-16_49_14-added-firebase-setup-steps-for-android-by-sduduzog-·-pull-request-21-·-janoodle.png "One of the pull requests submitted")
+
+
+
+Now I don't know about you guys, but I love free stuff.
