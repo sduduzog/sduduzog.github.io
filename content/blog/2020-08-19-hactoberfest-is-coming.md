@@ -6,6 +6,8 @@ coverImage: /img/rxnknzpjn6yga0wjoofm.jpeg
 ---
 # Hactoberfest is coming!
 
+*cover image [source](https://dev.to/ankit986/hactoberfest-2k19-4206)*
+
 ***TL;DR;***
 
 *Do open source stuff on the internet, get free stuff.*
@@ -18,4 +20,4 @@ Now to be fully immersed in the experience I really recommend you to follow the 
 
 ***"I've never contributed to open source before, I don't even know where to start"***
 
-Have I got news for you, so did I
+Have I got news for you. That alone makes you the perfect participant all on its own. Many people believe that contributing to open source means writing super complex code and/or fixing issues the author of the project could have never figured out. Which in so many lengths is not true.
