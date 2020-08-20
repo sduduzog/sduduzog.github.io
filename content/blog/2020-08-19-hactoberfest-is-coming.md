@@ -38,8 +38,6 @@ Sometimes it's the people who are close to you who could also use a helping hand
 
 * #### Be on a lookout for online tools used to search for projects on github
 
-Tools like http://issuehub.io/ https://gauger.io/contrib and https://www.codetriage.com/ make it so easy to scan through the many projects out there to tackle. I personally like http://issuehub.io/ because it's pretty intuitive and I think it's the one I've been using even way after the festival had passed.
+Tools like http://issuehub.io/ https://gauger.io/contrib and https://www.codetriage.com/ make it so easy to scan through the many projects out there to tackle. I personally like http://issuehub.io/ because it's pretty intuitive and I think it's the one I've been using even way after the festival had passed
 
-## Your own open source projects or projects you maintain can also benefit. Here's how
-
-ore detailed information (because I'm writing this out of excitement) please see <https://hacktoberfest.digitalocean.com> for more details.
+For more detailed information (because I'm writing this out of excitement) please see <https://hacktoberfest.digitalocean.com> for more details.
