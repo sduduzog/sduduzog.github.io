@@ -24,6 +24,17 @@ export default {
   head() {
     return {
       title: this.post.title,
+      meta: [
+        { hid: "og:title", name: "og:title", content: this.post.title },
+        { hid: "og:url", name: "og:url", content: this.post.slug },
+        { hid: "og:image", name: "og:image", content: this.post.coverImage },
+        { hid: "og:type", name: "og:type", content: "article" },
+        {
+          hid: "og:article:author",
+          name: "og:article:author",
+          content: "Beautus S. Gumede",
+        },
+      ],
     }
   },
 }
