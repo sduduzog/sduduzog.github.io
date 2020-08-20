@@ -32,8 +32,14 @@ To put this simply, with a quick example. One of the pull requests I submitted f
 
 A trick to get contributors on board by project maintainers is that they label some github issues with 'hacktoberfest', especially during these times of the festival which makes it very easy to filter down to repositories who are looking for help or looking to help you contribute. Other labels to look out for are 'good first issue' and 'beginner' which imply that you do not need to be an expert or super skilled and even versed on a certain project to take a jab in solving that issue.
 
-This is 
+* #### Ask around your circles if anyone needs an extra hand in their public projects
 
-Now I don't know about you guys, but I love free stuff. Now for m
+Sometimes it's the people who are close to you who could also use a helping hand with their projects. You might be also working in a company or a team that maintains some open source repositories, that's your chance to also deal with some minor typos in their documentation here and there, adding some tests or just organizing their file structure for easier consumption.
+
+* #### Be on a lookout for online tools used to search for projects on github
+
+Tools like http://issuehub.io/ https://gauger.io/contrib and https://www.codetriage.com/ make it so easy to scan through the many projects out there to tackle. I personally like http://issuehub.io/ because it's pretty intuitive and I think it's the one I've been using even way after the festival had passed.
+
+## Your own open source projects or projects you maintain can also benefit. Here's how
 
 ore detailed information (because I'm writing this out of excitement) please see <https://hacktoberfest.digitalocean.com> for more details.
