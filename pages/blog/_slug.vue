@@ -1,6 +1,9 @@
 <template>
-  <div>
-    <h2>{{ post.title }}</h2>
+  <div class="max-w-screen-md">
+    <img
+      :src="post.coverImage"
+      alt="Hacktoberfest t-shirt with a dev sticker"
+    />
     <nuxt-content :document="post" />
   </div>
 </template>
@@ -20,3 +23,16 @@ export default {
   },
 }
 </script>
+<style>
+.nuxt-content h1 {
+  @apply text-accent-color;
+  @apply font-bold;
+  @apply text-2xl;
+}
+
+@screen lg {
+  .nuxt-content h1 {
+    @apply text-4xl;
+  }
+}
+</style>
