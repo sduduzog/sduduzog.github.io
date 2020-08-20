@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Hacktoberfest is coming!
 date: 2020-08-19T08:49:15.690Z
 coverImage: /img/rxnknzpjn6yga0wjoofm.jpeg
