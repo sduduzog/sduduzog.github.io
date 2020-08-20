@@ -52,7 +52,7 @@ export default {
 .nuxt-content {
   @apply text-gray-800;
 }
-.nuxt-content > a {
+.nuxt-content p > em > a {
   @apply text-gray-600;
   @apply underline;
 }
