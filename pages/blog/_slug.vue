@@ -24,15 +24,59 @@ export default {
 }
 </script>
 <style>
+.nuxt-content {
+  @apply text-gray-800;
+}
+.nuxt-content > a {
+  @apply text-gray-600;
+  @apply underline;
+}
+.nuxt-content ul {
+  @apply list-disc;
+  @apply pl-4;
+}
+
 .nuxt-content h1 {
   @apply text-accent-color;
   @apply font-bold;
+  @apply text-3xl;
+}
+.nuxt-content h2 {
+  @apply font-bold;
   @apply text-2xl;
+}
+.nuxt-content h3 {
+  @apply font-bold;
+  @apply text-xl;
+}
+.nuxt-content h4 {
+  @apply font-bold;
+  @apply text-lg;
+}
+
+.nuxt-content p {
+  @apply my-4;
+  @apply text-base;
 }
 
 @screen lg {
   .nuxt-content h1 {
+    @apply text-5xl;
+  }
+  .nuxt-content h2 {
+    @apply font-bold;
     @apply text-4xl;
+  }
+  .nuxt-content h3 {
+    @apply font-bold;
+    @apply text-3xl;
+  }
+  .nuxt-content h4 {
+    @apply font-bold;
+    @apply text-2xl;
+  }
+  .nuxt-content p {
+    @apply text-xl;
   }
 }
 </style>
