@@ -22,12 +22,21 @@ export default {
     }
   },
   head() {
+    const domain = "https://sduduzog.com"
     return {
       title: this.post.title,
       meta: [
         { hid: "og:title", name: "og:title", content: this.post.title },
-        { hid: "og:url", name: "og:url", content: this.post.slug },
-        { hid: "og:image", name: "og:image", content: this.post.coverImage },
+        {
+          hid: "og:url",
+          name: "og:url",
+          content: `${domain}/blog/${this.post.slug}`,
+        },
+        {
+          hid: "og:image",
+          name: "og:image",
+          content: `${domain}/${this.post.coverImage}`,
+        },
         { hid: "og:type", name: "og:type", content: "article" },
         {
           hid: "og:article:author",
