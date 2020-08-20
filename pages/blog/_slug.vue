@@ -35,7 +35,7 @@ export default {
         {
           hid: "og:image",
           name: "og:image",
-          content: `${domain}/${this.post.coverImage}`,
+          content: `${domain}${this.post.coverImage}`,
         },
         { hid: "og:type", name: "og:type", content: "article" },
         {
