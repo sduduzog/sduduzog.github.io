@@ -6,11 +6,8 @@
   "private": true,
   "scripts": {
     "dev": "nuxt dev",
-    "build": "nuxt build",
-    "export": "nuxt export",
-    "serve": "nuxt serve",
+    "build": "nuxt generate",
     "start": "nuxt start",
-    "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore . --fix"
   },
   "devDependencies": {
@@ -27,13 +24,13 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-vue": "^6.2.2",
     "node-sass": "^4.13.1",
-    "nuxt": "^2.14.3",
     "prettier": "^2.0.5",
     "sass-loader": "^8.0.2",
     "vue-eslint-parser": "^7.1.0",
     "vue-jest": "^4.0.0-0"
   },
   "dependencies": {
+    "nuxt": "^2.14.5",
     "@nuxt/content": "^1.5.0"
   }
 }
