@@ -20,13 +20,13 @@
         {{ post.title }}
       </h2>
       <span class="text-gray-600">
-        Published {{ getSubDate(post.createdAt) }} ago
+        Published on {{ getDate(post.createdAt) }}
       </span>
     </nuxt-link>
   </div>
 </template>
 <script>
-import { parseISO, formatDistanceToNow } from "date-fns"
+import { parseISO, formatDistanceToNow, format } from "date-fns"
 
 export default {
   async asyncData({ $content }) {
@@ -43,6 +43,9 @@ export default {
   methods: {
     getSubDate(date) {
       return formatDistanceToNow(parseISO(date), true)
+    },
+    getDate(date) {
+      return format(parseISO(date), "d MMM yyyy")
     },
   },
 }
