@@ -2,7 +2,7 @@
   <div class="max-w-screen-md">
     <img
       :src="post.coverImage"
-      class="border"
+      class="border lg:border-2 rounded-md"
       alt="Hacktoberfest t-shirt with a dev sticker"
     />
     <span></span>
@@ -88,6 +88,8 @@ export default {
 
 .nuxt-content img {
   @apply m-auto;
+  @apply border;
+  @apply rounded-md;
 }
 
 @screen lg {
