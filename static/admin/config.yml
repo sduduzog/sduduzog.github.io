@@ -1,9 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
   branch: master
-  # use_large_media_transforms_in_media_library: false
+  repo: sduduzog/sduduzog.github.io
 
-# npx netlify-cms-proxy-server
 local_backend: true
 
 media_folder: static/img
