@@ -26,7 +26,7 @@
   </div>
 </template>
 <script>
-import { parseISO, formatDistanceToNow, format } from "date-fns"
+import { parseISO, format } from "date-fns"
 
 export default {
   async asyncData({ $content }) {
@@ -41,9 +41,6 @@ export default {
     }
   },
   methods: {
-    getSubDate(date) {
-      return formatDistanceToNow(parseISO(date), true)
-    },
     getDate(date) {
       return format(parseISO(date), "d MMM yyyy")
     },
