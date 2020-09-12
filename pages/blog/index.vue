@@ -31,16 +31,14 @@ import { parseISO, formatDistanceToNow } from "date-fns"
 export default {
   async asyncData({ $content }) {
     const posts = await $content("blog")
-      .only(["title", "coverImage", "createdAt"])
+      .only(["title", "coverImage", "createdAt", "slug", "published"])
       .sortBy("createdAt", "desc")
       .fetch()
     const isDev = process.env.NODE_ENV === "development"
+    const filtered = isDev ? posts : posts.filter((post) => post.published)
     return {
-      posts: isDev ? posts : posts.filter((post) => post.published),
+      posts: filtered,
     }
-  },
-  mounted() {
-    console.log(this.posts)
   },
   methods: {
     getSubDate(date) {

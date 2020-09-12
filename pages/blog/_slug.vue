@@ -18,7 +18,6 @@ export default {
     } catch (e) {
       error({ message: "Blog Post not found" })
     }
-    console.log(post)
     return {
       post,
     }
