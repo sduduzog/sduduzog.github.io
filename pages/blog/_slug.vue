@@ -5,6 +5,7 @@
       class="border"
       alt="Hacktoberfest t-shirt with a dev sticker"
     />
+    <span></span>
     <nuxt-content :document="post" />
   </div>
 </template>
