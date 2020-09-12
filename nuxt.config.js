@@ -42,6 +42,9 @@ export default {
    ** Nuxt.js modules
    */
   modules: ["@nuxt/content"],
+  content: {
+    liveEdit: false,
+  },
   /*
    ** Build configuration
    */
