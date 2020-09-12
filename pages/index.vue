@@ -1,5 +1,6 @@
 <template>
   <section class="max-w-screen-md space-y-8 font-bold">
+    <h1 class="text-2xl lg:text-4xl font-light text-gray-400">Me</h1>
     <h1 class="text-xl lg:text-3xl text-accent-color">
       I write code. Lots and lots of code. To be honest, I also delete most of
       it too, but hey, that's how programming is, I guess.

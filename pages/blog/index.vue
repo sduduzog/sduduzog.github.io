@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-screen-md space-y-6">
-    <h1 class="text-2xl lg:text-4xl font-bold text-accent-color">Blog</h1>
+    <h1 class="text-2xl lg:text-4xl font-light text-gray-400">Blog</h1>
     <p v-if="posts.length === 0" class="text-gray-700 lg:text-2xl">
       Stay tuned!
     </p>
@@ -16,7 +16,7 @@
         class="border rouded-sm lg:rounded-lg"
         alt="Blog cover image"
       />
-      <h2 class="text-xl lg:text-3xl font-bold text-gray-800">
+      <h2 class="text-xl lg:text-3xl font-bold text-accent-color">
         {{ post.title }}
       </h2>
       <span class="text-gray-600">
