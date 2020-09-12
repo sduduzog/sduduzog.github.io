@@ -2,6 +2,7 @@
   <div class="max-w-screen-md">
     <img
       :src="post.coverImage"
+      class="border"
       alt="Hacktoberfest t-shirt with a dev sticker"
     />
     <nuxt-content :document="post" />
@@ -16,7 +17,7 @@ export default {
     } catch (e) {
       error({ message: "Blog Post not found" })
     }
-
+    console.log(post)
     return {
       post,
     }
@@ -83,6 +84,10 @@ export default {
 .nuxt-content p {
   @apply my-4;
   @apply text-base;
+}
+
+.nuxt-content img {
+  @apply m-auto;
 }
 
 @screen lg {

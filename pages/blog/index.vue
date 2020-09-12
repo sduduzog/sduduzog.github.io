@@ -16,24 +16,31 @@
         class="border rouded-sm lg:rounded-lg"
         alt="Blog cover image"
       />
-      <h2
-        :to="`blog/${post.slug}`"
-        class="text-xl lg:text-3xl font-bold text-gray-800"
-      >
+      <h2 class="text-xl lg:text-3xl font-bold text-gray-800">
         {{ post.title }}
       </h2>
+      <span class="text-gray-600">
+        Published {{ getSubDate(post.createdAt) }} ago
+      </span>
     </nuxt-link>
   </div>
 </template>
 <script>
+import { parseISO, formatDistanceToNow } from "date-fns"
+
 export default {
   async asyncData({ $content }) {
     const posts = await $content("blog").sortBy("createdAt", "desc").fetch()
-    console.log(posts)
     const isDev = process.env.NODE_ENV === "development"
+    console.log(posts)
     return {
       posts: isDev ? posts : posts.filter((post) => post.published),
     }
+  },
+  methods: {
+    getSubDate(date) {
+      return formatDistanceToNow(parseISO(date), true)
+    },
   },
 }
 </script>
