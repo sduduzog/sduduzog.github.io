@@ -1,0 +1,7 @@
+{
+  "name": "sduduzog.github.io",
+  "version": 2,
+  "routes": [
+    {"handle": "filesystem"}
+  ]
+}
