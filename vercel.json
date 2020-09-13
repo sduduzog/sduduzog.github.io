@@ -12,6 +12,7 @@
   ],
   "routes": [
     { "src": "config.yml", "dest": "/config.yml"},
+    { "handle": "filesystem"},
     { "src": "/(.*)", "dest": "/" }
   ]
 }
