@@ -3,6 +3,6 @@
   "version": 2,
   "routes": [
     {"handle": "filesystem"},
-    {"src": "/config.yml", "dest": "/dist/config.yml"}
+    {"src": "/config.yml", "dest": "/config.yml"}
   ]
 }
