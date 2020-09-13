@@ -1,6 +1,9 @@
 {
   "name": "sduduzog.github.io",
   "version": 2,
+  "builds":[
+    {"src": "**/*.yml", "use":"@vercel/static"}
+  ],
   "routes": [
     {"handle": "filesystem"},
     {"src": "/config.yml", "dest": "/config.yml"}
