@@ -2,6 +2,7 @@
   "name": "sduduzog.github.io",
   "version": 2,
   "routes": [
-    {"handle": "filesystem"}
+    {"handle": "filesystem"},
+    {"src": "/config.yml", "dest": "/dist/config.yml"}
   ]
 }
