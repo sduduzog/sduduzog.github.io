@@ -1,7 +1,9 @@
 backend:
   name: github
   branch: master
+  base_url: http://localhost:3000
   repo: sduduzog/sduduzog.github.io
+  auth_endpoint: api/begin
 
 local_backend: true
 
