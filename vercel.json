@@ -9,5 +9,9 @@
         "distDir": "dist"
       }
     }
+  ],
+  "routes": [
+    { "src": "config.yml", "dest": "/config.yml"},
+    { "src": "/(.*)", "dest": "/" }
   ]
 }
