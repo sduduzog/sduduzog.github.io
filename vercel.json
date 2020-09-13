@@ -6,6 +6,6 @@
   ],
   "routes": [
     {"handle": "filesystem"},
-    {"src": "/config.yml", "dest": "/config.yml"}
+    {"src": "/config.yml", "dest": "dist/config.yml"}
   ]
 }
