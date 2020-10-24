@@ -29,12 +29,31 @@
 import { parseISO, format } from 'date-fns';
 
 export default {
-  async asyncData({ $content }) {
+  async asyncData({ isDev, app, $content }) {
+    const _posts = [];
+    let editMode = false;
+
+    if (isDev) {
+      editMode = true;
+    }
+
+    const version = editMode ? 'draft' : 'published';
+
+    try {
+      const response = await app.$storyapi.get(`cdn/stories/pages/`, {
+        version,
+        starts_with: 'blog/',
+      });
+      console.log(response.data.story.content);
+    } catch (error) {
+      console.error(error);
+    }
+
     const posts = await $content('blog')
       .only(['title', 'coverImage', 'createdAt', 'slug', 'published'])
       .sortBy('createdAt', 'desc')
       .fetch();
-    const isDev = process.env.NODE_ENV === 'development';
+    _posts.push(posts);
     const filtered = isDev ? posts : posts.filter((post) => post.published);
     return {
       posts: filtered,

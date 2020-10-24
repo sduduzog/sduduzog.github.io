@@ -30,15 +30,12 @@ export default {
     }
 
     const version = editMode ? 'draft' : 'published';
-    const path = context.route.path === '/' ? '' : context.route.path;
+    const path = context.route.path === '/' ? 'home' : context.route.path;
     try {
-      const response = await context.app.$storyapi.get(
-        `cdn/stories/pages/${path}`,
-        {
-          version,
-          cv: context.store.state.cacheVersion,
-        },
-      );
+      const response = await context.app.$storyapi.get(`cdn/stories/${path}`, {
+        version,
+        cv: context.store.state.cacheVersion,
+      });
       return response.data;
     } catch (error) {
       console.error(error);
