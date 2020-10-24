@@ -26,24 +26,24 @@
   </div>
 </template>
 <script>
-import { parseISO, format } from "date-fns"
+import { parseISO, format } from 'date-fns';
 
 export default {
   async asyncData({ $content }) {
-    const posts = await $content("blog")
-      .only(["title", "coverImage", "createdAt", "slug", "published"])
-      .sortBy("createdAt", "desc")
-      .fetch()
-    const isDev = process.env.NODE_ENV === "development"
-    const filtered = isDev ? posts : posts.filter((post) => post.published)
+    const posts = await $content('blog')
+      .only(['title', 'coverImage', 'createdAt', 'slug', 'published'])
+      .sortBy('createdAt', 'desc')
+      .fetch();
+    const isDev = process.env.NODE_ENV === 'development';
+    const filtered = isDev ? posts : posts.filter((post) => post.published);
     return {
       posts: filtered,
-    }
+    };
   },
   methods: {
     getDate(date) {
-      return format(parseISO(date), "d MMM yyyy")
+      return format(parseISO(date), 'd MMM yyyy');
     },
   },
-}
+};
 </script>

@@ -1,38 +1,38 @@
 module.exports = {
-  root: true,
   env: {
     browser: true,
+    commonjs: true,
+    es2021: true,
     node: true,
   },
-  parser: "vue-eslint-parser",
-  parserOptions: {
-    parser: "babel-eslint",
-    ecmaVersion: 2020,
-    sourceType: "module",
-  },
   extends: [
-    "eslint:recommended",
-    "plugin:vue/recommended",
-    "plugin:prettier/recommended",
-    "prettier",
-    "prettier/vue",
-    "plugin:prettier/recommended",
+    'airbnb-base',
+    '@nuxtjs',
+    'prettier/vue',
+    'plugin:prettier/recommended',
   ],
-  // add your custom rules here
-  plugins: ["prettier"],
-  globals: { $nuxt: true },
+  plugins: ['prettier'],
+  parserOptions: {
+    parser: 'babel-eslint',
+    ecmaVersion: 12,
+  },
   rules: {
-    "prettier/prettier": "error",
-    "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
-    "vue/max-attributes-per-line": [
-      "error",
+    'no-underscore-dangle': 'off',
+    'no-param-reassign': 'off',
+    'prettier/prettier': 'error',
+    'import/no-extraneous-dependencies': 'off',
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'vue/html-self-closing': [
+      'error',
       {
-        singleline: 3,
-        multiline: {
-          max: 1,
-          allowFirstLine: false,
+        html: {
+          void: 'always',
+          normal: 'always',
+          component: 'always',
         },
+        svg: 'always',
+        math: 'always',
       },
     ],
   },
-}
+};

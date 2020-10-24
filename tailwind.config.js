@@ -37,6 +37,13 @@ module.exports = {
       },
     },
   },
+  typescript: {
+    typeCheck: {
+      eslint: {
+        files: "./**/*.{ts,js,vue}",
+      },
+    },
+  },
   variants: {},
   plugins: [],
 }

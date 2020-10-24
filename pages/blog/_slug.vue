@@ -5,49 +5,49 @@
       class="border lg:border-2 rounded-md"
       alt="Hacktoberfest t-shirt with a dev sticker"
     />
-    <span></span>
+    <span />
     <nuxt-content :document="post" />
   </div>
 </template>
 <script>
 export default {
   async asyncData({ $content, params, error }) {
-    let post
+    let post;
     try {
-      post = await $content("blog", params.slug).fetch()
+      post = await $content('blog', params.slug).fetch();
     } catch (e) {
-      error({ message: "Blog Post not found" })
+      error({ message: 'Blog Post not found' });
     }
     return {
       post,
-    }
+    };
   },
   head() {
-    const domain = "https://sduduzog.com"
+    const domain = 'https://sduduzog.com';
     return {
       title: this.post.title,
       meta: [
-        { hid: "og:title", name: "og:title", content: this.post.title },
+        { hid: 'og:title', name: 'og:title', content: this.post.title },
         {
-          hid: "og:url",
-          name: "og:url",
+          hid: 'og:url',
+          name: 'og:url',
           content: `${domain}/blog/${this.post.slug}`,
         },
         {
-          hid: "og:image",
-          name: "og:image",
+          hid: 'og:image',
+          name: 'og:image',
           content: `${domain}${this.post.coverImage}`,
         },
-        { hid: "og:type", name: "og:type", content: "article" },
+        { hid: 'og:type', name: 'og:type', content: 'article' },
         {
-          hid: "og:article:author",
-          name: "og:article:author",
-          content: "Beautus S. Gumede",
+          hid: 'og:article:author',
+          name: 'og:article:author',
+          content: 'Beautus S. Gumede',
         },
       ],
-    }
+    };
   },
-}
+};
 </script>
 <style>
 .nuxt-content {
