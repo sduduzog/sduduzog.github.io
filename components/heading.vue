@@ -11,13 +11,5 @@ export default {
       default: undefined,
     },
   },
-  head() {
-    const head = {};
-    const title = this.$props.blok.name;
-    if (title) {
-      head.title = title;
-    }
-    return head;
-  },
 };
 </script>
