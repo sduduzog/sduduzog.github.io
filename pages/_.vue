@@ -11,7 +11,7 @@
 <script>
 function loadData({ api, cacheVersion, errorCallback, version, path }) {
   return api
-    .get(`cdn/stories/${path}`, {
+    .get(`cdn/stories/pages/${path}`, {
       version,
       cv: cacheVersion,
     })
@@ -56,7 +56,7 @@ export default {
     }
 
     const version = editMode ? 'draft' : 'published';
-    const path = context.route.path === '/' ? 'home' : context.route.path;
+    const path = context.route.path === '/' ? '' : context.route.path;
 
     // Load the JSON from the API
     return loadData({
