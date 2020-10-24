@@ -1,6 +1,6 @@
 export default {
-  components: true,
   target: 'static',
+  modern: true,
   /*
    ** Headers of the page
    */
