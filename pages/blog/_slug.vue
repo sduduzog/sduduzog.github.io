@@ -1,114 +1,147 @@
 <template>
   <div class="max-w-screen-md">
     <img
-      :src="post.coverImage"
+      :src="image.src"
+      :alt="image.alt"
       class="border lg:border-2 rounded-md"
-      alt="Hacktoberfest t-shirt with a dev sticker"
     />
-    <span />
-    <nuxt-content :document="post" />
+    <!-- eslint-disable-next-line vue/no-v-html -->
+    <div class="space-y-8 text-gray-900" v-html="richtext" />
   </div>
 </template>
 <script>
+import Prism from 'prismjs';
+import 'prismjs/themes/prism-solarizedlight.css';
+
 export default {
-  async asyncData({ $content, params, error }) {
-    let post;
-    try {
-      post = await $content('blog', params.slug).fetch();
-    } catch (e) {
-      error({ message: 'Blog Post not found' });
+  async asyncData(context) {
+    let editMode = false;
+
+    if (
+      context.query._storyblok ||
+      context.isDev ||
+      (typeof window !== 'undefined' &&
+        window.localStorage.getItem('_storyblok_draft_mode'))
+    ) {
+      if (typeof window !== 'undefined') {
+        window.localStorage.setItem('_storyblok_draft_mode', '1');
+        if (window.location === window.parent.location) {
+          window.localStorage.removeItem('_storyblok_draft_mode');
+        }
+      }
+
+      editMode = true;
     }
-    return {
-      post,
-    };
+
+    const version = editMode ? 'draft' : 'published';
+    const { slug } = context.route.params;
+    try {
+      const response = await context.app.$storyapi.get(
+        `cdn/stories/blog/${slug}`,
+        {
+          version,
+          cv: context.store.state.cacheVersion,
+        },
+      );
+      const { content } = response.data.story;
+      return {
+        image: {
+          src: content.image.filename,
+          alt: content.image.alt,
+        },
+        text: content.body,
+        blok: content,
+      };
+    } catch (error) {
+      console.error(error);
+      if (!error.response) {
+        context.error({
+          statusCode: 404,
+          message: 'Failed to receive content from api',
+        });
+      } else {
+        context.error({
+          statusCode: error.response.status,
+          message: error.response.data,
+        });
+      }
+      return {};
+    }
+  },
+
+  data() {
+    return { story: { content: {} } };
+  },
+  computed: {
+    richtext() {
+      return this.$data.text
+        ? this.$storyapi.richTextResolver.render(this.$data.text)
+        : '';
+    },
+  },
+  mounted() {
+    Prism.highlightAll();
+    this.$storybridge.on(['input', 'published', 'change'], (event) => {
+      if (event.action === 'input') {
+        if (event.story.id === this.story.id) {
+          this.story.content = event.story.content;
+        }
+      } else if (!event.slugChanged) {
+        window.location.reload();
+      }
+    });
   },
   head() {
-    const domain = 'https://sduduzog.com';
-    return {
-      title: this.post.title,
-      meta: [
-        { hid: 'og:title', name: 'og:title', content: this.post.title },
-        {
-          hid: 'og:url',
-          name: 'og:url',
-          content: `${domain}/blog/${this.post.slug}`,
-        },
-        {
-          hid: 'og:image',
-          name: 'og:image',
-          content: `${domain}${this.post.coverImage}`,
-        },
-        { hid: 'og:type', name: 'og:type', content: 'article' },
-        {
-          hid: 'og:article:author',
-          name: 'og:article:author',
-          content: 'Beautus S. Gumede',
-        },
-      ],
-    };
+    return {};
   },
 };
 </script>
-<style>
-.nuxt-content {
-  @apply text-gray-800;
-}
-.nuxt-content p > em > a,
-.nuxt-content p > a {
-  @apply text-gray-600;
-  @apply underline;
-}
-.nuxt-content ul {
-  @apply list-disc;
-  @apply pl-4;
-}
-
-.nuxt-content h1 {
-  @apply text-accent-color;
+<style lang="scss">
+h1,
+h2,
+h3,
+h4 {
   @apply font-bold;
+}
+h1 {
+  @apply text-accent-color;
   @apply text-3xl;
 }
-.nuxt-content h2 {
-  @apply font-bold;
+h2 {
   @apply text-2xl;
 }
-.nuxt-content h3 {
-  @apply font-bold;
+h3 {
   @apply text-xl;
 }
-.nuxt-content h4 {
-  @apply font-bold;
+h4 {
   @apply text-lg;
 }
-
-.nuxt-content p {
-  @apply my-4;
+p {
   @apply text-base;
+  a {
+    @apply text-gray-600;
+    @apply underline;
+  }
+  img {
+    @apply border;
+    @apply m-auto;
+    @apply rounded-md;
+  }
 }
-
-.nuxt-content img {
-  @apply m-auto;
-  @apply border;
-  @apply rounded-md;
-}
-
 @screen lg {
-  .nuxt-content h1 {
+  h1 {
     @apply text-5xl;
   }
-  .nuxt-content h2 {
-    @apply font-bold;
+  h2 {
     @apply text-4xl;
   }
-  .nuxt-content h3 {
-    @apply font-bold;
+  h3 {
     @apply text-3xl;
   }
-  .nuxt-content h4 {
-    @apply font-bold;
+  h4 {
     @apply text-2xl;
   }
-  .nuxt-content p {
+  p {
     @apply text-xl;
   }
 }
