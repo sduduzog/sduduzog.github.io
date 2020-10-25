@@ -17,6 +17,7 @@ module.exports = {
     ecmaVersion: 12,
   },
   rules: {
+    camelcase: 'off',
     'no-underscore-dangle': 'off',
     'no-param-reassign': 'off',
     'prettier/prettier': 'error',
