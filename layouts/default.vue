@@ -1,8 +1,6 @@
 <template>
-  <div
-    class="md:max-h-screen md:overflow-hidden grid md:grid-cols-layout md:grid-rows-layout"
-  >
-    <div class="md:pt-20">
+  <div class="flex flex-wrap w-full">
+    <div class="flex-grow md:flex-grow-0 w-full max-w-sm mx-auto md:pt-20">
       <img
         class="h-32 m-auto mt-12 rounded-lg shadow-lg md:mt-12"
         src="~/assets/img/sdu.jpg"
@@ -11,13 +9,13 @@
       <h1 class="p-4 mt-6 text-lg font-semibold text-center text-gray-700">
         Beautus S. Gumede
       </h1>
+      <nav class="p-3 flex justify-evenly">
+        <nuxt-link to="/">Me</nuxt-link>
+        <nuxt-link to="/blog">Blog</nuxt-link>
+        <nuxt-link to="/nothing">Nothing</nuxt-link>
+      </nav>
     </div>
-    <nav class="p-3 self-start row-start-2 flex justify-evenly">
-      <nuxt-link to="/">Me</nuxt-link>
-      <nuxt-link to="/blog">Blog</nuxt-link>
-      <nuxt-link to="/nothing">Nothing</nuxt-link>
-    </nav>
-    <div class="p-2 lg:p-12 overflow-y-auto row-span-2">
+    <div class="p-2 lg:p-12 max-h-screen flex-grow overflow-auto">
       <nuxt />
     </div>
   </div>
