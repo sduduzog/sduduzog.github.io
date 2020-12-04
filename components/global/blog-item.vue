@@ -20,7 +20,7 @@ export default {
   },
   computed: {
     slug() {
-      return `${this.blok.full_slug}`;
+      return `/blog/${this.blok.slug}`;
     },
     name() {
       return `${this.blok.name}`;
