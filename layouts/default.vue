@@ -10,8 +10,12 @@
         Beautus S. Gumede
       </h1>
       <nav class="p-3 flex justify-evenly">
-        <nuxt-link to="/">Me</nuxt-link>
-        <nuxt-link to="/blog">Blog</nuxt-link>
+        <component
+          :is="item.component"
+          v-for="item in story.content.nav_bar"
+          :key="item._uid"
+          :blok="item"
+        />
       </nav>
     </div>
     <div class="p-2 lg:p-12 lg:max-h-screen flex-grow lg:overflow-auto">
@@ -19,6 +23,46 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  async fetch() {
+    const { error, query, isDev } = this.$nuxt.context;
+    const { cacheVersion } = this.$store.state;
+    let editMode = false;
+
+    if (
+      query._storyblok ||
+      isDev ||
+      (typeof window !== 'undefined' &&
+        window.localStorage.getItem('_storyblok_draft_mode'))
+    ) {
+      if (typeof window !== 'undefined') {
+        window.localStorage.setItem('_storyblok_draft_mode', '1');
+        if (window.location === window.parent.location) {
+          window.localStorage.removeItem('_storyblok_draft_mode');
+        }
+      }
+
+      editMode = true;
+    }
+
+    const version = editMode ? 'draft' : 'published';
+    try {
+      const response = await this.$storyapi.get(`cdn/stories/global`, {
+        version,
+        cv: cacheVersion,
+      });
+      const { story } = response.data;
+      this.story = story;
+    } catch (err) {
+      error({ statusCode: 404 });
+    }
+  },
+  data() {
+    return { story: { content: {} } };
+  },
+};
+</script>
 <style lang="scss">
 .nuxt-link-exact-active {
   @apply underline;
