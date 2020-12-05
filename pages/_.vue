@@ -11,11 +11,10 @@
 <script>
 export default {
   async asyncData(context) {
-    const editMode =
-      context.query._storyblok ||
-      context.isDev ||
-      (typeof window !== 'undefined' &&
-        window.localStorage.getItem('_storyblok_draft_mode'));
+    const editMode = context.query._storyblok || context.isDev;
+    // context.isDev ||
+    // (typeof window !== 'undefined' &&
+    //   window.localStorage.getItem('_storyblok_draft_mode'));
 
     const version = editMode ? 'draft' : 'published';
     const path = context.route.path === '/' ? '/home' : context.route.path;

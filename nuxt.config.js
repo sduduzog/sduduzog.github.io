@@ -45,11 +45,11 @@ export default {
       'storyblok-nuxt',
       { accessToken: '5i2lrLgiTzCtvr9fKcp5PAtt', cacheProvider: 'memory' },
     ],
-    '@nuxtjs/sitemap',
+    // '@nuxtjs/sitemap',
   ],
-  sitemap: {
-    hostname: 'https://sduduzog.com',
-  },
+  // sitemap: {
+  //   hostname: 'https://sduduzog.com',
+  // },
 
   /*
    ** Build configuration

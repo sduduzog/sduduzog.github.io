@@ -6,6 +6,7 @@
       :key="item.uuid"
       :blok="item"
     />
+    <span v-if="$fetchState.error">issue with fetch</span>
   </div>
 </template>
 <script>
@@ -17,34 +18,27 @@ export default {
     },
   },
   async fetch() {
-    const { query, isDev, error } = this.$nuxt.context;
-    let editMode = false;
-
-    if (
+    const {
+      query,
+      isDev,
+      error,
+      store: { state },
+    } = this.$nuxt.context;
+    const editMode =
       query._storyblok ||
       isDev ||
       (typeof window !== 'undefined' &&
-        window.localStorage.getItem('_storyblok_draft_mode'))
-    ) {
-      if (typeof window !== 'undefined') {
-        window.localStorage.setItem('_storyblok_draft_mode', '1');
-        if (window.location === window.parent.location) {
-          window.localStorage.removeItem('_storyblok_draft_mode');
-        }
-      }
-
-      editMode = true;
-    }
+        window.localStorage.getItem('_storyblok_draft_mode'));
 
     const version = editMode ? 'draft' : 'published';
-    const { url, cached_url: cachedUrl } = this.blok.base;
-    const path = url || cachedUrl;
+
+    const { cached_url } = this.blok.base;
     try {
       const response = await this.$storyapi.get(`cdn/stories`, {
-        starts_with: path,
+        starts_with: cached_url,
         is_startpage: false,
         version,
-        cv: this.$store.state.cacheVersion,
+        cv: state.cacheVersion,
       });
       const { stories } = response.data;
       this.stories = stories;
@@ -54,6 +48,9 @@ export default {
   },
   data() {
     return { stories: [] };
+  },
+  mounted() {
+    this.$nextTick(() => this.$fetch());
   },
 };
 </script>

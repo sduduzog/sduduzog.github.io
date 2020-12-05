@@ -32,6 +32,9 @@ export default {
         this.blok.created_at;
       return format(parseISO(date), 'd MMM yyyy');
     },
+    publishedOn() {
+      return `Published on ${this.publishDate}`;
+    },
   },
 };
 </script>
