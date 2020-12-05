@@ -2,7 +2,7 @@
   <div v-editable="blok">
     <component
       :is="blok.type"
-      v-for="item in stories"
+      v-for="item in listing"
       :key="item.uuid"
       :blok="item"
     />
@@ -10,6 +10,8 @@
   </div>
 </template>
 <script>
+import { mapState } from 'vuex';
+
 export default {
   props: {
     blok: {
@@ -22,7 +24,7 @@ export default {
       query,
       isDev,
       error,
-      store: { state },
+      store: { state, commit },
     } = this.$nuxt.context;
     const editMode =
       query._storyblok ||
@@ -41,16 +43,19 @@ export default {
         cv: state.cacheVersion,
       });
       const { stories } = response.data;
-      this.stories = stories;
+      commit('setListing', { key: cached_url, value: stories });
     } catch {
       error({ statusCode: 404, message: 'Failed to receive content from api' });
     }
   },
-  data() {
-    return { stories: [] };
-  },
-  mounted() {
-    this.$nextTick(() => this.$fetch());
+  computed: {
+    ...mapState({
+      stories: (state) => state.listing,
+    }),
+    listing() {
+      const { cached_url } = this.blok.base;
+      return this.stories[cached_url] || [];
+    },
   },
 };
 </script>

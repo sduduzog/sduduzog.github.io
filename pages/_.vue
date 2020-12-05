@@ -10,29 +10,29 @@
 </template>
 <script>
 export default {
-  async asyncData(context) {
-    const editMode = context.query._storyblok || context.isDev;
-    // context.isDev ||
-    // (typeof window !== 'undefined' &&
-    //   window.localStorage.getItem('_storyblok_draft_mode'));
+  async asyncData({ error, query, isDev, route, app, store }) {
+    const editMode = query._storyblok || isDev;
+    isDev ||
+      (typeof window !== 'undefined' &&
+        window.localStorage.getItem('_storyblok_draft_mode'));
 
     const version = editMode ? 'draft' : 'published';
-    const path = context.route.path === '/' ? '/home' : context.route.path;
+    const path = route.path === '/' ? '/home' : route.path;
     try {
-      const response = await context.app.$storyapi.get(`cdn/stories/${path}`, {
+      const response = await app.$storyapi.get(`cdn/stories/${path}`, {
         version,
-        cv: context.store.state.cacheVersion,
+        cv: store.state.cacheVersion,
       });
       return response.data;
-    } catch (error) {
+    } catch (err) {
       console.error(error);
       if (!error.response) {
-        context.error({
+        error({
           statusCode: 404,
           message: 'Failed to receive content from api',
         });
       } else {
-        context.error({
+        error({
           statusCode: error.response.status,
           message: error.response.data,
         });

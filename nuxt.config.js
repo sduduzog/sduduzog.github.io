@@ -45,17 +45,17 @@ export default {
       'storyblok-nuxt',
       { accessToken: '5i2lrLgiTzCtvr9fKcp5PAtt', cacheProvider: 'memory' },
     ],
-    // '@nuxtjs/sitemap',
+    '@nuxtjs/sitemap',
   ],
-  // sitemap: {
-  //   hostname: 'https://sduduzog.com',
-  // },
+  sitemap: {
+    hostname: 'https://sduduzog.com',
+  },
 
   /*
    ** Build configuration
    */
   router: {
-    middleware: 'setCacheVersion',
+    middleware: 'prepareStories',
   },
   generate: {
     crawler: false,
@@ -81,7 +81,10 @@ export default {
         `https://api.storyblok.com/v1/cdn/links?token=${token}&version=${version}&cv=${cache_version}&per_page=100`,
       );
       Object.keys(res.data.links).forEach((key) => {
-        if (!toIgnore.includes(res.data.links[key].slug)) {
+        if (
+          !toIgnore.includes(res.data.links[key].slug) ||
+          !res.data.links[key].is_folder
+        ) {
           routes.push(`/${res.data.links[key].slug}`);
         }
       });
