@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "@nuxt/http": "^0.6.1",
+    "@nuxtjs/sitemap": "^2.4.0",
     "date-fns": "^2.16.1",
     "nuxt": "^2.14.7",
     "prismjs": "^1.22.0",

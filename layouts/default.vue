@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap w-full overflow-auto max-h-screen">
+  <div class="flex flex-wrap lg:flex-no-wrap w-full overflow-auto max-h-screen">
     <div class="flex-grow md:flex-grow-0 w-full max-w-sm mx-auto md:pt-20">
       <img
         class="h-32 m-auto mt-12 rounded-lg shadow-lg md:mt-12"
@@ -18,7 +18,9 @@
         />
       </nav>
     </div>
-    <div class="p-2 lg:p-12 lg:max-h-screen flex-grow lg:overflow-auto">
+    <div
+      class="p-2 lg:px-0 lg:py-12 lg:max-h-screen flex-grow lg:overflow-auto"
+    >
       <nuxt />
     </div>
   </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-screen-md space-y-8 font-semibold">
+  <div class="max-w-screen-sm lg:max-w-screen-md space-y-8 mx-auto lg:ml-0">
     <component
       :is="story.content.component"
       v-if="story.content.component"
@@ -11,23 +11,11 @@
 <script>
 export default {
   async asyncData(context) {
-    let editMode = false;
-
-    if (
+    const editMode =
       context.query._storyblok ||
       context.isDev ||
       (typeof window !== 'undefined' &&
-        window.localStorage.getItem('_storyblok_draft_mode'))
-    ) {
-      if (typeof window !== 'undefined') {
-        window.localStorage.setItem('_storyblok_draft_mode', '1');
-        if (window.location === window.parent.location) {
-          window.localStorage.removeItem('_storyblok_draft_mode');
-        }
-      }
-
-      editMode = true;
-    }
+        window.localStorage.getItem('_storyblok_draft_mode'));
 
     const version = editMode ? 'draft' : 'published';
     const path = context.route.path === '/' ? '/home' : context.route.path;
