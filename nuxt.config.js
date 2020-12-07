@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 export default {
   target: 'static',
   components: [{ path: '~/components/global', global: true }],
@@ -46,6 +44,12 @@ export default {
       { accessToken: '5i2lrLgiTzCtvr9fKcp5PAtt', cacheProvider: 'memory' },
     ],
     '@nuxtjs/sitemap',
+    [
+      '@nuxtjs/robots',
+      {
+        Sitemap: '/sitemap.xml',
+      },
+    ],
   ],
   sitemap: {
     hostname: 'https://sduduzog.com',
