@@ -5,6 +5,8 @@
       v-if="story.content.component"
       :key="story.content._uid"
       :blok="story.content"
+      :slug="story.slug"
+      :stories="stories"
     />
   </div>
 </template>
@@ -18,12 +20,23 @@ export default {
 
     const version = editMode ? 'draft' : 'published';
     const path = route.path === '/' ? '/home' : route.path;
+    const data = { story: {}, stories: [] };
     try {
-      const response = await app.$storyapi.get(`cdn/stories/${path}`, {
+      const storyResponse = await app.$storyapi.get(`cdn/stories/${path}`, {
         version,
         cv: store.state.cacheVersion,
       });
-      return response.data;
+      data.story = storyResponse.data.story;
+      if (!data.story.is_startpage) {
+        return data;
+      }
+      const storiesResponse = await app.$storyapi.get(`cdn/stories`, {
+        starts_with: data.story.full_slug,
+        is_startpage: false,
+        cv: store.state.cacheVersion,
+      });
+      data.stories = storiesResponse.data.stories;
+      return data;
     } catch (err) {
       console.error(error);
       if (!error.response) {
@@ -41,7 +54,12 @@ export default {
     }
   },
   data() {
-    return { story: { content: {} } };
+    return {
+      story: {
+        content: {},
+      },
+      stories: [],
+    };
   },
   mounted() {
     this.$storybridge.on(['input', 'published', 'change'], (event) => {

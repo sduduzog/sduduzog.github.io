@@ -7,6 +7,14 @@
       :key="blok._uid"
       :blok="blok"
     />
+    <div v-if="stories">
+      <component
+        :is="`${slug}-item`"
+        v-for="story in stories"
+        :key="story.uuid"
+        :blok="story"
+      />
+    </div>
   </div>
 </template>
 
@@ -14,6 +22,11 @@
 export default {
   props: {
     blok: { type: Object, default: undefined },
+    slug: { type: String, default: undefined },
+    stories: {
+      type: Array,
+      default: undefined,
+    },
   },
 };
 </script>

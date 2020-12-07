@@ -2,7 +2,7 @@
   <div class="py-1 lg:py-4 space-y-1">
     <nuxt-link
       class="text-xl lg:text-2xl font-semibold hover:text-accent-color"
-      :to="slug"
+      :to="`/${blok.full_slug}`"
     >
       {{ blok.name }}
     </nuxt-link>
@@ -19,12 +19,6 @@ export default {
     blok: { type: Object, default: undefined },
   },
   computed: {
-    slug() {
-      return `/blog/${this.blok.slug}`;
-    },
-    name() {
-      return `${this.blok.name}`;
-    },
     publishDate() {
       const date =
         this.blok.first_published_at ||
@@ -32,9 +26,9 @@ export default {
         this.blok.created_at;
       return format(parseISO(date), 'd MMM yyyy');
     },
-    publishedOn() {
-      return `Published on ${this.publishDate}`;
-    },
+    //   publishedOn() {
+    //     return `Published on ${this.publishDate}`;
+    //   },
   },
 };
 </script>
