@@ -8,7 +8,7 @@
     </nuxt-link>
     <div class="block text-sm text-gray-600">
       <client-only>
-        <span id="foo" ref="dateSpan">Foooo</span>
+        <span ref="dateSpan" />
       </client-only>
       <span v-if="!dynamic"> Published on {{ publishDate }} </span>
     </div>
