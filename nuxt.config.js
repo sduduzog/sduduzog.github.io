@@ -1,3 +1,4 @@
+const hostname = 'https://sduduzog.com';
 export default {
   target: 'static',
   components: [{ path: '~/components/global', global: true }],
@@ -47,12 +48,12 @@ export default {
     [
       '@nuxtjs/robots',
       {
-        Sitemap: '/sitemap.xml',
+        Sitemap: `${hostname}/sitemap.xml`,
       },
     ],
   ],
   sitemap: {
-    hostname: 'https://sduduzog.com',
+    hostname,
   },
 
   /*
