@@ -6,6 +6,9 @@
   </div>
 </template>
 <script>
+import Prism from 'prismjs';
+import 'prismjs/themes/prism-tomorrow.css';
+
 export default {
   props: {
     blok: {
@@ -22,6 +25,9 @@ export default {
         ? this.$storyapi.richTextResolver.render(this.blok.body)
         : '';
     },
+  },
+  mounted() {
+    Prism.highlightAll();
   },
   methods: {
     resize(image, option) {

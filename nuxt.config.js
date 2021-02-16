@@ -31,6 +31,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
+  vendor: ['prismjs'],
   plugins: [],
   /*
    ** Nuxt.js dev-modules
