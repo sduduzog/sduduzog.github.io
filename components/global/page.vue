@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok" class="space-y-12">
+  <div v-editable="blok" class="space-y-8 xl:space-y-12">
     <!-- eslint-disable vue/no-template-shadow -->
     <component
       :is="blok.component"

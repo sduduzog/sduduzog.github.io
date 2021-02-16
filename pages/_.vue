@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-screen-sm lg:max-w-screen-md space-y-8 mx-auto lg:ml-0">
+  <div class="max-w-screen-sm lg:max-w-screen-md space-y-6 mx-auto xl:ml-0">
     <component
       :is="story.content.component"
       v-if="story.content.component"
