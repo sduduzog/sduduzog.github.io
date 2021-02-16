@@ -1,6 +1,7 @@
 <template>
   <div v-editable="blok">
     <img :src="imageSrc" alt="" class="border rounded-md" />
+    <h1 class="my-6">{{ blok.title }}</h1>
     <!-- eslint-disable-next-line vue/no-v-html -->
     <div class="space-y-8 text-gray-800" v-html="richtext" />
   </div>
@@ -25,6 +26,39 @@ export default {
         ? this.$storyapi.richTextResolver.render(this.blok.body)
         : '';
     },
+    description() {
+      const { content } = this.blok.body;
+      if (content.length === 0) {
+        return undefined;
+      }
+      const paragraphs = content.filter((item) => {
+        if (item.type !== 'paragraph') {
+          return false;
+        }
+        return item.content.find((elem) => {
+          return elem.type === 'text';
+        });
+      });
+      if (paragraphs.length === 0) {
+        return undefined;
+      }
+      const { text } = paragraphs[0].content[0];
+      return text;
+      // let text;
+      // paragraphs.forEach((item) => {
+      //   if (item.type !== 'paragraph') {
+      //     return;
+      //   }
+      //   const subItem = item.content.find((element) => {
+      //     return element.type === 'text';
+      //   });
+      //   if (!subItem) {
+      //     return;
+      //   }
+      //   item = subItem.text;
+      // });
+      // return text;
+    },
   },
   mounted() {
     Prism.highlightAll();
@@ -35,6 +69,57 @@ export default {
       const path = image.replace(/(http(s?):)?\/\/a.storyblok.com/, '');
       return imageService + option + path;
     },
+    getDescription() {
+      const { content } = this.blok.body;
+      if (content.length === 0) {
+        return '';
+      }
+      const paragraphs = content.filter((item) => {
+        return item.type === 'paragraph';
+      });
+      let text;
+      paragraphs.forEach((item) => {
+        if (item.type !== 'paragraph') {
+          return;
+        }
+        const subItem = item.content.find((element) => {
+          return element.type === 'text';
+        });
+        if (!subItem) {
+          return;
+        }
+        item = subItem.text;
+      });
+      return text;
+    },
+  },
+  head() {
+    return {
+      title: this.blok.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description,
+        },
+        {
+          name: 'og:title',
+          content: this.blok.title,
+        },
+        {
+          name: 'og:type',
+          content: 'article',
+        },
+        {
+          name: 'og:image',
+          content: `https:${this.imageSrc}`,
+        },
+        {
+          name: 'og:url',
+          content: this.$config.baseURL + this.$route.fullPath,
+        },
+      ],
+    };
   },
 };
 </script>

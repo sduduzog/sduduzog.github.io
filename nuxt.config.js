@@ -1,6 +1,9 @@
 const hostname = 'https://iamsdu.online';
 export default {
   target: 'static',
+  publicRuntimeConfig: {
+    baseURL: process.env.BASE_URL || hostname,
+  },
   components: [{ path: '~/components/global', global: true }],
   /*
    ** Headers of the page
