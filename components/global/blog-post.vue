@@ -2,7 +2,7 @@
   <div v-editable="blok">
     <img :src="imageSrc" alt="" class="border rounded-md" />
     <!-- eslint-disable-next-line vue/no-v-html -->
-    <div class="space-y-6 text-gray-800" v-html="richtext" />
+    <div class="space-y-6 text-gray-800 text-justify" v-html="richtext" />
   </div>
 </template>
 <script>
@@ -54,6 +54,8 @@ h4 {
 }
 p {
   @apply text-base;
+  @apply text-gray-900;
+
   a {
     @apply text-gray-600;
     @apply underline;
@@ -78,7 +80,7 @@ p {
     @apply text-2xl;
   }
   p {
-    @apply text-xl;
+    @apply text-lg;
   }
 }
 </style>
