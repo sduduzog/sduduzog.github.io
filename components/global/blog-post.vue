@@ -38,6 +38,9 @@ export default {
         if (item.type !== 'paragraph') {
           return false;
         }
+        if (!item.content) {
+          return false;
+        }
         return item.content.find((elem) => {
           return elem.type === 'text';
         });
