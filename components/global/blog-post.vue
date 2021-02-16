@@ -103,9 +103,20 @@ export default {
           content: this.description,
         },
         {
+          name: 'twitter:card',
+          content: 'summary_large_image',
+        },
+        {
+          name: 'twitter:site',
+          content: '@sduduzo_g',
+        },
+        { name: 'twitter:creator', content: '@sduduzo_g' },
+        { name: 'twitter:title', content: this.blok.title },
+        {
           name: 'og:title',
           content: this.blok.title,
         },
+        { name: 'og:description', content: this.description },
         {
           name: 'og:type',
           content: 'article',
