@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link v-editable="blok" :to="url">
+  <nuxt-link :to="url">
     {{ blok.name || blok.Name }}
   </nuxt-link>
 </template>

@@ -19,7 +19,10 @@ export default {
   },
   computed: {
     imageSrc() {
-      return `${this.resize(this.blok.image.filename, '768x0/smart')}`;
+      return `${this.$foo.resizeBlokImage(
+        this.blok.image.filename,
+        '768x0/smart',
+      )}`;
     },
     richtext() {
       return this.blok.body
@@ -44,31 +47,12 @@ export default {
       }
       const { text } = paragraphs[0].content[0];
       return text;
-      // let text;
-      // paragraphs.forEach((item) => {
-      //   if (item.type !== 'paragraph') {
-      //     return;
-      //   }
-      //   const subItem = item.content.find((element) => {
-      //     return element.type === 'text';
-      //   });
-      //   if (!subItem) {
-      //     return;
-      //   }
-      //   item = subItem.text;
-      // });
-      // return text;
     },
   },
   mounted() {
     Prism.highlightAll();
   },
   methods: {
-    resize(image, option) {
-      const imageService = '//img2.storyblok.com/';
-      const path = image.replace(/(http(s?):)?\/\/a.storyblok.com/, '');
-      return imageService + option + path;
-    },
     getDescription() {
       const { content } = this.blok.body;
       if (content.length === 0) {
