@@ -1,4 +1,4 @@
-const hostname = 'https://sduduzog.com';
+const hostname = 'https://iamsdu.online';
 export default {
   target: 'static',
   components: [{ path: '~/components/global', global: true }],
