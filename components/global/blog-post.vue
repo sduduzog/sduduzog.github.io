@@ -2,7 +2,7 @@
   <div v-editable="blok">
     <img :src="imageSrc" alt="" class="border rounded-md" />
     <!-- eslint-disable-next-line vue/no-v-html -->
-    <div class="space-y-8 text-gray-800 text-justify" v-html="richtext" />
+    <div class="space-y-8 text-gray-800" v-html="richtext" />
   </div>
 </template>
 <script>
@@ -60,6 +60,7 @@ h4 {
 }
 p {
   @apply text-base;
+  @apply text-justify;
   @apply text-gray-900;
 
   a {
@@ -71,6 +72,16 @@ p {
     @apply m-auto;
     @apply rounded-md;
   }
+}
+ul,
+ol {
+  @apply ml-6;
+}
+ul {
+  @apply list-disc;
+}
+ol {
+  @apply list-decimal;
 }
 @screen lg {
   h1 {

@@ -28,6 +28,10 @@ module.exports = {
       'accent-color': '#ff8f00',
       'overlay-color': 'rgba(255, 255, 255, 0.4)',
     },
+    listStyleType: {
+      disc: 'disc',
+      decimal: 'decimal',
+    },
     extend: {
       boxShadow: {
         x:
