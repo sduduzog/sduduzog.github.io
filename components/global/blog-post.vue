@@ -1,6 +1,6 @@
 <template>
   <div v-editable="blok">
-    <img :src="imageSrc" alt="" class="border rounded-md" />
+    <img :src="imageSrc" alt="" class="border rounded-md w-full" />
     <h1 class="my-6">{{ blok.title }}</h1>
     <!-- eslint-disable-next-line vue/no-v-html -->
     <div class="space-y-8 text-gray-800" v-html="richtext" />

@@ -19,7 +19,7 @@
       </nav>
     </div>
     <div
-      class="p-2 lg:px-0 lg:py-12 lg:max-h-screen flex-grow lg:overflow-auto"
+      class="p-2 lg:px-0 lg:py-12 lg:max-h-screen flex-grow lg:overflow-auto overflow-x-hidden"
     >
       <nuxt />
     </div>
