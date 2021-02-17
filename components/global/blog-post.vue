@@ -100,20 +100,20 @@ export default {
         { name: 'twitter:creator', content: '@sduduzo_g' },
         { name: 'twitter:title', content: this.blok.title },
         {
-          name: 'og:title',
+          property: 'og:title',
           content: this.blok.title,
         },
-        { name: 'og:description', content: this.description },
+        { property: 'og:description', content: this.description },
         {
-          name: 'og:type',
+          property: 'og:type',
           content: 'article',
         },
         {
-          name: 'og:image',
+          property: 'og:image',
           content: `https:${this.imageSrc}`,
         },
         {
-          name: 'og:url',
+          property: 'og:url',
           content: this.$config.baseURL + this.$route.fullPath,
         },
       ],
