@@ -54,6 +54,11 @@ export default {
   },
   mounted() {
     Prism.highlightAll();
+
+    const inlineCodeElements = document.querySelectorAll('p > code');
+    inlineCodeElements.forEach((node) => {
+      Prism.highlightElement(node);
+    });
   },
   methods: {
     getDescription() {
