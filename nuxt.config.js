@@ -22,6 +22,9 @@ export default {
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    htmlAttrs: {
+      lang: 'en', // it sets the language English
+    },
   },
   /*
    ** Customize the progress-bar color
