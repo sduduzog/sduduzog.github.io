@@ -166,6 +166,15 @@ ul {
 ol {
   @apply list-decimal;
 }
+blockquote {
+  @apply border-l-4;
+  @apply border-gray-400;
+  @apply pl-6;
+  p {
+    @apply text-gray-600;
+    @apply italic;
+  }
+}
 @screen lg {
   h1 {
     @apply text-5xl;
