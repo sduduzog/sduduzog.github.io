@@ -8,7 +8,7 @@
       <span class="text-3xl font-bold text-fuchsia-600">{{ abbr }}</span>
     </div>
     <h3 class="text-xl font-semibold">{{ blok.name }}</h3>
-    <a href="github" class="text-fuchsia-600"> {{ github }}</a>
+    <a :href="github" class="text-fuchsia-600"> {{ github }}</a>
   </div>
 </template>
 <script>
