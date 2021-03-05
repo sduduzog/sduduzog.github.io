@@ -16,5 +16,10 @@ export default {
       default: undefined,
     },
   },
+  mounted() {
+    this.blok.projects.forEach((story) => {
+      console.log('container-', story._uid);
+    });
+  },
 };
 </script>
