@@ -1,10 +1,10 @@
 <template>
   <div class="grid md:grid-cols-2 gap-2">
     <component
-      :is="blok.component"
-      v-for="blok in blok.projects"
-      :key="blok._uid"
-      :blok="blok"
+      :is="b.component"
+      v-for="b in blok.projects"
+      :key="b._uid"
+      :blok="b"
     />
   </div>
 </template>

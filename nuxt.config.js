@@ -58,9 +58,16 @@ export default {
         Sitemap: `${hostname}/sitemap.xml`,
       },
     ],
+    '@nuxt/http',
   ],
   sitemap: {
     hostname,
+  },
+
+  tailwindcss: {
+    cssPath: '~/assets/css/tailwind.css',
+    configPath: 'tailwind.config.js',
+    exposeConfig: false,
   },
 
   /*
