@@ -36,7 +36,6 @@ export default {
     if (!process.server) {
       return;
     }
-    console.log(process.server);
     const { url } = this.blok.github_repo;
     const [username, repo] = url.split('/').splice(-2);
     const api = `https://api.github.com/repos/${username}/${repo}/languages`;
@@ -46,7 +45,6 @@ export default {
     }
     const data = await response.json();
     const languages = Object.keys(data);
-    console.log('project-', url, languages);
     this.languages = languages;
   },
   data() {

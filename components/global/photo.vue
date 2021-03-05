@@ -20,8 +20,5 @@ export default {
       return this.blok.src.filename;
     },
   },
-  mounted() {
-    console.log(this.blok);
-  },
 };
 </script>
