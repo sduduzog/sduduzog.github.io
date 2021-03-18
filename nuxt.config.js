@@ -4,7 +4,7 @@ export default {
   publicRuntimeConfig: {
     baseURL: process.env.BASE_URL || hostname,
   },
-  components: [{ path: '~/components/global', global: true }],
+  components: true,
   /*
    ** Headers of the page
    */
@@ -42,7 +42,7 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/tailwindcss'],
+  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/tailwindcss', 'nuxt-vite'],
   /*
    ** Nuxt.js modules
    */
@@ -65,9 +65,7 @@ export default {
   },
 
   tailwindcss: {
-    cssPath: '~/assets/css/tailwind.css',
-    configPath: 'tailwind.config.js',
-    exposeConfig: false,
+    jit: true,
   },
 
   /*
