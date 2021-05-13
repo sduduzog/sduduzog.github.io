@@ -42,7 +42,12 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/tailwindcss', 'nuxt-vite'],
+  buildModules: [
+    '@nuxt/typescript-build',
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/tailwindcss',
+    'nuxt-vite',
+  ],
   /*
    ** Nuxt.js modules
    */
@@ -62,10 +67,6 @@ export default {
   ],
   sitemap: {
     hostname,
-  },
-
-  tailwindcss: {
-    jit: true,
   },
 
   /*

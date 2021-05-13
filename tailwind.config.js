@@ -6,10 +6,7 @@ const colors = require('tailwindcss/colors');
  ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  */
 module.exports = {
-  future: {
-    purgeLayersByDefault: true,
-    removeDeprecatedGapUtilities: true,
-  },
+  mode: true,
   purge: {
     enabled: process.env.NODE_ENV === 'production',
     content: [
@@ -34,8 +31,7 @@ module.exports = {
     },
     extend: {
       boxShadow: {
-        x:
-          '0 20px 25px -5px rgba(0, 0, 0, .4), 0 10px 10px -5px rgba(0, 0, 0, .4)',
+        x: '0 20px 25px -5px rgba(0, 0, 0, .4), 0 10px 10px -5px rgba(0, 0, 0, .4)',
       },
       gridTemplateColumns: {
         layout: '24rem 1fr',
