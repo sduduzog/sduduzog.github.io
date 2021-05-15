@@ -1,9 +1,16 @@
-export const state = () => ({
+import { MutationTree, ActionTree } from 'vuex';
+type RootState = {
+  cacheVersion: string;
+  listing: any;
+  story?: any;
+  stories?: any;
+};
+export const state = (): RootState => ({
   cacheVersion: '',
   listing: {},
 });
 
-export const mutations = {
+export const mutations: MutationTree<RootState> = {
   setCacheVersion(_state, version) {
     _state.cacheVersion = version;
   },
@@ -12,9 +19,11 @@ export const mutations = {
   },
 };
 
-export const actions = {
+export const actions: ActionTree<RootState, RootState> = {
   async loadCacheVersion({ commit }) {
     const response = await this.$storyapi.get('cdn/spaces/me');
     return commit('setCacheVersion', response.data.space.version);
   },
+  async loadStory() {},
+  async loadStories() {},
 };

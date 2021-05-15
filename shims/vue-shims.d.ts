@@ -12,29 +12,31 @@ interface StoryAPI {
 
 declare module 'vue/types/vue' {
   interface Vue {
-    $storybridge: StoryBridge;
     $storyapi: StoryAPI;
   }
-  interface Context {
-    $storybridge: StoryBridge;
-  }
+  interface Context {}
 }
 // declare module '@nuxt/vue-app' {
-//   interface Context {
-//     $storybridge: {};
-//   }
-
-//   interface NuxtAppOptions {
-//     $storybridge: {};
-//   }
+// interface Context {
+// }
+// interface NuxtAppOptions {
+// }
 // }
 
-// declare module '@nuxt/types' {
-//   interface Context {
-//     $storybridge: {};
-//   }
+declare module '@nuxt/types' {
+  interface Context {
+    $storyapi: StoryAPI;
+  }
 
-//   interface NuxtAppOptions {
-//     $storybridge: {};
-//   }
-// }
+  // interface NuxtAppOptions {
+  // }
+  // interface NuxtAppOptions {
+  // }
+  // interface Configuration {
+  // }
+}
+declare module 'vuex' {
+  interface Store<S> {
+    $storyapi: StoryAPI;
+  }
+}
