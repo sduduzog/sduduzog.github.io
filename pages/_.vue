@@ -1,17 +1,19 @@
 <template>
   <div class="max-w-screen-sm lg:max-w-screen-md space-y-6 mx-auto xl:ml-0">
-    <component
+    <!-- <component
       :is="story.content.component"
       v-if="story.content.component"
       :key="story.content._uid"
       :blok="story.content"
       :slug="story.slug"
       :stories="stories"
-    />
+    /> -->
   </div>
 </template>
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from '@nuxtjs/composition-api';
+
+export default defineComponent({
   async asyncData({ error, query, isDev, route, app, store }) {
     const editMode = query._storyblok || isDev;
     isDev ||
@@ -20,7 +22,10 @@ export default {
 
     const version = editMode ? 'draft' : 'published';
     const path = route.path === '/' ? '/home' : route.path;
-    const data = { story: {}, stories: [] };
+    const data = {
+      story: { id: 0, full_slug: '', is_startpage: false },
+      stories: [],
+    };
     try {
       const storyResponse = await app.$storyapi.get(`cdn/stories/${path}`, {
         version,
@@ -39,15 +44,15 @@ export default {
       return data;
     } catch (err) {
       console.error(error);
-      if (!error.response) {
+      if (!err.response) {
         error({
           statusCode: 404,
           message: 'Failed to receive content from api',
         });
       } else {
         error({
-          statusCode: error.response.status,
-          message: error.response.data,
+          statusCode: err.response.status,
+          message: err.response.data,
         });
       }
       return {};
@@ -56,6 +61,7 @@ export default {
   data() {
     return {
       story: {
+        id: undefined,
         content: {},
       },
       stories: [],
@@ -72,5 +78,5 @@ export default {
       }
     });
   },
-};
+});
 </script>

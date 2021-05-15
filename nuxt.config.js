@@ -45,8 +45,7 @@ export default {
   buildModules: [
     '@nuxt/typescript-build',
     '@nuxtjs/eslint-module',
-    '@nuxtjs/tailwindcss',
-    'nuxt-vite',
+    '@nuxtjs/composition-api/module',
   ],
   /*
    ** Nuxt.js modules
@@ -56,14 +55,14 @@ export default {
       'storyblok-nuxt',
       { accessToken: '5i2lrLgiTzCtvr9fKcp5PAtt', cacheProvider: 'memory' },
     ],
-    '@nuxtjs/sitemap',
-    [
-      '@nuxtjs/robots',
-      {
-        Sitemap: `${hostname}/sitemap.xml`,
-      },
-    ],
-    '@nuxt/http',
+    // "@nuxtjs/sitemap",
+    // [
+    //   "@nuxtjs/robots",
+    //   {
+    //     Sitemap: `${hostname}/sitemap.xml`,
+    //   },
+    // ],
+    // "@nuxt/http",
   ],
   sitemap: {
     hostname,
@@ -77,6 +76,7 @@ export default {
   },
   generate: {
     routes: ['/'],
+    interval: 1000,
   },
   build: {
     /*

@@ -25,8 +25,10 @@
     </div>
   </div>
 </template>
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from '@nuxtjs/composition-api';
+
+export default defineComponent({
   async fetch() {
     const { error, query, isDev } = this.$nuxt.context;
     const { cacheVersion } = this.$store.state;
@@ -63,7 +65,7 @@ export default {
   data() {
     return { story: { content: {} } };
   },
-};
+});
 </script>
 <style lang="scss">
 .nuxt-link-exact-active {
