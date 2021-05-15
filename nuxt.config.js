@@ -1,6 +1,7 @@
 const hostname = 'https://iamsdu.online';
 export default {
   target: 'static',
+  ssr: true,
   publicRuntimeConfig: {
     baseURL: process.env.BASE_URL || hostname,
   },

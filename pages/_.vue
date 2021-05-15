@@ -34,7 +34,7 @@ export default defineComponent({
     const { $storyapi, route, store, isDev } = useContext();
     const { path, query } = route.value;
     const slug = computed(() =>
-      path === '/' ? 'home' : path.replace(/\//g, '#'),
+      path === '/' ? 'home' : path.replace(/\/$/, '').replace(/\//g, '~'),
     );
     const blok = useStatic(
       async (key) => {
@@ -43,7 +43,7 @@ export default defineComponent({
         const editMode = _storyblok || isDev;
         const version = editMode ? 'draft' : 'published';
         const storyResponse = await $storyapi.get(
-          `cdn/stories/${key.replace(/#/g, '/')}`,
+          `cdn/stories/${key.replace(/~/g, '/')}`,
           {
             version,
             cv: cacheVersion,
