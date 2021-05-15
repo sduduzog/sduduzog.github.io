@@ -17,6 +17,45 @@ export default {
       default: undefined,
     },
   },
+  head() {
+    return {
+      title: this.blok.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description,
+        },
+        {
+          name: 'twitter:card',
+          content: 'summary_large_image',
+        },
+        {
+          name: 'twitter:site',
+          content: '@sduduzo_g',
+        },
+        { name: 'twitter:creator', content: '@sduduzo_g' },
+        { name: 'twitter:title', content: this.blok.title },
+        {
+          property: 'og:title',
+          content: this.blok.title,
+        },
+        { property: 'og:description', content: this.description },
+        {
+          property: 'og:type',
+          content: 'article',
+        },
+        {
+          property: 'og:image',
+          content: `https:${this.imageSrc}`,
+        },
+        {
+          property: 'og:url',
+          content: this.$config.baseURL + this.$route.fullPath,
+        },
+      ],
+    };
+  },
   computed: {
     imageSrc() {
       return `${this.$foo.resizeBlokImage(
@@ -84,45 +123,6 @@ export default {
       });
       return text;
     },
-  },
-  head() {
-    return {
-      title: this.blok.title,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.description,
-        },
-        {
-          name: 'twitter:card',
-          content: 'summary_large_image',
-        },
-        {
-          name: 'twitter:site',
-          content: '@sduduzo_g',
-        },
-        { name: 'twitter:creator', content: '@sduduzo_g' },
-        { name: 'twitter:title', content: this.blok.title },
-        {
-          property: 'og:title',
-          content: this.blok.title,
-        },
-        { property: 'og:description', content: this.description },
-        {
-          property: 'og:type',
-          content: 'article',
-        },
-        {
-          property: 'og:image',
-          content: `https:${this.imageSrc}`,
-        },
-        {
-          property: 'og:url',
-          content: this.$config.baseURL + this.$route.fullPath,
-        },
-      ],
-    };
   },
 };
 </script>

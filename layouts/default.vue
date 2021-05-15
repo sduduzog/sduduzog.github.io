@@ -18,6 +18,7 @@
         />
       </nav>
     </div>
+    <!-- prettier-ignore -->
     <div
       class="p-2 lg:px-0 lg:py-12 xl:max-h-screen flex-grow lg:overflowss-auto overflow-x-hidden"
     >
@@ -29,6 +30,9 @@
 import { defineComponent } from '@nuxtjs/composition-api';
 
 export default defineComponent({
+  data() {
+    return { story: { content: {} } };
+  },
   async fetch() {
     const { error, query, isDev } = this.$nuxt.context;
     const { cacheVersion } = this.$store.state;
@@ -61,9 +65,6 @@ export default defineComponent({
     } catch (err) {
       error({ statusCode: 404 });
     }
-  },
-  data() {
-    return { story: { content: {} } };
   },
 });
 </script>

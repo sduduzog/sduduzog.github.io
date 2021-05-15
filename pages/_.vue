@@ -1,13 +1,13 @@
 <template>
   <div class="max-w-screen-sm lg:max-w-screen-md space-y-6 mx-auto xl:ml-0">
-    <!-- <component
+    <component
       :is="story.content.component"
       v-if="story.content.component"
       :key="story.content._uid"
       :blok="story.content"
       :slug="story.slug"
       :stories="stories"
-    /> -->
+    />
   </div>
 </template>
 <script lang="ts">
@@ -67,16 +67,16 @@ export default defineComponent({
       stories: [],
     };
   },
-  mounted() {
-    this.$storybridge.on(['input', 'published', 'change'], (event) => {
-      if (event.action === 'input') {
-        if (event.story.id === this.story.id) {
-          this.story.content = event.story.content;
-        }
-      } else if (!event.slugChanged) {
-        window.location.reload();
-      }
-    });
-  },
+  // mounted() {
+  //   this.$storybridge.on(['input', 'published', 'change'], (event) => {
+  //     if (event.action === 'input') {
+  //       if (event.story.id === this.story.id) {
+  //         this.story.content = event.story.content;
+  //       }
+  //     } else if (!event.slugChanged) {
+  //       window.location.reload();
+  //     }
+  //   });
+  // },
 });
 </script>

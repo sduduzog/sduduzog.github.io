@@ -6,7 +6,7 @@ const colors = require('tailwindcss/colors');
  ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  */
 module.exports = {
-  mode: true,
+  mode: 'jit',
   purge: {
     enabled: process.env.NODE_ENV === 'production',
     content: [

@@ -32,6 +32,11 @@ export default {
       default: undefined,
     },
   },
+  data() {
+    return {
+      languages: [],
+    };
+  },
   async fetch() {
     if (!process.server) {
       return;
@@ -46,11 +51,6 @@ export default {
     const data = await response.json();
     const languages = Object.keys(data);
     this.languages = languages;
-  },
-  data() {
-    return {
-      languages: [],
-    };
   },
   fetchKey() {
     return this.github;

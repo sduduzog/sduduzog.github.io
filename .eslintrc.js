@@ -8,7 +8,7 @@ module.exports = {
   extends: [
     //   'airbnb-base',
     '@nuxtjs/eslint-config-typescript',
-    'prettier/vue',
+    'prettier',
     'plugin:prettier/recommended',
   ],
   plugins: ['prettier'],
@@ -17,23 +17,23 @@ module.exports = {
     ecmaVersion: 12,
   },
   rules: {
-    //   camelcase: 'off',
-    //   'no-underscore-dangle': 'off',
-    //   'no-param-reassign': 'off',
+    camelcase: 'off',
+    // 'no-underscore-dangle': 'off',
+    // 'no-param-reassign': 'off',
     'prettier/prettier': 'error',
-    //   'import/no-extraneous-dependencies': 'off',
-    //   'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    //   'vue/html-self-closing': [
-    //     'error',
-    //     {
-    //       html: {
-    //         void: 'always',
-    //         normal: 'always',
-    //         component: 'always',
-    //       },
-    //       svg: 'always',
-    //       math: 'always',
-    //     },
-    //   ],
+    // 'import/no-extraneous-dependencies': 'off',
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'vue/html-self-closing': [
+      'error',
+      {
+        html: {
+          void: 'always',
+          normal: 'always',
+          component: 'always',
+        },
+        svg: 'always',
+        math: 'always',
+      },
+    ],
   },
 };
