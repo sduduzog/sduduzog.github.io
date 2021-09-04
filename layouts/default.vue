@@ -11,7 +11,7 @@
         <sun-icon v-else size="1x" />
       </div>
     </div>
-    <div class="border w-full max-w-screen-md mx-auto">
+    <div class="w-full max-w-screen-md mx-auto">
       <nuxt />
     </div>
   </div>
@@ -48,8 +48,14 @@ export default defineComponent({
 });
 </script>
 <style lang="scss">
-.nuxt-link-exact-active {
-  @apply underline;
-  @apply font-bold;
+h1 {
+  @apply text-7xl md:text-8xl font-black text-fuchsia-500;
+}
+p {
+  @apply text-gray-800 dark:text-gray-200;
+
+  a {
+    @apply underline text-fuchsia-600 dark:text-fuchsia-400;
+  }
 }
 </style>

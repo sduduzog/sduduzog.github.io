@@ -73,14 +73,14 @@ export default {
       if (content.length === 0) {
         return undefined;
       }
-      const paragraphs = content.filter((item) => {
+      const paragraphs = content.filter(item => {
         if (item.type !== 'paragraph') {
           return false;
         }
         if (!item.content) {
           return false;
         }
-        return item.content.find((elem) => {
+        return item.content.find(elem => {
           return elem.type === 'text';
         });
       });
@@ -95,7 +95,7 @@ export default {
     Prism.highlightAll();
 
     const inlineCodeElements = document.querySelectorAll('p > code');
-    inlineCodeElements.forEach((node) => {
+    inlineCodeElements.forEach(node => {
       Prism.highlightElement(node);
     });
   },
@@ -105,15 +105,15 @@ export default {
       if (content.length === 0) {
         return '';
       }
-      const paragraphs = content.filter((item) => {
+      const paragraphs = content.filter(item => {
         return item.type === 'paragraph';
       });
       let text;
-      paragraphs.forEach((item) => {
+      paragraphs.forEach(item => {
         if (item.type !== 'paragraph') {
           return;
         }
-        const subItem = item.content.find((element) => {
+        const subItem = item.content.find(element => {
           return element.type === 'text';
         });
         if (!subItem) {
@@ -126,7 +126,7 @@ export default {
   },
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 h1,
 h2,
 h3,

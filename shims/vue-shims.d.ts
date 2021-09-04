@@ -3,11 +3,24 @@ declare module '*.vue' {
   export default Vue;
 }
 
-interface StoryBridge {
-  on: (arg0: Array<string>, callback: (event: any) => void) => void;
+type StoryblokEventAction = 'input' | 'published' | 'change';
+interface StoryblokEvent {
+  action: StoryblokEventAction;
+  story: any;
+}
+interface StoryblokInstance {
+  on: (
+    actions: Array<StoryblokEventAction>,
+    callback: (event: StoryblokEvent) => void,
+  ) => void;
+}
+
+interface RichTextResolver {
+  render: (body: any) => any;
 }
 interface StoryAPI {
   get: any;
+  richTextResolver: RichTextResolver;
 }
 
 declare module 'vue/types/vue' {
@@ -16,27 +29,23 @@ declare module 'vue/types/vue' {
   }
   interface Context {}
 }
-// declare module '@nuxt/vue-app' {
-// interface Context {
-// }
-// interface NuxtAppOptions {
-// }
-// }
 
 declare module '@nuxt/types' {
   interface Context {
     $storyapi: StoryAPI;
+    $storybridge: (cb: Function) => void;
   }
-
-  // interface NuxtAppOptions {
-  // }
-  // interface NuxtAppOptions {
-  // }
-  // interface Configuration {
-  // }
 }
 declare module 'vuex' {
   interface Store<S> {
     $storyapi: StoryAPI;
+  }
+}
+
+type StoryblokBridgeConstructor = new () => StoryblokInstance;
+
+declare global {
+  interface Window {
+    StoryblokBridge: StoryblokBridgeConstructor;
   }
 }
