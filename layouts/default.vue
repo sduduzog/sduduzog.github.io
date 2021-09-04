@@ -1,30 +1,5 @@
 <template>
-  <div class="flex flex-wrap lg:flex-no-wrap w-full overflow-auto max-h-screen">
-    <div class="flex-grow md:flex-grow-0 w-full max-w-sm mx-auto md:pt-20">
-      <img
-        class="h-32 m-auto mt-12 rounded-lg shadow-lg md:mt-12"
-        src="~/assets/img/sdu.jpg"
-        alt="My face"
-      />
-      <h1 class="p-4 mt-6 text-lg font-semibold text-center text-gray-700">
-        Beautus S. Gumede
-      </h1>
-      <nav class="p-3 flex justify-evenly">
-        <component
-          :is="item.component"
-          v-for="item in story.content.nav_bar"
-          :key="item._uid"
-          :blok="item"
-        />
-      </nav>
-    </div>
-    <!-- prettier-ignore -->
-    <div
-      class="p-2 lg:px-0 lg:py-12 xl:max-h-screen flex-grow lg:overflowss-auto overflow-x-hidden"
-    >
-      <nuxt />
-    </div>
-  </div>
+  <div>Cheese</div>
 </template>
 <script lang="ts">
 import {

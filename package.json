@@ -17,18 +17,19 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "axios": "^0.21.1",
     "date-fns": "^2.21.3",
-    "nuxt": "^2.15.6",
+    "nuxt": "^2.15.8",
+    "prismjs": "^1.24.1",
     "storyblok-nuxt": "^2.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.14.2",
     "@babel/preset-env": "^7.14.2",
-    "@nuxt/types": "^2.15.6",
+    "@nuxt/types": "^2.15.8",
     "@nuxt/typescript-build": "^2.1.0",
-    "@nuxtjs/composition-api": "^0.23.4",
+    "@nuxtjs/composition-api": "^0.27.0",
     "@nuxtjs/eslint-config-typescript": "^6.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
-    "@nuxtjs/tailwindcss": "^4.1.2",
+    "@nuxtjs/tailwindcss": "^4.2.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.3.0",
@@ -36,8 +37,7 @@
     "eslint-plugin-import": "^2.23.0",
     "eslint-plugin-prettier": "^3.4.0",
     "postcss": "^8.2.15",
-    "prettier": "^2.3.0",
-    "prismjs": "^1.23.0",
+    "prettier": "^2.3.2",
     "sass": "^1.32.13",
     "serve": "^11.3.2"
   }
