@@ -6,34 +6,16 @@ module.exports = {
     node: true,
   },
   extends: [
-    //   'airbnb-base',
     '@nuxtjs/eslint-config-typescript',
+    'plugin:nuxt/recommended',
+    'plugin:vue/essential',
+    'eslint:recommended',
     'prettier',
-    'plugin:prettier/recommended',
   ],
   plugins: ['prettier'],
   parserOptions: {
     parser: 'babel-eslint',
     ecmaVersion: 12,
   },
-  rules: {
-    camelcase: 'off',
-    // 'no-underscore-dangle': 'off',
-    // 'no-param-reassign': 'off',
-    'prettier/prettier': 'error',
-    // 'import/no-extraneous-dependencies': 'off',
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'vue/html-self-closing': [
-      'error',
-      {
-        html: {
-          void: 'always',
-          normal: 'always',
-          component: 'always',
-        },
-        svg: 'always',
-        math: 'always',
-      },
-    ],
-  },
+  rules: {},
 };

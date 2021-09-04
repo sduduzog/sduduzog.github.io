@@ -1,55 +1,49 @@
 <template>
-  <div>Cheese</div>
+  <div
+    class="min-h-screen bg-white dark:bg-gray-900 font-sans flex items-center"
+  >
+    <div class="absolute top-0 w-full flex justify-end p-2">
+      <div
+        class="rounded-full p-2 bg-gray-300 dark:bg-gray-300 dark:bg-opcity-50"
+        @click="toggleTheme"
+      >
+        <moon-icon v-if="theme === 'dark'" size="1x" />
+        <sun-icon v-else size="1x" />
+      </div>
+    </div>
+    <div class="border w-full max-w-screen-md mx-auto">
+      <nuxt />
+    </div>
+  </div>
 </template>
 <script lang="ts">
-import {
-  defineComponent,
-  ref,
-  useContext,
-  useStatic,
-} from '@nuxtjs/composition-api';
+import { defineComponent, onMounted, watch } from '@nuxtjs/composition-api';
+import { useMediaQuery, useStorage } from '@vueuse/core';
+import { SunIcon, MoonIcon } from 'vue-feather-icons';
 
 export default defineComponent({
+  components: { SunIcon, MoonIcon },
   setup() {
-    const slug = ref('global');
-    const { $storyapi, route, store, isDev } = useContext();
-    const { query } = route.value;
-    const story = useStatic(
-      async (slug) => {
-        const { cacheVersion } = store.state;
-        const { _storyblok } = query;
+    const isPreferredDark = useMediaQuery('(prefers-color-scheme: dark)');
+    const defaultThemeState = isPreferredDark.value ? 'dark' : 'light';
+    const theme = useStorage('theme', defaultThemeState);
 
-        let editMode = false;
+    onMounted(() => toggleThemeClass(theme.value));
 
-        if (
-          _storyblok ||
-          isDev ||
-          (typeof window !== 'undefined' &&
-            window.localStorage.getItem('_storyblok_draft_mode'))
-        ) {
-          if (typeof window !== 'undefined') {
-            window.localStorage.setItem('_storyblok_draft_mode', '1');
-            if (window.location === window.parent.location) {
-              window.localStorage.removeItem('_storyblok_draft_mode');
-            }
-          }
+    watch(theme, toggleThemeClass);
 
-          editMode = true;
-        }
+    function toggleThemeClass(themeString: string) {
+      if (themeString === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    }
 
-        const version = editMode ? 'draft' : 'published';
-        const storyResponse = await $storyapi.get(`cdn/stories/${slug}`, {
-          version,
-          cv: cacheVersion,
-        });
-
-        const { story } = storyResponse.data;
-        return story;
-      },
-      slug,
-      'options',
-    );
-    return { story };
+    function toggleTheme() {
+      theme.value = theme.value === 'dark' ? 'light' : 'dark';
+    }
+    return { toggleTheme, theme };
   },
 });
 </script>

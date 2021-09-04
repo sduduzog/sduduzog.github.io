@@ -1,5 +1,10 @@
+import { NuxtConfig } from '@nuxt/types';
+import fs from 'fs';
+import path from 'path';
+
 const hostname = 'https://iamsdu.online';
-export default {
+
+export default (): NuxtConfig => ({
   target: 'static',
   ssr: true,
   publicRuntimeConfig: {
@@ -34,7 +39,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['~/assets/css/font.css'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -45,8 +50,8 @@ export default {
    */
   buildModules: [
     '@nuxt/typescript-build',
-    '@nuxtjs/eslint-module',
     '@nuxtjs/composition-api/module',
+    '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
   ],
   /*
@@ -69,10 +74,6 @@ export default {
   sitemap: {
     hostname,
   },
-
-  /*
-   ** Build configuration
-   */
   router: {
     middleware: 'prepareStories',
   },
@@ -80,13 +81,11 @@ export default {
     routes: ['/'],
     interval: 1000,
   },
+
   build: {
-    /*
-     ** You can extend webpack config here
-     */
     extend(config, ctx) {
       if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
+        config.module?.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
@@ -95,4 +94,4 @@ export default {
       }
     },
   },
-};
+});

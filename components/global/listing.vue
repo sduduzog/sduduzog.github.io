@@ -34,6 +34,7 @@ export default {
 
     const version = editMode ? 'draft' : 'published';
 
+    // eslint-disable-next-line camelcase
     const { cached_url } = this.blok.base;
     try {
       const response = await this.$storyapi.get(`cdn/stories`, {
@@ -50,9 +51,10 @@ export default {
   },
   computed: {
     ...mapState({
-      stories: (state) => state.listing,
+      stories: state => state.listing,
     }),
     listing() {
+      // eslint-disable-next-line camelcase
       const { cached_url } = this.blok.base;
       return this.stories[cached_url] || [];
     },
