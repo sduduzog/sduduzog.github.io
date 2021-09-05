@@ -15,7 +15,7 @@ export default (): NuxtConfig => ({
    ** Headers of the page
    */
   head: {
-    title: 'I am Sdu' || process.env.npm_package_name,
+    title: "Hi, I'm Sdu" || process.env.npm_package_name,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
