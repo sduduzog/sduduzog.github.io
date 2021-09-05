@@ -49,7 +49,7 @@ export default defineComponent({
 </script>
 <style lang="scss">
 h1 {
-  @apply text-7xl md:text-8xl font-black text-fuchsia-500;
+  @apply text-6xl md:text-7xl font-black text-fuchsia-500;
 }
 p {
   @apply text-gray-800 dark:text-gray-200;
