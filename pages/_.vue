@@ -1,7 +1,7 @@
 <template>
   <lazy-hydrate never>
     <component
-      :is="story.content.component"
+      :is="`lazy-${story.content.component}`"
       v-if="story && story.content.component"
       :key="story.content._uid"
       :blok="story.content"
