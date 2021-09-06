@@ -92,11 +92,11 @@ export default (): NuxtConfig => ({
           exclude: /(node_modules)/,
         });
       }
-      config.module?.rules.push({
-        test: /\.mjs$/,
-        include: /node_modules/,
-        type: 'javascript/auto',
-      });
+      // config.module?.rules.push({
+      //   test: /\.mjs$/,
+      //   include: /node_modules/,
+      //   type: 'javascript/auto',
+      // });
     },
   },
 });
