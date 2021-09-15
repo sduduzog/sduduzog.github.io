@@ -1,18 +1,35 @@
 <template>
   <div v-editable="blok" class="grid md:grid-cols-3 gap-2">
     <h3
-      class="col-span-full text-3xl font-bold text-gray-400 dark:text-gray-500">
+      class="
+        mb-4
+        col-span-full
+        text-3xl
+        font-black
+        text-gray-400
+        dark:text-gray-500
+      ">
       {{ blok.title }}
     </h3>
     <div
       v-for="item in list"
       :key="item.uuid"
-      class="rounded bg-gray-100 hover:bg-gray-50 dark:bg-gray-800 p-4">
+      class="
+        rounded
+        bg-gray-100
+        hover:bg-gray-50
+        dark:bg-gray-800
+        p-4
+        space-y-4
+      ">
       <nuxt-link
         :to="`${slug}/${item.slug}`"
-        class="line-clamp-3 hover:underline">
+        class="line-clamp-3 hover:underline font-semibold">
         {{ item.name }}
       </nuxt-link>
+      <span class="text-sm font-medium text-gray-400 dark:text-gray-500">
+        Published {{ formatDate(item) }}
+      </span>
     </div>
   </div>
 </template>
@@ -32,7 +49,7 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const { $storyapi, store } = useContext();
+    const { $storyapi, $dateFns, store, isDev } = useContext();
     const { cacheVersion } = store.state;
     const { root } = props.blok;
     const { url, cached_url: cachedUrl } = root;
@@ -48,7 +65,25 @@ export default defineComponent({
       const { stories } = response.data;
       list.value = stories;
     });
-    return { slug, list };
+    function formatDate(blok: any) {
+      if (!blok) {
+        return '';
+      }
+      const date =
+        blok.first_published_at || blok.published_at || blok.created_at;
+      try {
+        const parsedDate = $dateFns.parseISO(date);
+        const formattedDate = $dateFns.format(parsedDate, 'd MMM yyyy');
+        return formattedDate;
+      } catch (e) {
+        if (isDev) {
+          // eslint-disable-next-line no-console
+          console.error(e);
+        }
+      }
+      return '';
+    }
+    return { slug, list, formatDate };
   },
 });
 </script>

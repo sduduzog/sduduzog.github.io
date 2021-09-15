@@ -53,6 +53,7 @@ export default (): NuxtConfig => ({
     '@nuxtjs/composition-api/module',
     '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/date-fns',
   ],
   /*
    ** Nuxt.js modules

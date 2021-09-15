@@ -1,13 +1,13 @@
 <template>
-  <!-- <lazy-hydrate never> -->
-  <component
-    :is="`lazy-${story.content.component}`"
-    v-if="story && story.content.component"
-    :key="story.content._uid"
-    :blok="story.content"
-    :slug="story.slug"
-    :stories="stories" />
-  <!-- </lazy-hydrate> -->
+  <lazy-hydrate :never="!isDev">
+    <component
+      :is="`lazy-${story.content.component}`"
+      v-if="story && story.content.component"
+      :key="story.content._uid"
+      :blok="story.content"
+      :slug="story.slug"
+      :stories="stories" />
+  </lazy-hydrate>
 </template>
 <script lang="ts">
 import {
@@ -80,7 +80,7 @@ export default defineComponent({
       )}' is="lazy-${component}" />`;
     });
 
-    return { story, stories };
+    return { story, stories, isDev };
   },
 });
 </script>

@@ -15,7 +15,12 @@
       "~/*": ["./*"],
       "@/*": ["./*"]
     },
-    "types": ["@types/node", "@nuxt/types", "vue-feather-icons"]
+    "types": [
+      "@types/node",
+      "@nuxt/types",
+      "@nuxtjs/date-fns",
+      "vue-feather-icons"
+    ]
   },
   "exclude": ["node_modules", ".nuxt", "dist"]
 }
