@@ -85,7 +85,7 @@ h2 {
   @apply text-3xl md:text-4xl;
 }
 p {
-  @apply text-gray-800 dark:text-gray-200;
+  @apply font-medium text-gray-800 dark:text-gray-200;
 
   a {
     @apply underline font-medium;
