@@ -2,9 +2,9 @@
   <div v-editable="blok">
     <lazy-generic-header />
     <img :src="imageSrc" alt="" class="border rounded-md w-full" />
-    <h1 class="my-6">{{ blok.title }}</h1>
+    <h1 class="my-6 px-4">{{ blok.title }}</h1>
     <!-- eslint-disable-next-line vue/no-v-html -->
-    <div class="space-y-8 text-gray-800" v-html="richtext" />
+    <div class="p-4 space-y-8" v-html="richtext" />
   </div>
 </template>
 <script>
@@ -127,68 +127,3 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
-h1 {
-  @apply text-3xl;
-}
-h2 {
-  @apply text-2xl;
-}
-h3 {
-  @apply text-xl;
-}
-h4 {
-  @apply text-lg;
-}
-p {
-  @apply text-base;
-  @apply text-justify;
-  @apply text-gray-900;
-
-  a {
-    @apply text-gray-600;
-    @apply underline;
-  }
-  img {
-    @apply border;
-    @apply m-auto;
-    @apply rounded-md;
-  }
-}
-ul,
-ol {
-  @apply ml-6;
-}
-ul {
-  @apply list-disc;
-}
-ol {
-  @apply list-decimal;
-}
-blockquote {
-  @apply border-l-4;
-  @apply border-gray-400;
-  @apply pl-6;
-  p {
-    @apply text-gray-600;
-    @apply italic;
-  }
-}
-@screen lg {
-  h1 {
-    @apply text-5xl;
-  }
-  h2 {
-    @apply text-4xl;
-  }
-  h3 {
-    @apply text-3xl;
-  }
-  h4 {
-    @apply text-2xl;
-  }
-  p {
-    @apply text-lg;
-  }
-}
-</style>

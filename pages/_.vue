@@ -5,8 +5,7 @@
       v-if="story && story.content.component"
       :key="story.content._uid"
       :blok="story.content"
-      :slug="story.slug"
-      :stories="stories" />
+      :slug="story.slug" />
   </lazy-hydrate>
 </template>
 <script lang="ts">
@@ -26,7 +25,6 @@ export default defineComponent({
   },
   setup() {
     const story = ref();
-    const stories = ref();
     const { $storyapi, $storybridge, route, store, isDev } = useContext();
     const { path, query } = route.value;
     const slug = computed(() =>
@@ -62,16 +60,6 @@ export default defineComponent({
       );
       const { story: storyData } = storyResponse.data;
       story.value = storyData;
-      if (!storyData.is_startpage) {
-        return;
-      }
-      const storiesResponse = await $storyapi.get(`cdn/stories`, {
-        starts_with: storyData.full_slug,
-        is_startpage: false,
-        cv: cacheVersion,
-      });
-      const { stories: storiesData } = storiesResponse.data;
-      stories.value = storiesData;
     });
 
     $storyapi.setComponentResolver((component, blok) => {
@@ -80,7 +68,7 @@ export default defineComponent({
       )}' is="lazy-${component}" />`;
     });
 
-    return { story, stories, isDev };
+    return { story, isDev };
   },
 });
 </script>
@@ -91,7 +79,7 @@ h2 {
   @apply text-fuchsia-600 dark:text-fuchsia-500 font-black;
 }
 h1 {
-  @apply text-6xl md:text-7xl;
+  @apply text-5xl md:text-7xl;
 }
 h2 {
   @apply text-3xl md:text-4xl;
@@ -102,8 +90,33 @@ p {
   a {
     @apply underline font-medium;
   }
+  img {
+    @apply border;
+    @apply m-auto;
+    @apply rounded-md;
+  }
 }
 a {
   @apply text-fuchsia-600 dark:text-fuchsia-500;
+}
+
+ul,
+ol {
+  @apply ml-6;
+}
+ul {
+  @apply list-disc;
+}
+ol {
+  @apply list-decimal;
+}
+blockquote {
+  @apply border-l-4;
+  @apply border-gray-400;
+  @apply pl-6;
+  p {
+    @apply text-gray-600;
+    @apply italic;
+  }
 }
 </style>
