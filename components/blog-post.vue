@@ -1,5 +1,6 @@
 <template>
   <div v-editable="blok">
+    <lazy-generic-header />
     <img :src="imageSrc" alt="" class="border rounded-md w-full" />
     <h1 class="my-6">{{ blok.title }}</h1>
     <!-- eslint-disable-next-line vue/no-v-html -->
@@ -127,12 +128,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-h1,
-h2,
-h3,
-h4 {
-  @apply font-bold;
-}
 h1 {
   @apply text-3xl;
 }

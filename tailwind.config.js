@@ -17,12 +17,8 @@ module.exports = {
       black: colors.black,
       blue: colors.blue,
       gray: colors.coolGray,
-      cyan: colors.cyan,
       fuchsia: colors.fuchsia,
-      background: '#fafafa',
-      'secondary-color': '#263238',
-      'accent-color': '#ff8f00',
-      'overlay-color': 'rgba(255, 255, 255, 0.4)',
+      white: colors.white,
     },
     listStyleType: {
       disc: 'disc',
