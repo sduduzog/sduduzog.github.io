@@ -1,6 +1,14 @@
 <template>
   <div
-    class="min-h-screen bg-white dark:bg-gray-900 font-sans flex items-center"
+    class="
+      min-h-screen
+      bg-white
+      dark:bg-gray-900
+      font-sans
+      flex
+      items-center
+      text-lg
+    "
   >
     <div
       class="

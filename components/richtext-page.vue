@@ -1,8 +1,8 @@
 <template>
   <v-runtime-template
+    v-editable="blok"
     class="content p-4 space-y-8"
-    :template="runtimeTemplate"
-  ></v-runtime-template>
+    :template="runtimeTemplate" />
 </template>
 
 <script lang="ts">

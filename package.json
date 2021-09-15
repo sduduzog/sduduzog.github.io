@@ -17,6 +17,7 @@
     "@nuxtjs/composition-api": "^0.27.0",
     "@nuxtjs/robots": "^2.5.0",
     "@nuxtjs/sitemap": "^2.4.0",
+    "@tailwindcss/line-clamp": "^0.2.1",
     "@vue/composition-api": "^1.1.4",
     "@vueuse/core": "^6.1.0",
     "axios": "^0.21.1",
@@ -45,7 +46,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-vue": "^7.17.0",
     "postcss": "^8.2.15",
-    "prettier": "^2.3.2",
+    "prettier": "^2.4.0",
     "sass": "^1.32.13",
     "tailwindcss": "^2.2.9"
   }

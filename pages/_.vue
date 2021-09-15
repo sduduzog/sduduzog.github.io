@@ -1,14 +1,13 @@
 <template>
-  <lazy-hydrate never>
-    <component
-      :is="`lazy-${story.content.component}`"
-      v-if="story && story.content.component"
-      :key="story.content._uid"
-      :blok="story.content"
-      :slug="story.slug"
-      :stories="stories"
-    />
-  </lazy-hydrate>
+  <!-- <lazy-hydrate never> -->
+  <component
+    :is="`lazy-${story.content.component}`"
+    v-if="story && story.content.component"
+    :key="story.content._uid"
+    :blok="story.content"
+    :slug="story.slug"
+    :stories="stories" />
+  <!-- </lazy-hydrate> -->
 </template>
 <script lang="ts">
 import {
@@ -76,7 +75,9 @@ export default defineComponent({
     });
 
     $storyapi.setComponentResolver((component, blok) => {
-      return `<component :blok='${JSON.stringify(blok)}' is='${component}' />`;
+      return `<component :blok='${JSON.stringify(
+        blok,
+      )}' is='lazy-${component}' />`;
     });
 
     return { story, stories };
@@ -99,7 +100,10 @@ p {
   @apply text-gray-800 dark:text-gray-200;
 
   a {
-    @apply underline font-medium text-fuchsia-600 dark:text-fuchsia-500;
+    @apply underline font-medium;
   }
+}
+a {
+  @apply text-fuchsia-600 dark:text-fuchsia-500;
 }
 </style>
