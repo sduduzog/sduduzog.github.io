@@ -16,9 +16,9 @@
       :key="item.uuid"
       class="
         rounded
-        bg-gray-100
-        hover:bg-gray-50
-        dark:bg-gray-800
+        bg-gray-50
+        hover:bg-gray-100
+        dark:bg-gray-800 dark:bg-opacity-50 dark:hover:bg-opacity-100
         p-4
         space-y-4
       ">
