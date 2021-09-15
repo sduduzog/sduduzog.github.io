@@ -62,8 +62,8 @@ export default defineComponent({
         },
       );
       const { story: storyData } = storyResponse.data;
+      story.value = storyData;
       if (!storyData.is_startpage) {
-        story.value = storyData;
         return;
       }
       const storiesResponse = await $storyapi.get(`cdn/stories`, {
@@ -74,14 +74,26 @@ export default defineComponent({
       const { stories: storiesData } = storiesResponse.data;
       stories.value = storiesData;
     });
+
+    $storyapi.setComponentResolver((component, blok) => {
+      return `<component :blok='${JSON.stringify(blok)}' is='${component}' />`;
+    });
+
     return { story, stories };
   },
 });
 </script>
 
 <style lang="scss">
+h1,
+h2 {
+  @apply text-fuchsia-600 dark:text-fuchsia-500 font-black;
+}
 h1 {
-  @apply text-6xl md:text-7xl font-black text-fuchsia-600 dark:text-fuchsia-500;
+  @apply text-6xl md:text-7xl;
+}
+h2 {
+  @apply text-3xl md:text-4xl;
 }
 p {
   @apply text-gray-800 dark:text-gray-200;

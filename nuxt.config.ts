@@ -85,6 +85,9 @@ export default (): NuxtConfig => ({
   build: {
     extend(config, ctx) {
       if (ctx.isDev && ctx.isClient) {
+        if (config.resolve && config.resolve.alias) {
+          config.resolve.alias['vue'] = 'vue/dist/vue.common';
+        }
         config.module?.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,

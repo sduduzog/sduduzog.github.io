@@ -134,7 +134,6 @@ h4 {
   @apply font-bold;
 }
 h1 {
-  @apply text-accent-color;
   @apply text-3xl;
 }
 h2 {

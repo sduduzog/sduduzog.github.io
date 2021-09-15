@@ -19,7 +19,10 @@ interface RichTextResolver {
   render: (body: any) => any;
 }
 interface StoryAPI {
-  get: any;
+  get: (url: string, options?: any) => Promise<any>;
+  setComponentResolver: (
+    cb: (component: string, blok: unknown) => string,
+  ) => void;
   richTextResolver: RichTextResolver;
 }
 
