@@ -1,5 +1,9 @@
 <template>
   <div v-editable="blok" class="grid md:grid-cols-3 gap-2">
+    <h3
+      class="col-span-full text-3xl font-bold text-gray-400 dark:text-gray-500">
+      {{ blok.title }}
+    </h3>
     <div
       v-for="item in list"
       :key="item.uuid"

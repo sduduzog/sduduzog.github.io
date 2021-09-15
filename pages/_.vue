@@ -77,7 +77,7 @@ export default defineComponent({
     $storyapi.setComponentResolver((component, blok) => {
       return `<component :blok='${JSON.stringify(
         blok,
-      )}' is='lazy-${component}' />`;
+      )}' is="lazy-${component}" />`;
     });
 
     return { story, stories };
