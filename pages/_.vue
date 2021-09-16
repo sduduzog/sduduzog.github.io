@@ -1,8 +1,8 @@
 <template>
-  <component
-    :is="`lazy-${story.content.component}`"
+  <nuxt-dynamic
     v-if="story && story.content.component"
     :key="story.content._uid"
+    :component="story.content.component"
     :blok="story.content"
     :slug="story.slug" />
 </template>
@@ -10,56 +10,56 @@
 import {
   computed,
   defineComponent,
-  onMounted,
-  ref,
   useContext,
-  useFetch,
+  useStatic,
 } from '@nuxtjs/composition-api';
 
 export default defineComponent({
   setup() {
-    const story = ref();
-    const { $storyapi, $storybridge, route, store, isDev } = useContext();
+    const { $storyapi, route, isDev } = useContext();
     const { path, query } = route.value;
     const slug = computed(() =>
       path === '/' ? 'home' : path.replace(/\/$/, '').replace(/\//g, '~'),
     );
 
-    onMounted(() => {
-      $storybridge(() => {
-        const storyBlokInstance = new window.StoryblokBridge();
-        storyBlokInstance.on(['input', 'published', 'change'], event => {
-          if (event.action === 'input') {
-            if (event.story.id === story.value.id) {
-              story.value.content = event.story.content;
-            }
-          } else {
-            window.location.reload();
-          }
-        });
-      });
-    });
+    // onMounted(() => {
+    //   $storybridge(() => {
+    //     const storyBlokInstance = new window.StoryblokBridge();
+    //     storyBlokInstance.on(['input', 'published', 'change'], event => {
+    //       if (event.action === 'input') {
+    //         if (event.story.id === story.value.id) {
+    //           story.value.content = event.story.content;
+    //         }
+    //       } else {
+    //         window.location.reload();
+    //       }
+    //     });
+    //   });
+    // });
 
-    useFetch(async () => {
-      const { cacheVersion } = store.state;
-      const { _storyblok } = query;
-      const editMode = _storyblok || isDev;
-      const version = editMode ? 'draft' : 'published';
-      const storyResponse = await $storyapi.get(
-        `cdn/stories/${slug.value.replace(/~/g, '/')}`,
-        {
-          version,
-          cv: cacheVersion,
-        },
-      );
-      const { story: storyData } = storyResponse.data;
-      story.value = storyData;
-    });
+    const story = useStatic(
+      async slug => {
+        const response = await $storyapi.get('cdn/spaces/me');
+        const { version: cacheVersion } = response.data.space;
+        const { _storyblok } = query;
+        const editMode = _storyblok || isDev;
+        const version = editMode ? 'draft' : 'published';
+        const storyResponse = await $storyapi.get(
+          `cdn/stories/${slug.replace(/~/g, '/')}`,
+          {
+            version,
+            cv: cacheVersion,
+          },
+        );
+        const { story: storyData } = storyResponse.data;
+        return storyData;
+      },
+      slug,
+      'story',
+    );
 
     $storyapi.setComponentResolver((component, blok) => {
-      return `<component :blok='${JSON.stringify(
-        blok,
-      )}' is="lazy-${component}" />`;
+      return `<component :blok='${JSON.stringify(blok)}' is="${component}" />`;
     });
 
     return { story };

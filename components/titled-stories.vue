@@ -18,7 +18,10 @@
         rounded
         bg-gray-50
         hover:bg-gray-100
-        dark:bg-gray-800 dark:bg-opacity-50 dark:hover:bg-opacity-100
+        dark:bg-gray-800
+        dark:bg-opacity-50
+        dark:hover:bg-gray-800
+        dark:hover:bg-opacity-100
         p-4
         space-y-4
       ">
