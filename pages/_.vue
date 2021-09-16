@@ -42,10 +42,10 @@ export default defineComponent({
     const story = useStatic(
       async key => {
         const spaceResponse = await $storyapi.get('cdn/spaces/me');
-        const { version: cacheVersion } = spaceResponse.data.space;
+        const { version } = spaceResponse.data.space;
         const { _storyblok } = query;
         const editMode = _storyblok || isDev;
-        const version = editMode ? 'draft' : 'published';
+        const cacheVersion = editMode ? 'draft' : 'published';
         const storyResponse = await $storyapi.get(
           `cdn/stories/${key.replace(/~/g, '/')}`,
           {

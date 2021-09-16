@@ -38,7 +38,12 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, useAsync, useContext } from '@nuxtjs/composition-api';
+import {
+  defineComponent,
+  useContext,
+  useFetch,
+  ref,
+} from '@nuxtjs/composition-api';
 
 export default defineComponent({
   props: {
@@ -52,8 +57,9 @@ export default defineComponent({
     const { root } = props.blok;
     const { url, cached_url: cachedUrl } = root;
     const slug = cachedUrl || url;
+    const list = ref();
 
-    const list = useAsync(async () => {
+    useFetch(async () => {
       const spaceResponse = await $storyapi.get('cdn/spaces/me');
       const { version: cacheVersion } = spaceResponse.data.space;
       const response = await $storyapi.get(`cdn/stories`, {
@@ -62,8 +68,8 @@ export default defineComponent({
         cv: cacheVersion,
       });
       const { stories } = response.data;
-      return stories;
-    }, `stories-${slug}`);
+      list.value = stories;
+    });
     function formatDate(blok: any) {
       if (!blok) {
         return '';
