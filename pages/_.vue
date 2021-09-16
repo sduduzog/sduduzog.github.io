@@ -1,12 +1,10 @@
 <template>
-  <lazy-hydrate>
-    <component
-      :is="`lazy-${story.content.component}`"
-      v-if="story && story.content.component"
-      :key="story.content._uid"
-      :blok="story.content"
-      :slug="story.slug" />
-  </lazy-hydrate>
+  <component
+    :is="`lazy-${story.content.component}`"
+    v-if="story && story.content.component"
+    :key="story.content._uid"
+    :blok="story.content"
+    :slug="story.slug" />
 </template>
 <script lang="ts">
 import {
@@ -17,12 +15,8 @@ import {
   useContext,
   useFetch,
 } from '@nuxtjs/composition-api';
-import LazyHydrate from 'vue-lazy-hydration';
 
 export default defineComponent({
-  components: {
-    LazyHydrate,
-  },
   setup() {
     const story = ref();
     const { $storyapi, $storybridge, route, store, isDev } = useContext();
@@ -68,7 +62,7 @@ export default defineComponent({
       )}' is="lazy-${component}" />`;
     });
 
-    return { story, isDev };
+    return { story };
   },
 });
 </script>
