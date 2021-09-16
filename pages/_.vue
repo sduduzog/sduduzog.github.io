@@ -1,8 +1,9 @@
 <template>
-  <nuxt-dynamic
+  <component
+    :is="story.content.component"
     v-if="story && story.content.component"
     :key="story.content._uid"
-    :component="story.content.component"
+    v-editable="story.content"
     :blok="story.content"
     :slug="story.slug" />
 </template>
@@ -10,57 +11,50 @@
 import {
   computed,
   defineComponent,
+  onMounted,
+  useAsync,
   useContext,
-  useStatic,
 } from '@nuxtjs/composition-api';
 
 export default defineComponent({
   setup() {
-    const { $storyapi, route, isDev } = useContext();
+    const { $storyapi, $storybridge, route, isDev } = useContext();
     const { path, query } = route.value;
     const slug = computed(() =>
       path === '/' ? 'home' : path.replace(/\/$/, '').replace(/\//g, '~'),
     );
 
-    // onMounted(() => {
-    //   $storybridge(() => {
-    //     const storyBlokInstance = new window.StoryblokBridge();
-    //     storyBlokInstance.on(['input', 'published', 'change'], event => {
-    //       if (event.action === 'input') {
-    //         if (event.story.id === story.value.id) {
-    //           story.value.content = event.story.content;
-    //         }
-    //       } else {
-    //         window.location.reload();
-    //       }
-    //     });
-    //   });
-    // });
-
-    const story = useStatic(
-      async slug => {
-        const response = await $storyapi.get('cdn/spaces/me');
-        const { version: cacheVersion } = response.data.space;
-        const { _storyblok } = query;
-        const editMode = _storyblok || isDev;
-        const version = editMode ? 'draft' : 'published';
-        const storyResponse = await $storyapi.get(
-          `cdn/stories/${slug.replace(/~/g, '/')}`,
-          {
-            version,
-            cv: cacheVersion,
-          },
-        );
-        const { story: storyData } = storyResponse.data;
-        return storyData;
-      },
-      slug,
-      'story',
-    );
-
-    $storyapi.setComponentResolver((component, blok) => {
-      return `<component :blok='${JSON.stringify(blok)}' is="${component}" />`;
+    onMounted(() => {
+      $storybridge(() => {
+        const storyBlokInstance = new window.StoryblokBridge();
+        storyBlokInstance.on(['input', 'published', 'change'], event => {
+          if (event.action === 'input') {
+            if (event.story.id === story.value.id) {
+              story.value.content = event.story.content;
+            }
+          } else {
+            window.location.reload();
+          }
+        });
+      });
     });
+
+    const story = useAsync(async () => {
+      const spaceResponse = await $storyapi.get('cdn/spaces/me');
+      const { version: cacheVersion } = spaceResponse.data.space;
+      const { _storyblok } = query;
+      const editMode = _storyblok || isDev;
+      const version = editMode ? 'draft' : 'published';
+      const storyResponse = await $storyapi.get(
+        `cdn/stories/${slug.value.replace(/~/g, '/')}`,
+        {
+          version,
+          cv: cacheVersion,
+        },
+      );
+      const { story: storyData } = storyResponse.data;
+      return storyData;
+    }, slug.value);
 
     return { story };
   },

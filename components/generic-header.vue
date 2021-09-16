@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4 px-0">
+  <div v-editable="blok" class="p-4 px-0">
     <nav class="flex items-center text-base space-x-2">
       <nuxt-link
         to="/"
@@ -17,6 +17,12 @@ import { defineComponent } from '@nuxtjs/composition-api';
 import { HomeIcon } from 'vue-feather-icons';
 export default defineComponent({
   components: { HomeIcon },
+  props: {
+    blok: {
+      type: Object,
+      default: undefined,
+    },
+  },
 });
 </script>
 

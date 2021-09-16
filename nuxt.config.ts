@@ -6,7 +6,6 @@ const hostname = 'https://iamsdu.online';
 
 export default (): NuxtConfig => ({
   target: 'static',
-  ssr: true,
   publicRuntimeConfig: {
     baseURL: process.env.BASE_URL || hostname,
   },
@@ -63,7 +62,6 @@ export default (): NuxtConfig => ({
       'storyblok-nuxt',
       { accessToken: '5i2lrLgiTzCtvr9fKcp5PAtt', cacheProvider: 'memory' },
     ],
-    '@blokwise/dynamic',
     '@nuxtjs/sitemap',
     [
       '@nuxtjs/robots',
@@ -76,9 +74,6 @@ export default (): NuxtConfig => ({
   sitemap: {
     hostname,
   },
-  router: {
-    middleware: 'prepareStories',
-  },
   generate: {
     routes: ['/'],
     interval: 1000,
@@ -87,9 +82,6 @@ export default (): NuxtConfig => ({
   build: {
     extend(config, ctx) {
       if (ctx.isDev && ctx.isClient) {
-        if (config.resolve && config.resolve.alias) {
-          config.resolve.alias['vue'] = 'vue/dist/vue.common';
-        }
         config.module?.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,

@@ -1,6 +1,7 @@
 <template>
   <div v-editable="blok" class="grid md:grid-cols-3 gap-2">
     <h3
+      v-if="blok.title"
       class="
         mb-4
         col-span-full
@@ -37,12 +38,7 @@
   </div>
 </template>
 <script lang="ts">
-import {
-  defineComponent,
-  ref,
-  useContext,
-  useFetch,
-} from '@nuxtjs/composition-api';
+import { defineComponent, useAsync, useContext } from '@nuxtjs/composition-api';
 
 export default defineComponent({
   props: {
@@ -52,22 +48,22 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const { $storyapi, $dateFns, store, isDev } = useContext();
-    const { cacheVersion } = store.state;
+    const { $storyapi, $dateFns, isDev } = useContext();
     const { root } = props.blok;
     const { url, cached_url: cachedUrl } = root;
     const slug = cachedUrl || url;
-    const list = ref();
 
-    useFetch(async () => {
+    const list = useAsync(async () => {
+      const spaceResponse = await $storyapi.get('cdn/spaces/me');
+      const { version: cacheVersion } = spaceResponse.data.space;
       const response = await $storyapi.get(`cdn/stories`, {
         starts_with: slug,
         is_startpage: false,
         cv: cacheVersion,
       });
       const { stories } = response.data;
-      list.value = stories;
-    });
+      return stories;
+    }, `stories-${slug}`);
     function formatDate(blok: any) {
       if (!blok) {
         return '';
