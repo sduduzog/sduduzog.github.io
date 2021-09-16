@@ -23,7 +23,7 @@
         space-y-4
       ">
       <nuxt-link
-        :to="`${slug}/${item.slug}`"
+        :to="`/${slug}${item.slug}`"
         class="line-clamp-3 hover:underline font-semibold">
         {{ item.name }}
       </nuxt-link>

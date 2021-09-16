@@ -8,8 +8,7 @@
       flex
       items-center
       text-lg
-    "
-  >
+    ">
     <div
       class="
         absolute
@@ -20,8 +19,7 @@
         bg-gray-300
         dark:bg-gray-300 dark:bg-opcity-50
       "
-      @click="() => toggleDark()"
-    >
+      @click="() => toggleDark()">
       <moon-icon v-if="isDark" size="1x" />
       <sun-icon v-else size="1x" />
     </div>
