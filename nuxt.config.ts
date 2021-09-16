@@ -61,6 +61,7 @@ export default (): NuxtConfig => ({
       'storyblok-nuxt',
       { accessToken: '5i2lrLgiTzCtvr9fKcp5PAtt', cacheProvider: 'memory' },
     ],
+    '@blokwise/dynamic',
     '@nuxtjs/sitemap',
     [
       '@nuxtjs/robots',

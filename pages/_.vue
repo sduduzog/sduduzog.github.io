@@ -1,9 +1,10 @@
 <template>
-  <component
-    :is="story.content.component"
+  <nuxt-dynamic
     v-if="story && story.content.component"
     :key="story.content._uid"
     v-editable="story.content"
+    hydration="Never"
+    :component="story.content.component"
     :blok="story.content"
     :slug="story.slug" />
 </template>
