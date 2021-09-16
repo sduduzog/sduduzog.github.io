@@ -3,7 +3,6 @@
     v-if="story && story.content.component"
     :key="story.content._uid"
     v-editable="story.content"
-    hydration="Never"
     :component="story.content.component"
     :blok="story.content"
     :slug="story.slug" />
@@ -13,8 +12,8 @@ import {
   computed,
   defineComponent,
   onMounted,
-  useAsync,
   useContext,
+  useStatic,
 } from '@nuxtjs/composition-api';
 
 export default defineComponent({
@@ -40,22 +39,26 @@ export default defineComponent({
       });
     });
 
-    const story = useAsync(async () => {
-      const spaceResponse = await $storyapi.get('cdn/spaces/me');
-      const { version: cacheVersion } = spaceResponse.data.space;
-      const { _storyblok } = query;
-      const editMode = _storyblok || isDev;
-      const version = editMode ? 'draft' : 'published';
-      const storyResponse = await $storyapi.get(
-        `cdn/stories/${slug.value.replace(/~/g, '/')}`,
-        {
-          version,
-          cv: cacheVersion,
-        },
-      );
-      const { story: storyData } = storyResponse.data;
-      return storyData;
-    }, slug.value);
+    const story = useStatic(
+      async key => {
+        const spaceResponse = await $storyapi.get('cdn/spaces/me');
+        const { version: cacheVersion } = spaceResponse.data.space;
+        const { _storyblok } = query;
+        const editMode = _storyblok || isDev;
+        const version = editMode ? 'draft' : 'published';
+        const storyResponse = await $storyapi.get(
+          `cdn/stories/${key.replace(/~/g, '/')}`,
+          {
+            version,
+            cv: cacheVersion,
+          },
+        );
+        const { story: storyData } = storyResponse.data;
+        return storyData;
+      },
+      slug,
+      `story-${slug.value}`,
+    );
 
     return { story };
   },
