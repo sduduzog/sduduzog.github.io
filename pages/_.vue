@@ -1,5 +1,5 @@
 <template>
-  <lazy-hydrate :never="!isDev">
+  <lazy-hydrate>
     <component
       :is="`lazy-${story.content.component}`"
       v-if="story && story.content.component"
