@@ -13,6 +13,7 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore . --fix"
   },
   "dependencies": {
+    "@luxdamore/nuxt-prune-html": "^2.0.6",
     "@nuxt/http": "^0.6.4",
     "@nuxtjs/composition-api": "^0.27.0",
     "@nuxtjs/robots": "^2.5.0",

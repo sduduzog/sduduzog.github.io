@@ -70,6 +70,7 @@ export default (): NuxtConfig => ({
         Sitemap: `${hostname}/sitemap.xml`,
       },
     ],
+    '@luxdamore/nuxt-prune-html',
     '@nuxt/http',
   ],
   sitemap: {
