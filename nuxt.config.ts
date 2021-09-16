@@ -48,6 +48,7 @@ export default (): NuxtConfig => ({
   buildModules: [
     '@nuxt/typescript-build',
     '@nuxtjs/composition-api/module',
+    '@nuxt/image',
     '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/date-fns',
@@ -78,7 +79,12 @@ export default (): NuxtConfig => ({
     crawler: true,
     routes: ['/'],
   },
-
+  image: {
+    domains: ['https://a.storyblok.com'],
+    storyblok: {
+      baseURL: 'https://img2.storyblok.com',
+    },
+  },
   build: {
     extend(config, ctx) {
       if (ctx.isDev && ctx.isClient) {

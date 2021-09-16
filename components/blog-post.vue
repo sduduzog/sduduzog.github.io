@@ -1,7 +1,10 @@
 <template>
   <div v-editable="blok" class="p-4">
     <lazy-generic-header />
-    <img :src="imageSrc" alt="" class="border rounded-md w-full" />
+    <nuxt-img
+      property="storyblok"
+      :src="blok.image.filename"
+      class="border rounded-md w-full" />
     <h1 class="my-6">{{ blok.title }}</h1>
     <!-- eslint-disable-next-line vue/no-v-html -->
     <div class="space-y-8" v-html="richtext" />
@@ -58,12 +61,6 @@ export default {
     };
   },
   computed: {
-    imageSrc() {
-      return `${this.$foo.resizeBlokImage(
-        this.blok.image.filename,
-        '768x0/smart',
-      )}`;
-    },
     richtext() {
       return this.blok.body
         ? this.$storyapi.richTextResolver.render(this.blok.body)
