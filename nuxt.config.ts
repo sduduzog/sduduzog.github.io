@@ -1,6 +1,4 @@
 import { NuxtConfig } from '@nuxt/types';
-import fs from 'fs';
-import path from 'path';
 
 const hostname = 'https://iamsdu.online';
 
@@ -53,6 +51,7 @@ export default (): NuxtConfig => ({
     '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/date-fns',
+    '~/modules/sitemapRouteGenerator',
   ],
   /*
    ** Nuxt.js modules
@@ -75,8 +74,8 @@ export default (): NuxtConfig => ({
     hostname,
   },
   generate: {
+    crawler: true,
     routes: ['/'],
-    interval: 1000,
   },
 
   build: {

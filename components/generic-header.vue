@@ -1,6 +1,6 @@
 <template>
   <div v-editable="blok" class="p-4 px-0">
-    <nav class="flex items-center text-base space-x-2">
+    <nav class="flex items-center text-base space-x-6">
       <nuxt-link
         to="/"
         class="rounded-full p-2 hover:bg-fuchsia-600 hover:bg-opacity-10">
@@ -9,6 +9,8 @@
       <nuxt-link to="/blog" class="hover:underline hover:font-medium">
         Blog
       </nuxt-link>
+      <a href="https://twitter.com/sduduzo_g">Twitter</a>
+      <a href="https://github.com/sduduzog">Github</a>
     </nav>
   </div>
 </template>
@@ -20,7 +22,7 @@ export default defineComponent({
   props: {
     blok: {
       type: Object,
-      default: undefined,
+      default: () => ({}),
     },
   },
 });

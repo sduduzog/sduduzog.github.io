@@ -85,7 +85,7 @@ p {
   }
 }
 a {
-  @apply text-fuchsia-600 dark:text-fuchsia-500;
+  @apply text-fuchsia-600 dark:text-fuchsia-500 hover:underline;
 }
 
 ul,
