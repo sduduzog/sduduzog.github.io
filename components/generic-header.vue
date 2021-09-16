@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4">
+  <div class="p-4 px-0">
     <nav class="flex text-base">
       <nuxt-link
         to="/"
