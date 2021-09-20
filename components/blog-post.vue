@@ -5,7 +5,7 @@
       property="storyblok"
       :src="blok.image.filename"
       class="border rounded-md w-full" />
-    <h1 class="my-6">{{ blok.title }}</h1>
+    <h1 class="my-6">{{ name }}</h1>
     <!-- eslint-disable-next-line vue/no-v-html -->
     <div class="space-y-8" v-html="richtext" />
   </div>
@@ -20,10 +20,14 @@ export default {
       type: Object,
       default: undefined,
     },
+    name: {
+      type: String,
+      default: undefined,
+    },
   },
   head() {
     return {
-      title: this.blok.title,
+      title: this.name,
       meta: [
         {
           hid: 'description',
@@ -39,10 +43,10 @@ export default {
           content: '@sduduzo_g',
         },
         { name: 'twitter:creator', content: '@sduduzo_g' },
-        { name: 'twitter:title', content: this.blok.title },
+        { name: 'twitter:title', content: this.name },
         {
           property: 'og:title',
-          content: this.blok.title,
+          content: this.name,
         },
         { property: 'og:description', content: this.description },
         {

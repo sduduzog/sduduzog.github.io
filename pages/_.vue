@@ -5,6 +5,7 @@
     v-editable="story.content"
     :component="story.content.component"
     :blok="story.content"
+    :name="story.name"
     :slug="story.slug" />
 </template>
 <script lang="ts">
