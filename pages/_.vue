@@ -68,7 +68,8 @@ export default defineComponent({
 
 <style lang="scss">
 h1,
-h2 {
+h2,
+h3 {
   @apply text-fuchsia-600 dark:text-fuchsia-500 font-black;
 }
 h1 {
@@ -76,6 +77,9 @@ h1 {
 }
 h2 {
   @apply text-3xl md:text-4xl;
+}
+h3 {
+  @apply text-xl md:text-2xl;
 }
 p {
   @apply font-medium text-gray-800 dark:text-gray-200;
@@ -92,7 +96,9 @@ p {
 a {
   @apply text-fuchsia-600 dark:text-fuchsia-500 hover:underline;
 }
-
+b {
+  @apply font-extrabold;
+}
 ul,
 ol {
   @apply ml-6;
