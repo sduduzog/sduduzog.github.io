@@ -53,7 +53,7 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const { $storyapi, $dateFns, isDev } = useContext();
+    const { $storyapi, $dateFns, isDev, route } = useContext();
     const { root } = props.blok;
     const { url, cached_url: cachedUrl } = root;
     const slug = cachedUrl || url;
@@ -62,9 +62,14 @@ export default defineComponent({
     useFetch(async () => {
       const spaceResponse = await $storyapi.get('cdn/spaces/me');
       const { version: cacheVersion } = spaceResponse.data.space;
+      const { query } = route.value;
+      const { _storyblok } = query;
+      const editMode = _storyblok || isDev;
+      const version = editMode ? 'draft' : 'published';
       const response = await $storyapi.get(`cdn/stories`, {
         starts_with: slug,
         is_startpage: false,
+        version,
         cv: cacheVersion,
       });
       const { stories } = response.data;
