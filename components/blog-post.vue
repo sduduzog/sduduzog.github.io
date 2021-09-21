@@ -55,7 +55,7 @@ export default {
         },
         {
           property: 'og:image',
-          content: `https:${this.imageSrc}`,
+          content: `https:${this.blok.filename}`,
         },
         {
           property: 'og:url',
