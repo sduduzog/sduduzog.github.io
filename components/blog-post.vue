@@ -55,7 +55,7 @@ export default {
         },
         {
           property: 'og:image',
-          content: `https:${this.blok.image.filename}`,
+          content: `${this.imageSrc}`,
         },
         {
           property: 'og:url',
@@ -91,6 +91,17 @@ export default {
       }
       const { text } = paragraphs[0].content[0];
       return text;
+    },
+    imageSrc() {
+      if (!this.blok) {
+        return '';
+      }
+      const imgUrl = this.$img(
+        this.blok.image.filename,
+        {},
+        { provider: 'storyblok' },
+      );
+      return imgUrl;
     },
   },
   mounted() {
