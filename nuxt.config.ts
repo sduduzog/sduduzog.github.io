@@ -1,6 +1,6 @@
 import { NuxtConfig } from '@nuxt/types';
 
-const hostname = 'https://iamsdu.online';
+const hostname = 'https://sduu.dev';
 
 export default (): NuxtConfig => ({
   target: 'static',
