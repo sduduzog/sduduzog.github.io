@@ -4,5 +4,7 @@ export default defineNuxtConfig({
     shim: true,
   },
   modules: ['@nuxtjs/tailwindcss', '@nuxt/content'],
-  tailwindcss: {},
+  tailwindcss: {
+    viewer: false,
+  },
 });

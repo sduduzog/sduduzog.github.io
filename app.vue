@@ -1,9 +1,7 @@
 <template>
-  <div class="mx-auto max-w-screen-lg p-4 py-12">
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
-  </div>
+  <nuxt-layout>
+    <nuxt-page />
+  </nuxt-layout>
 </template>
 <script lang="ts" setup>
 useHead({

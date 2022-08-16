@@ -1,10 +1,13 @@
 <template>
-  <div>
-    <nav>
+  <div class="space-y-12 p-4">
+    <nav class="flex space-x-4 font-medium">
       <content-navigation v-slot="{ navigation }">
-        <div v-for="link of navigation" :key="link._path">
-          <NuxtLink :to="link._path">{{ link.title }}</NuxtLink>
-        </div>
+        <nuxt-link
+          :to="link._path"
+          v-for="link of navigation"
+          :key="link._path">
+          {{ link.title }}
+        </nuxt-link>
       </content-navigation>
     </nav>
     <main class="max-w-screen-md">
