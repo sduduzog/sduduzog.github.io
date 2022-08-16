@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-12 p-4">
+  <div class="mx-auto max-w-screen-lg space-y-12 p-4">
     <nav class="flex space-x-4 font-medium">
       <content-navigation v-slot="{ navigation }">
         <nuxt-link
