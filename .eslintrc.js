@@ -41,6 +41,16 @@ module.exports = {
     'quote-props': [
       'error',
       'as-needed',
-    ]
+    ],
+    'object-curly-spacing': [
+      'warn',
+      'always'
+    ],
+    'array-bracket-newline': [
+      'error', 
+      'consistent'
+    ],
+    'comma-style': ['error', 'last'],
+    'vue/multi-word-component-names': ['off']
   }
 };
