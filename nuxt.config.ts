@@ -6,7 +6,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ['@nuxt/content'],
+  modules: ['@nuxt/content', 'nuxt-og-image'],
   content: {
     documentDriven: true
   }

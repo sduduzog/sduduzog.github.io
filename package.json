@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "nuxt dev",
-    "build": "nuxt generate"
+    "build": "npx playwright install && nuxt generate"
   },
   "devDependencies": {
     "@nuxt/content": "^2.6.0",
