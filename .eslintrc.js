@@ -9,8 +9,7 @@ module.exports = {
     'plugin:vue/vue3-strongly-recommended',
     'plugin:@typescript-eslint/recommended'
   ],
-  overrides: [
-  ],
+  overrides: [],
   parser: 'vue-eslint-parser',
   parserOptions: {
     parser: '@typescript-eslint/parser',
@@ -48,7 +47,7 @@ module.exports = {
     ],
     'array-bracket-newline': [
       'error', 
-      'consistent'
+      { multiline: true, minItems: 3 }
     ],
     'comma-style': ['error', 'last'],
     'vue/multi-word-component-names': ['off']

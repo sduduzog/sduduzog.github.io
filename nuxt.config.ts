@@ -6,8 +6,17 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ['@nuxt/content', 'nuxt-og-image'],
+  modules: [
+    '@nuxt/content',
+    '@nuxtjs/google-fonts', 'nuxt-og-image',
+  ],
   content: {
     documentDriven: true
+  },
+  googleFonts: {
+    download: true,
+    families: {
+      'JetBrains+Mono': true,
+    }
   }
 });
