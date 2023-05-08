@@ -6,6 +6,11 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  nitro: {
+    routeRules: {
+      '/**': { static: true }
+    }
+  },
   modules: [
     'nuxt-content-assets',
     '@nuxt/content',
