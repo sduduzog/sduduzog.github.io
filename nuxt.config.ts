@@ -1,100 +1,29 @@
-import { NuxtConfig } from '@nuxt/types';
-
-const hostname = 'https://sduu.dev';
-
-export default (): NuxtConfig => ({
-  target: 'static',
-  publicRuntimeConfig: {
-    baseURL: process.env.BASE_URL || hostname,
-  },
-  components: true,
-  /*
-   ** Headers of the page
-   */
-  head: {
-    title: "Hi, I'm Sdu" || process.env.npm_package_name,
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content:
-          'I write code. Lots and lots of code. To be honest I also delete most of it too ,' +
-          "but hey, that's how programming is, I guess",
-      },
-    ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    htmlAttrs: {
-      lang: 'en', // it sets the language English
+export default defineNuxtConfig({
+  css: ['~/assets/css/main.css'],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
     },
   },
-  /*
-   ** Customize the progress-bar color
-   */
-  loading: { color: '#fff' },
-  /*
-   ** Global CSS
-   */
-  css: ['~/assets/css/font.css'],
-  /*
-   ** Plugins to load before mounting the App
-   */
-  vendor: ['prismjs'],
-  plugins: ['~/plugins/foo.js'],
-  /*
-   ** Nuxt.js dev-modules
-   */
-  buildModules: [
-    '@nuxt/typescript-build',
-    '@nuxtjs/composition-api/module',
-    '@nuxt/image',
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/date-fns',
-    '~/modules/sitemapRouteGenerator',
-  ],
-  /*
-   ** Nuxt.js modules
-   */
+  nitro: {
+    routeRules: {
+      '/**': { static: true }
+    }
+  },
   modules: [
-    [
-      'storyblok-nuxt',
-      { accessToken: '5i2lrLgiTzCtvr9fKcp5PAtt', cacheProvider: 'memory' },
-    ],
-    '@blokwise/dynamic',
-    '@nuxtjs/sitemap',
-    [
-      '@nuxtjs/robots',
-      {
-        Sitemap: `${hostname}/sitemap.xml`,
-      },
-    ],
-    '@nuxt/http',
+    'nuxt-content-assets',
+    '@nuxt/content',
+    '@nuxtjs/google-fonts', 'nuxt-og-image',
+    'nuxt-icon'
   ],
-  sitemap: {
-    hostname,
+  content: {
+    documentDriven: true
   },
-  generate: {
-    crawler: true,
-    routes: ['/'],
-  },
-  image: {
-    domains: ['https://a.storyblok.com'],
-    storyblok: {
-      baseURL: 'https://img2.storyblok.com',
-    },
-  },
-  build: {
-    extend(config, ctx) {
-      if (ctx.isDev && ctx.isClient) {
-        config.module?.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/,
-        });
-      }
-    },
-  },
+  googleFonts: {
+    download: true,
+    families: {
+      'JetBrains+Mono': true,
+    }
+  }
 });
