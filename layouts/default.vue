@@ -10,6 +10,6 @@ h1{
 }
 
 h2 {
-  @apply text-3xl font-medium text-gray-600;
+  @apply text-3xl font-medium text-gray-500;
 }
 </style>
