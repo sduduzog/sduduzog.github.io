@@ -1,4 +1,4 @@
 :headshot
 # Beautus Sduduzo Gumede
-## [Software Engineer]{.pb-20}
+## Software Engineer
 [_call me **Sdu**_]{.text-gray-400}

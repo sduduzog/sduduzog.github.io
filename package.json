@@ -1,7 +1,8 @@
 {
   "scripts": {
     "dev": "nuxt dev",
-    "build": "npx playwright install && nuxt generate"
+    "build": "nuxt generate",
+    "build:new": "npx playwright install && nuxt generate"
   },
   "devDependencies": {
     "@nuxt/content": "^2.6.0",
@@ -13,6 +14,7 @@
     "eslint-plugin-vue": "^9.11.0",
     "nuxt": "^3.4.3",
     "nuxt-content-assets": "^1.3.2",
+    "nuxt-icon": "^0.4.0",
     "nuxt-og-image": "^1.5.9",
     "postcss": "^8.4.23",
     "sass": "^1.62.1",

@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     'nuxt-content-assets',
     '@nuxt/content',
     '@nuxtjs/google-fonts', 'nuxt-og-image',
+    'nuxt-icon'
   ],
   content: {
     documentDriven: true
