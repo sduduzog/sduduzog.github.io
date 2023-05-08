@@ -55,7 +55,7 @@ p{
   @apply text-sm py-2;
 }
 
-li > a {
+li > a, p > a {
   @apply text-sm underline text-gray-500 hover:text-gray-800;
 }
 </style>
