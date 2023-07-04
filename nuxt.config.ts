@@ -9,8 +9,10 @@ export default defineNuxtConfig({
   modules: [
     'nuxt-content-assets',
     '@nuxt/content',
-    '@nuxtjs/google-fonts', 'nuxt-og-image',
-    'nuxt-icon'
+    '@nuxtjs/google-fonts',
+    'nuxt-og-image',
+    'nuxt-icon',
+    '@nuxtjs/html-validator'
   ],
   content: {
     documentDriven: true
@@ -18,7 +20,12 @@ export default defineNuxtConfig({
   googleFonts: {
     download: true,
     families: {
-      'JetBrains+Mono': true,
+      'JetBrains+Mono': {
+        wght: [100,200, 300, 400, 500, 600, 700, 800, 900],
+      },
     }
-  }
+  },
+  app: {
+    head: { htmlAttrs: { lang: 'en' } },
+  },
 });
