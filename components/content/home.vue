@@ -10,7 +10,7 @@
       text-center>
       <img
         src="@/assets/img/headshot.jpg"
-        alt="headshot"
+        alt="My face"
         h-32
         w-32
         rounded-full

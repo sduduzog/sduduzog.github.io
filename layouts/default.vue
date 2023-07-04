@@ -1,22 +1,20 @@
 <template>
   <div class="max-w-2xl mx-auto px-4 font-mono">
-    <nav class="mt-4">
+    <nav class="my-4">
       <content-navigation v-slot="{ navigation }">
         <ul class="flex space-x-4">
           <li
             v-for="link of navigation"
             :key="link._path">
             <nuxt-link
-              hover:underline
-              text="gray-500 hover:gray-900"
+              class="hover:underline text-gray-500 hover:text-gray-900"
               :to="link._path"
               >{{ link.title }}</nuxt-link
             >
           </li>
           <li>
             <nuxt-link
-              hover:underline
-              text="gray-500 hover:gray-900"
+              class="hover:underline text-gray-500 hover:text-gray-900"
               to="https://zatechradio.co.za"
               >Podcast</nuxt-link
             >
@@ -62,3 +60,21 @@ const socialLinks = [
   },
 ]
 </script>
+<style lang="scss" scoped>
+.router-link-active {
+  --at-apply: text-gray-900 font-semibold underline;
+}
+</style>
+<style lang="scss">
+div[data-content-id] {
+  h1 {
+    --at-apply: my-4 text-2xl text-gray-800 font-bold;
+  }
+  h2 {
+    --at-apply: my-2 text-lg text-gray-600 font-bold;
+  }
+  p {
+    --at-apply: text-gray-800;
+  }
+}
+</style>

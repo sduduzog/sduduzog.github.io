@@ -5,29 +5,36 @@ export default defineNuxtConfig({
     'nuxt-content-assets',
     '@nuxt/content',
     'nuxt-og-image',
-    '@nuxtjs/html-validator'
+    '@nuxtjs/html-validator',
   ],
   unocss: {
     uno: true,
     attributify: true,
     icons: {
       extraProperties: {
-       'display': 'inline-block',
-       'vertical-align': 'middle',
+        display: 'inline-block',
+        'vertical-align': 'middle',
       },
     },
     components: false,
     webFonts: {
       provider: 'google',
       fonts: {
-        mono: ['JetBrains Mono']
-      }
-    }
+        mono: ['JetBrains Mono'],
+      },
+    },
+    withDirectives: true,
   },
   content: {
-    documentDriven: true
+    documentDriven: true,
+    highlight: {
+      theme: {
+        default: 'github-light',
+        dark: 'github-dark',
+      },
+    },
   },
   app: {
     head: { htmlAttrs: { lang: 'en' } },
   },
-});
+})
