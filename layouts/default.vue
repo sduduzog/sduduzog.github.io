@@ -71,10 +71,13 @@ div[data-content-id] {
     --at-apply: my-4 text-2xl text-gray-800 font-bold;
   }
   h2 {
-    --at-apply: my-2 text-lg text-gray-600 font-bold;
+    --at-apply: mt-2 mb-1 text-lg text-gray-600 font-bold;
   }
   p {
     --at-apply: text-gray-800;
+    & + p {
+      --at-apply: mt-4;
+    }
   }
 }
 </style>
