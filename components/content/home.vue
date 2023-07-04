@@ -1,30 +1,14 @@
 <template>
-  <div
-    flex="~ wrap"
-    gap-6
-    p="t-12"
-    items-center>
-    <div
-      sm:order-last
-      w="full sm:auto"
-      text-center>
+  <div class="pt-12 items-center gap-6 flex flex-wrap">
+    <div class="text-center w-full sm:w-auto sm:order-last">
       <img
         src="@/assets/img/headshot.jpg"
         alt="My face"
-        h-32
-        w-32
-        rounded-full
-        inline-block />
+        class="inline-block rounded-full h-32 w-32" />
     </div>
     <div grow>
-      <h1
-        font="bold"
-        text="4xl gray-800">
-        Beautus Sduduzo Gumede
-      </h1>
-      <h2
-        font="semibold"
-        text="gray-600 3xl">
+      <h1 class="font-bold text-4xl text-gray-800">Beautus Sduduzo Gumede</h1>
+      <h2 class="font-semibold text-gray-600 text-3xl">
         Software Engineer at Codeeo
       </h2>
     </div>

@@ -9,7 +9,6 @@ export default defineNuxtConfig({
   ],
   unocss: {
     uno: true,
-    attributify: true,
     icons: {
       extraProperties: {
         display: 'inline-block',
@@ -36,5 +35,10 @@ export default defineNuxtConfig({
   },
   app: {
     head: { htmlAttrs: { lang: 'en' } },
+  },
+  $production: {
+    routeRules: {
+      '/*': { prerender: true },
+    },
   },
 })
