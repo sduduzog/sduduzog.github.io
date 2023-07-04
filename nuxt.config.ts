@@ -1,29 +1,31 @@
 export default defineNuxtConfig({
-  css: ['~/assets/css/main.css'],
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  },
+  css: ['@unocss/reset/tailwind.css'],
   modules: [
+    '@unocss/nuxt',
     'nuxt-content-assets',
     '@nuxt/content',
-    '@nuxtjs/google-fonts',
     'nuxt-og-image',
-    'nuxt-icon',
     '@nuxtjs/html-validator'
   ],
+  unocss: {
+    uno: true,
+    attributify: true,
+    icons: {
+      extraProperties: {
+       'display': 'inline-block',
+       'vertical-align': 'middle',
+      },
+    },
+    components: false,
+    webFonts: {
+      provider: 'google',
+      fonts: {
+        mono: ['JetBrains Mono']
+      }
+    }
+  },
   content: {
     documentDriven: true
-  },
-  googleFonts: {
-    download: true,
-    families: {
-      'JetBrains+Mono': {
-        wght: [100,200, 300, 400, 500, 600, 700, 800, 900],
-      },
-    }
   },
   app: {
     head: { htmlAttrs: { lang: 'en' } },
