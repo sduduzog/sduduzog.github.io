@@ -36,9 +36,4 @@ export default defineNuxtConfig({
   app: {
     head: { htmlAttrs: { lang: 'en' } },
   },
-  $production: {
-    routeRules: {
-      '/*': { prerender: true },
-    },
-  },
 })
