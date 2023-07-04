@@ -67,25 +67,25 @@ const socialLinks = [
 <style lang="scss">
 div[data-content-id] {
   h1 {
-    --at-apply: my-4 text-3xl text-gray-800 font-bold;
+    @apply my-4 text-3xl text-gray-800 font-bold;
   }
   h2 {
-    --at-apply: mt-2 mb-1 text-2xl text-gray-700 font-semibold;
+    @apply mt-2 mb-1 text-2xl text-gray-700 font-semibold;
   }
   h3 {
-    --at-apply: text-lg font-bold text-gray-500 my-1;
+    @apply text-lg font-bold text-gray-500 my-1;
   }
   p {
-    --at-apply: text-gray-800;
+    @apply text-gray-800;
     & + p {
-      --at-apply: mt-4;
+      @apply mt-4;
     }
   }
   ul {
-    --at-apply: my-2;
+    @apply my-2;
   }
   ul > li {
-    --at-apply: list-disc list-inside;
+    @apply list-disc list-inside;
   }
 }
 </style>
