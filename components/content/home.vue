@@ -9,7 +9,12 @@
     <div grow>
       <h1 class="font-bold text-4xl text-gray-800">Beautus Sduduzo Gumede</h1>
       <h2 class="font-semibold text-gray-600 text-3xl">
-        Software Engineer at Codeeo
+        Software Engineer at
+        <nuxt-link
+          to="https://codeo.co.za"
+          target="_blank"
+          >Codeo_</nuxt-link
+        >
       </h2>
     </div>
   </div>
