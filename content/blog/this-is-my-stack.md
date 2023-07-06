@@ -1,7 +1,3 @@
----
-layout: blog
----
-
 If you woke me up in the middle of the night and asked me if I started a from scratch what would I choose, and why
 
 <!-- more -->

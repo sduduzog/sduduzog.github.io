@@ -1,5 +1,6 @@
 import defaultTheme from 'tailwindcss/defaultTheme'
 export default defineNuxtConfig({
+  css: ['assets/css/main.scss'],
   modules: [
     'nuxt-content-assets',
     '@nuxt/content',
@@ -20,6 +21,14 @@ export default defineNuxtConfig({
   },
   tailwindcss: {
     config: {
+      content: [
+        './content/**/*.md',
+        './layouts/*.vue',
+        './components/**/*.vue',
+        './app.vue',
+        '!./.devcontainer',
+        '!./.nuxt',
+      ],
       theme: {
         fontFamily: {
           mono: ['"JetBrains Mono"', ...defaultTheme.fontFamily.mono],

@@ -1,5 +1,4 @@
 ---
-layout: blog
 title: These are my favourite presets when working on any project
 ---
 
