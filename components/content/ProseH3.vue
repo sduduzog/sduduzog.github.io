@@ -15,6 +15,7 @@
 import { useRuntimeConfig } from '#imports'
 defineProps<{ id?: string }>()
 const heading = 3
+// @ts-expect-error doesn't exist or something
 const { anchorLinks } = useRuntimeConfig().public.content
 const generate =
   anchorLinks?.depth >= heading && !anchorLinks?.exclude.includes(heading)

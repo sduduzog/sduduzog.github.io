@@ -2,7 +2,7 @@
   <p class="text-gray-700 sm:text-base"><slot></slot></p>
 </template>
 <style lang="scss" scoped>
-p + p {
+p + p , pre + p{
   @apply mt-2.5;
 }
 </style>
