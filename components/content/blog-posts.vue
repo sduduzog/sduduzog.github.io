@@ -7,7 +7,7 @@
       class="py-4"
       v-for="blog in list"
       :key="blog._path">
-      <h2 class="relative text-lg !m-0 font-bold text-gray-600 hover:text-gray-900">
+      <h2 class="relative text-xl !m-0 font-bold text-gray-600 hover:text-gray-900">
         <span class="absolute right-full opacity-50 pr-0.5 sm:pr-1">##</span>
         <nuxt-link :to="blog._path">
           {{ blog.title }}</nuxt-link>

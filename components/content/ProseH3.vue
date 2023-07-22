@@ -1,7 +1,8 @@
 <template>
   <h3
-    class="text-lg font-bold text-gray-500 my-1"
+    class="relative text-lg font-bold text-gray-500 my-1"
     :id="id">
+        <span class="absolute right-full opacity-50 pr-0.5 sm:pr-1">###</span>
     <a
       v-if="id && generate"
       :href="`#${id}`">

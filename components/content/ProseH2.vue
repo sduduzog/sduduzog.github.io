@@ -1,6 +1,6 @@
 <template>
   <h2
-    class="mt-2 mb-1 text-lg text-gray-700 font-semibold relative"
+    class="mt-2 mb-1 text-xl text-gray-700 font-semibold relative"
     :id="id">
         <span class="absolute right-full opacity-50 pr-0.5 sm:pr-1">##</span>
     <a

@@ -1,5 +1,5 @@
 <template>
-  <p class="text-gray-700 sm:text-base"><slot></slot></p>
+  <p class="text-gray-700"><slot></slot></p>
 </template>
 <style lang="scss" scoped>
 p + p , pre + p{
