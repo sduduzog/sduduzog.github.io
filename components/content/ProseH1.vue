@@ -1,7 +1,8 @@
 <template>
   <h1
-    class="my-4 text-3xl text-gray-800 font-bold"
+    class="my-4 text-2xl text-gray-800 font-bold relative"
     :id="id">
+        <span class="absolute right-full opacity-50 pr-0.5 sm:pr-1">#</span>
     <a
       v-if="id && generate"
       :href="`#${id}`">

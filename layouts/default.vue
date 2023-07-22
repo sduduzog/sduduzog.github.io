@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-2xl mx-auto px-4 font-mono">
+  <div class="max-w-2xl mx-auto px-6 font-mono">
     <nav class="my-4">
       <content-navigation v-slot="{ navigation }">
         <ul class="flex space-x-4">
