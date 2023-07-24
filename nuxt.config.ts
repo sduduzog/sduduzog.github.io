@@ -17,7 +17,19 @@ export default defineNuxtConfig({
         default: 'github-light',
         dark: 'github-dark',
       },
-      preload: ['json', 'js', 'ts', 'html', 'css', 'vue', 'diff', 'shell', 'markdown', 'yaml', 'bash', 'ini']
+      preload: [
+        'json',
+        'js',
+        'ts',
+        'html',
+        'css',
+        'vue',
+        'diff',
+        'shell',
+        'markdown',
+        'yaml',
+        'bash',
+      ],
     },
   },
   tailwindcss: {
@@ -44,5 +56,8 @@ export default defineNuxtConfig({
   },
   app: {
     head: { htmlAttrs: { lang: 'en' } },
+  },
+  experimental: {
+    noScripts: true,
   },
 })
