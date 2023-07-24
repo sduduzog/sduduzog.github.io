@@ -57,7 +57,9 @@ export default defineNuxtConfig({
   app: {
     head: { htmlAttrs: { lang: 'en' } },
   },
-  experimental: {
-    noScripts: true,
+  $production: {
+    routeRules: {
+      '/**': { static: true },
+    },
   },
 })
