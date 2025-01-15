@@ -9,6 +9,6 @@
 <style>
 :root {
   font-family: "Space Mono";
-  background-color: #FFFDF0;
+  background-color: #FAF7F0;
 }
 </style>
