@@ -1,6 +1,8 @@
 export default defineNuxtConfig({
-  extends: 'content-wind',
   routeRules: {
-    '/': { prerender: true }
-  }
-})
+    "/": { prerender: true },
+  },
+
+  modules: ["@nuxthq/studio", "@nuxt/content"],
+});
+
