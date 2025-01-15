@@ -8,5 +8,10 @@ export default defineNuxtConfig({
 	content: {
 		documentDriven: true,
 	},
+	fonts: {
+		defaults: {
+			weights: [100, 200, 400, 500, 600, 700, 800, 900],
+		},
+	},
 	compatibilityDate: "2025-01-15",
 });

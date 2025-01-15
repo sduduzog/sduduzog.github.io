@@ -1,6 +1,6 @@
 <template>
   <main class="mx-auto max-w-screen-xl">
-    <div class="border">
+    <div class="max-w-screen-md">
       <nuxt-page />
     </div>
   </main>
@@ -9,5 +9,6 @@
 <style>
 :root {
   font-family: "Space Mono";
+  background-color: #FFFDF0;
 }
 </style>
