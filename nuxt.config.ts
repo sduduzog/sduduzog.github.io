@@ -1,5 +1,10 @@
 export default defineNuxtConfig({
-	modules: ["@nuxthq/studio", "@nuxt/content", "@nuxt/fonts"],
+	modules: [
+		"@nuxthq/studio",
+		"@nuxt/content",
+		"@nuxt/fonts",
+		"@nuxtjs/tailwindcss",
+	],
 	content: {
 		documentDriven: true,
 	},
