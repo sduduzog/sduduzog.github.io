@@ -4,4 +4,7 @@ export default defineNuxtConfig({
 	},
 
 	modules: ["@nuxthq/studio", "@nuxt/content"],
+	content: {
+		documentDriven: true,
+	},
 });
