@@ -1,8 +1,7 @@
 export default defineNuxtConfig({
-  routeRules: {
-    "/": { prerender: true },
-  },
+	routeRules: {
+		"/": { prerender: true },
+	},
 
-  modules: ["@nuxthq/studio", "@nuxt/content"],
+	modules: ["@nuxthq/studio", "@nuxt/content"],
 });
-
