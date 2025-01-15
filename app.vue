@@ -1,5 +1,5 @@
 <template>
-  <main class="mx-auto max-w-screen-xl p-4">
+  <main class="mx-auto max-w-screen-xl">
     <div class="border">
       <nuxt-page />
     </div>
