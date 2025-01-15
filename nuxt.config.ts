@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-	modules: ["@nuxthq/studio", "@nuxt/content"],
+	modules: ["@nuxthq/studio", "@nuxt/content", "@nuxt/fonts"],
 	content: {
 		documentDriven: true,
 	},
