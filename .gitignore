@@ -1,9 +1,7 @@
 node_modules
 *.log*
-.nuxt
-.nitro
 .cache
-.output
+.astro
 .env
 dist
 .DS_Store

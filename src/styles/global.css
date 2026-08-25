@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+:root {
+  color: #27201f;
+  background-color: #faf7f0;
+  font-family: var(--font-mono);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 20rem;
+  margin: 0;
+  background-color: #faf7f0;
+}
+
+::selection {
+  color: #faf7f0;
+  background-color: #3b3030;
+}
+
+.document h1,
+.document h2,
+.document h3 {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0;
+  color: #27201f;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.document h1::before,
+.document h2::before,
+.document h3::before {
+  flex: none;
+  color: #a1a1aa;
+}
+
+.document h1 {
+  margin-top: 0;
+  padding-block: 2rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.document h1::before {
+  content: "#";
+}
+
+.document h2 {
+  margin-top: 2.5rem;
+  padding-block: 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.document h2::before {
+  content: "##";
+}
+
+.document h3 {
+  margin-top: 1.5rem;
+  padding-block: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.document h3::before {
+  content: "###";
+}
+
+.document p {
+  margin-block: 0;
+  padding: 0.5rem 0.25rem 0.5rem 2.5rem;
+  color: #27272a;
+  line-height: 1.75rem;
+}
+
+.document a {
+  border-radius: 0.125rem;
+  color: #3b3030;
+  font-weight: 700;
+  text-decoration-line: underline;
+  text-decoration-color: #9b8b7e;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  transition: color 150ms ease;
+}
+
+.document a[href^="#"] {
+  font-weight: 400;
+}
+
+.document a:hover {
+  color: #6b5555;
+}
+
+.document a:focus-visible {
+  outline: 2px solid #3b3030;
+  outline-offset: 4px;
+}
+
+@media (max-width: 39.999rem) {
+  .document h1 {
+    padding-block: 1.5rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .document p {
+    padding-left: 1.5rem;
+  }
+}

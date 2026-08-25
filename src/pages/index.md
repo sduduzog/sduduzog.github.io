@@ -1,6 +1,5 @@
 ---
-navigation:
-  title: Home
+layout: ../layouts/MarkdownLayout.astro
 title: Sdu Gumede — Software Engineer
 description: Software engineer and technical consultant working across mobile, backend systems, integrations and developer experience.
 ---
