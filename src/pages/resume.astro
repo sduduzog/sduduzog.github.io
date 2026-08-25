@@ -1,0 +1,843 @@
+---
+import "../styles/global.css";
+
+const title = "Sdu Gumede — Resume";
+const description =
+  "Software engineer and technical consultant working across mobile, backend systems, integrations and developer experience.";
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+  </head>
+
+  <body class="resume-body">
+    <nav class="resume-controls" aria-label="Resume actions">
+      <a href="/">← portfolio</a>
+      <button type="button" data-print-resume>print / save PDF</button>
+    </nav>
+
+    <main class="resume-page">
+      <header class="resume-header">
+        <div>
+          <p class="eyebrow">software engineer / technical consultant</p>
+          <h1>Sdu Gumede</h1>
+        </div>
+
+        <div class="contact-block" aria-label="Contact details">
+          <span>Johannesburg, South Africa</span>
+          <a href="mailto:gumedesduduzo@gmail.com">gumedesduduzo@gmail.com</a>
+          <a href="https://sduu.dev">sduu.dev</a>
+          <a href="https://github.com/sduduzog">github.com/sduduzog</a>
+        </div>
+      </header>
+
+      <div class="resume-grid">
+        <aside class="resume-sidebar">
+          <section aria-labelledby="profile-heading">
+            <h2 id="profile-heading"><span>#</span> profile</h2>
+            <p>
+              Software consultant with 7+ years of experience working on mobile
+              applications, backend services, web platforms and integrations.
+              Languages and frameworks include Kotlin/Android, React Native, Go,
+              C#/.NET, TypeScript, Vue, Node.js and Phoenix/Elixir.
+            </p>
+          </section>
+
+          <section aria-labelledby="education-heading">
+            <h2 id="education-heading"><span>#</span> education</h2>
+            <p class="compact-copy">
+              <strong>BSc · Computer Science &amp; Hydrology</strong><br />University of Zululand
+            </p>
+          </section>
+
+          <section aria-labelledby="role-heading">
+            <h2 id="role-heading"><span>#</span> employment</h2>
+            <p class="compact-copy">
+              <strong>Consultant, <a href="https://www.dae.mn">Daemon</a></strong><br />Dec 2023—present
+            </p>
+            <p class="compact-copy">
+              <strong>Software Engineer, <a href="https://www.codeo.co.za">Codeo</a></strong><br />Mar 2019—Dec 2023
+            </p>
+          </section>
+
+          <section aria-labelledby="public-work-heading">
+            <h2 id="public-work-heading"><span>#</span> public work</h2>
+            <p>
+              Published and maintained{" "}
+              <a href="https://play.google.com/store/apps/details?id=com.sduduzog.slimlauncher">Slim Launcher</a>,
+              an open-source Kotlin Android app with 100K+ downloads, a 4.0 rating
+              and 1.6K+ Google Play reviews.
+            </p>
+            <p class="compact-copy">
+              Its{" "}<a href="https://github.com/sduduzog/slim-launcher">public repository</a>{" "}
+              has 350+ stars, 125+ forks and more than 500 commits.
+            </p>
+          </section>
+
+          <section aria-labelledby="community-heading">
+            <h2 id="community-heading"><span>#</span> community</h2>
+            <p>
+              Co-host of <a href="https://zatechradio.com">ZATechRadio</a>, a
+              community about entering, remaining in and thriving in South African
+              technology.
+            </p>
+            <p class="compact-copy">
+              Speaker and contributor on Vue, Nuxt, Nitro, Slidev, cloud
+              development, mobile architecture and engineering careers.
+            </p>
+          </section>
+        </aside>
+
+        <div class="resume-main">
+          <section aria-labelledby="experience-heading">
+            <div class="section-heading-row">
+              <h2 id="experience-heading"><span>##</span> experience</h2>
+            </div>
+
+            <article class="experience-section">
+              <header class="experience-header">
+                <div>
+                  <h3>Daemon</h3>
+                  <p>Consultant</p>
+                </div>
+                <time datetime="2023-12">Dec 2023—present</time>
+              </header>
+
+              <section class="client-item">
+                <h4>JWO (Just Walk Out) <span>Daemon</span></h4>
+                <ul class="client-facts">
+                  <li>Building the Go connector between POS providers and Amazon’s Just Walk Out platform.</li>
+                  <li>Implemented providers for Oracle Simphony, Shopify and Clover Sport.</li>
+                </ul>
+              </section>
+
+              <section class="client-item">
+                <h4>AJ Bell <span>Daemon</span></h4>
+                <ul class="client-facts">
+                  <li>Evaluated Hangfire, Quartz.NET, Elsa, Temporal and WorkflowCore; recommended WorkflowCore for the existing AWS and MongoDB stack.</li>
+                  <li>Built the proof of concept, initial API endpoints and hosted workflows for a pension-payout case-management service.</li>
+                  <li>The production service reduced a multi-day manual process to as little as one day when no manual intervention was required.</li>
+                  <li>Introduced a Playwright builder pattern for deterministic test data, removing failures caused by shared and duplicate setup data.</li>
+                </ul>
+              </section>
+
+              <section class="client-item">
+                <h4>Domestic &amp; General <span>Daemon</span></h4>
+                <ul class="client-facts">
+                  <li>Introduced Drizzle ORM, composable database connections and Drizzle-managed schema migrations for TypeScript services on AWS Lambda.</li>
+                  <li>Added isolated unit-testing patterns for Lambda handlers and services, plus shared Zod validation schemas.</li>
+                  <li>Modernised ESLint configuration in a shared repository used across the team’s services.</li>
+                  <li>Identified PostgreSQL connection exhaustion and documented the data-access patterns and pooling options for the team.</li>
+                </ul>
+              </section>
+            </article>
+
+            <article class="experience-section">
+              <header class="experience-header">
+                <div>
+                  <h3>Codeo</h3>
+                  <p>Software Engineer</p>
+                </div>
+                <time datetime="2019-03">Mar 2019—Dec 2023</time>
+              </header>
+
+              <section class="client-item">
+                <h4>Yumbi / Famous Brands <span>Codeo</span></h4>
+                <ul class="client-facts">
+                  <li>Built and maintained the React Native Android application around a Vue.js food-ordering platform.</li>
+                  <li>Added AWS SNS push notifications, deep links and native modules, and managed Google Play releases.</li>
+                  <li>Modernised the AngularJS back office build, introduced Jest and TypeScript, and implemented dynamic RBAC scoped by store, brand and region.</li>
+                </ul>
+              </section>
+
+              <section class="client-item">
+                <h4>Spar <span>Codeo</span></h4>
+                <ul class="client-facts">
+                  <li>Worked on the React Native application wrapping the AngularJS frontend for Spar Rewards.</li>
+                  <li>Built .NET sagas and workflows for ordering, campaigns, promotions and vouchers across the Spar and Yumbi platforms.</li>
+                </ul>
+              </section>
+
+              <section class="client-item">
+                <h4>Backend infrastructure <span>Codeo</span></h4>
+                <ul class="client-facts">
+                  <li>Worked with Codeo’s in-house .NET orchestration framework across the Yumbi and Spar backends.</li>
+                  <li>Contributed to migrating services to a Nomad container cluster with Consul service discovery.</li>
+                </ul>
+              </section>
+            </article>
+          </section>
+
+        </div>
+      </div>
+
+      <footer class="resume-footer">
+        <p>sduu.dev/resume</p>
+        <p>01 / 02</p>
+      </footer>
+    </main>
+
+    <main class="resume-page resume-page--continued">
+      <header class="resume-continuation">
+        <strong>Sdu Gumede</strong>
+        <span>gumedesduduzo@gmail.com · sduu.dev</span>
+        <span>02 / 02</span>
+      </header>
+
+      <div class="resume-grid resume-grid--full">
+        <div class="resume-main">
+          <section aria-labelledby="range-heading">
+            <div class="section-heading-row">
+              <h2 id="range-heading"><span>##</span> technical work</h2>
+            </div>
+
+            <article class="work-item">
+              <div>
+                <h3>Backend services <span>Go · C#/.NET · Node.js · Elixir</span></h3>
+                <p>
+                  Built Go POS providers for JWO, .NET APIs and hosted services for
+                  AJ Bell, and TypeScript Lambda services for Domestic &amp; General.
+                  Additional backend experience includes Node.js and Phoenix/Elixir.
+                </p>
+              </div>
+            </article>
+
+            <article class="work-item">
+              <div>
+                <h3>Workflow orchestration <span>WorkflowCore · .NET sagas</span></h3>
+                <p>
+                  Built AJ Bell’s pension-payout workflows with WorkflowCore and
+                  Codeo sagas covering ordering, campaigns, promotions and vouchers
+                  for the Yumbi and Spar platforms.
+                </p>
+              </div>
+            </article>
+
+            <article class="work-item">
+              <div>
+                <h3>Mobile applications <span>Kotlin · Android · React Native</span></h3>
+                <p>
+                  Worked on the Yumbi/Famous Brands and Spar applications, including
+                  push notifications, deep links, native modules, analytics and
+                  Google Play releases. Built Slim Launcher with Kotlin and Jetpack
+                  Compose.
+                </p>
+              </div>
+            </article>
+
+            <article class="work-item">
+              <div>
+                <h3>Web applications <span>Vue · Nuxt · TypeScript · AngularJS</span></h3>
+                <p>
+                  Worked on Yumbi’s Vue ordering application and AngularJS back
+                  office, including its TypeScript and Jest migration. Additional
+                  frontend work includes Nuxt applications and reusable libraries.
+                </p>
+              </div>
+            </article>
+
+            <article class="work-item">
+              <div>
+                <h3>Integrations <span>GraphQL · REST · OAuth2 PKCE</span></h3>
+                <p>
+                  Built reusable provider integrations and the JWO connectors for
+                  Oracle Simphony, Shopify and Clover Sport. Wrote configuration
+                  documentation and added readiness checks for provider work.
+                </p>
+              </div>
+            </article>
+
+            <article class="work-item">
+              <div>
+                <h3>Access control &amp; validation <span>RBAC · Zod · TypeScript</span></h3>
+                <p>
+                  Implemented dynamic permissions scoped by store, brand and region
+                  for Yumbi. Added shared Zod schemas and generated types for
+                  Domestic &amp; General services.
+                </p>
+              </div>
+            </article>
+
+            <article class="work-item">
+              <div>
+                <h3>Application releases &amp; production APIs <span>Android · AWS Lambda</span></h3>
+                <p>
+                  Managed Yumbi’s Android releases to Google Play, published and
+                  maintained Slim Launcher, and overhauled Yumbi’s back-office
+                  build system. At Domestic &amp; General, implemented APIs that had
+                  previously been mocked; the concrete implementations were
+                  deployed to production after unit and manual testing.
+                </p>
+              </div>
+            </article>
+          </section>
+
+          <section class="experience-range" aria-labelledby="tools-heading">
+            <div class="section-heading-row">
+              <h2 id="tools-heading"><span>##</span> tools &amp; infrastructure</h2>
+            </div>
+
+            <div class="range-list">
+              <article>
+                <span>01 / data</span>
+                <h3>Databases</h3>
+                <p>
+                  PostgreSQL, MySQL and MongoDB. Drizzle ORM, schema migrations,
+                  reusable connections and connection-pooling work.
+                </p>
+              </article>
+
+              <article>
+                <span>02 / cloud</span>
+                <h3>AWS &amp; infrastructure</h3>
+                <p>
+                  AWS Lambda, SNS and RDS; AWS CDK, Terraform, Nomad and Consul.
+                </p>
+              </article>
+
+              <article>
+                <span>03 / quality</span>
+                <h3>Testing</h3>
+                <p>
+                  Playwright, Jest and TDD; deterministic test-data builders and
+                  isolated handler and service tests.
+                </p>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <footer class="resume-footer">
+        <p>sduu.dev/resume</p>
+        <p>02 / 02</p>
+      </footer>
+    </main>
+
+    <script>
+      document
+        .querySelector("[data-print-resume]")
+        ?.addEventListener("click", () => window.print());
+    </script>
+  </body>
+</html>
+
+<style>
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  :global(.resume-body) {
+    min-width: 20rem;
+    margin: 0;
+    padding: 3rem 1rem 5rem;
+    background: #ffffff;
+    color: #2c2523;
+    font-family: var(--font-mono);
+  }
+
+  .resume-controls {
+    display: flex;
+    width: min(210mm, calc(100vw - 2rem));
+    margin: 0 auto 1rem;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.75rem;
+  }
+
+  .resume-controls a,
+  .resume-controls button {
+    border: 0;
+    border-radius: 0.15rem;
+    color: #6c4f47;
+    background: transparent;
+    font: inherit;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: #c7a692;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    cursor: pointer;
+  }
+
+  .resume-controls button {
+    padding: 0.45rem 0.65rem;
+    color: #ffffff;
+    background: #6c4f47;
+    text-decoration: none;
+  }
+
+  .resume-page {
+    display: grid;
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 13mm 15mm 10mm;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    background: #ffffff;
+    box-shadow: 0 1.25rem 4rem rgba(75, 55, 50, 0.12);
+  }
+
+  .resume-page + .resume-page {
+    margin-top: 1.5rem;
+  }
+
+  .resume-page--continued {
+    grid-template-rows: auto minmax(0, 1fr) auto;
+  }
+
+  .resume-continuation {
+    display: grid;
+    margin-bottom: 0;
+    padding: 0.52rem 0;
+    grid-template-columns: 1fr 1.25fr auto;
+    gap: 1rem;
+    align-items: center;
+    border-top: 2px solid #71544c;
+    border-bottom: 1px solid #e6ded3;
+    color: #8b675c;
+    font-size: 0.58rem;
+    letter-spacing: 0.025em;
+  }
+
+  .resume-continuation strong {
+    color: #6c4f47;
+  }
+
+  .resume-continuation span:nth-child(2) {
+    text-align: center;
+  }
+
+  .resume-continuation span:last-child {
+    font-weight: 700;
+    text-align: right;
+  }
+
+  .resume-header {
+    display: grid;
+    padding-bottom: 0.85rem;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1.5rem;
+    align-items: end;
+    border-bottom: 2px solid #71544c;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.2rem;
+    color: #a36f5d;
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+
+  .resume-header h1 {
+    margin: 0;
+    color: #2c2523;
+    font-size: 2.75rem;
+    line-height: 0.95;
+    letter-spacing: -0.065em;
+  }
+
+  .contact-block {
+    display: grid;
+    gap: 0.18rem;
+    justify-items: end;
+    color: #71645e;
+    font-size: 0.61rem;
+    line-height: 1.35;
+  }
+
+  .contact-block a,
+  .resume-sidebar a {
+    color: #704f46;
+    font-weight: 700;
+    text-decoration-color: #c7a692;
+    text-underline-offset: 2px;
+  }
+
+  .resume-grid {
+    display: grid;
+    min-height: 0;
+    margin-top: 1rem;
+    grid-template-columns: 31% minmax(0, 1fr);
+    gap: 1.25rem;
+    align-items: stretch;
+  }
+
+  .resume-grid--full {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .resume-sidebar {
+    display: flex;
+    padding-right: 1.15rem;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-between;
+    border-right: 1px solid #e6ded3;
+  }
+
+  .resume-main {
+    display: grid;
+    min-width: 0;
+    min-height: 0;
+    grid-template-rows: minmax(0, 1fr) auto;
+    gap: 1rem;
+  }
+
+  .resume-main > section:first-child {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+  }
+
+  section,
+  article {
+    break-inside: avoid;
+  }
+
+  h2 {
+    margin: 0 0 0.55rem;
+    color: #2c2523;
+    font-size: 0.84rem;
+    line-height: 1.2;
+    letter-spacing: -0.035em;
+  }
+
+  h2 span {
+    color: #bd927f;
+    font-weight: 400;
+  }
+
+  .resume-sidebar p,
+  .work-item p,
+  .experience-range p {
+    margin: 0;
+    color: #4a403d;
+    font-size: 0.69rem;
+    line-height: 1.5;
+  }
+
+  .resume-sidebar .compact-copy {
+    margin-top: 0.5rem;
+  }
+
+  .stack-list {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    gap: 0.48rem;
+    list-style: none;
+  }
+
+  .stack-list li {
+    display: grid;
+    gap: 0.05rem;
+  }
+
+  .stack-list strong {
+    color: #9b6b59;
+    font-size: 0.57rem;
+    letter-spacing: 0.06em;
+  }
+
+  .stack-list span {
+    color: #2c2523;
+    font-size: 0.67rem;
+    line-height: 1.4;
+  }
+
+  .section-heading-row {
+    display: flex;
+    margin-bottom: 0.15rem;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .section-heading-row p {
+    margin: 0;
+    color: #8a746b;
+    font-size: 0.55rem;
+  }
+
+  .experience-section {
+    padding: 0.7rem 0;
+    border-top: 1px solid #e9e2d9;
+  }
+
+  .experience-section:first-of-type {
+    padding-top: 0.62rem;
+  }
+
+  .experience-header {
+    display: flex;
+    margin-bottom: 0.2rem;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .experience-header h3,
+  .client-item h4 {
+    margin: 0;
+    color: #2c2523;
+    font-size: 0.76rem;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+  }
+
+  .experience-header p,
+  .client-item p {
+    margin: 0;
+    color: #4a403d;
+    font-size: 0.67rem;
+    line-height: 1.45;
+  }
+
+  .experience-header time {
+    color: #a36f5d;
+    font-size: 0.54rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .client-item {
+    padding: 0.48rem 0 0.12rem;
+  }
+
+  .client-item + .client-item {
+    margin-top: 0.28rem;
+    border-top: 1px solid #eee8e1;
+  }
+
+  .client-item h4 {
+    margin-bottom: 0.18rem;
+  }
+
+  .client-item h4 span {
+    margin-left: 0.25rem;
+    color: #8a746b;
+    font-size: 0.5rem;
+    font-weight: 400;
+  }
+
+  .client-facts {
+    display: grid;
+    margin: 0.18rem 0 0;
+    padding-left: 1rem;
+    gap: 0.14rem;
+    color: #4a403d;
+    font-size: 0.63rem;
+    line-height: 1.4;
+  }
+
+  .client-facts li::marker {
+    color: #b88c78;
+  }
+
+  .work-item {
+    display: grid;
+    padding: 0.78rem 0;
+    flex: 1;
+    grid-template-columns: minmax(0, 1fr);
+    align-content: center;
+    border-top: 1px solid #e9e2d9;
+  }
+
+  .work-item h3,
+  .range-list h3 {
+    margin: 0 0 0.22rem;
+    color: #2c2523;
+    font-size: 0.76rem;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+  }
+
+  .work-item h3 span {
+    margin-left: 0.25rem;
+    color: #8a746b;
+    font-size: 0.52rem;
+    font-weight: 400;
+  }
+
+  .experience-range {
+    padding-top: 0.15rem;
+  }
+
+  .range-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border: 1px solid #8c6a60;
+    background: #ffffff;
+  }
+
+  .range-list article {
+    padding: 0.72rem 0.65rem;
+  }
+
+  .range-list article + article {
+    border-left: 1px solid #e6ded3;
+  }
+
+  .range-list article > span {
+    display: block;
+    margin-bottom: 0.32rem;
+    color: #95766a;
+    font-size: 0.47rem;
+    font-weight: 700;
+    letter-spacing: 0.035em;
+  }
+
+  .range-list h3 {
+    min-height: 2em;
+  }
+
+  .resume-footer {
+    display: flex;
+    padding-top: 0.7rem;
+    align-items: end;
+    justify-content: space-between;
+    border-top: 1px solid #e6ded3;
+    color: #8b675c;
+    font-size: 0.55rem;
+    font-weight: 700;
+  }
+
+  .resume-footer p {
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .resume-page--continued .resume-footer p:last-child {
+    margin-right: 0.2rem;
+  }
+
+  @media (max-width: 52rem) {
+    :global(.resume-body) {
+      padding: 1rem;
+    }
+
+    .resume-page {
+      width: 100%;
+      min-height: 0;
+      padding: 2rem;
+    }
+
+    .resume-header,
+    .resume-grid,
+    .range-list {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-block {
+      justify-items: start;
+    }
+
+    .resume-sidebar {
+      padding-right: 0;
+      border-right: 0;
+    }
+
+    .range-list article + article {
+      border-top: 1px solid #e6ded3;
+      border-left: 0;
+    }
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  @media print {
+    :global(html),
+    :global(.resume-body) {
+      width: 210mm;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+    }
+
+    :global(.resume-body) {
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .resume-controls {
+      display: none;
+    }
+
+    .resume-page {
+      width: 210mm;
+      height: 296mm;
+      min-height: 296mm;
+      margin: 0;
+      overflow: hidden;
+      break-inside: avoid-page;
+      page-break-inside: avoid;
+      box-shadow: none;
+    }
+
+    .resume-page + .resume-page {
+      margin-top: 0;
+      break-before: page;
+      page-break-before: always;
+    }
+
+    .resume-header {
+      grid-template-columns: minmax(0, 1fr) auto;
+    }
+
+    .resume-grid {
+      grid-template-columns: 31% minmax(0, 1fr);
+    }
+
+    .resume-grid--full {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .range-list {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .contact-block {
+      justify-items: end;
+    }
+
+    .resume-sidebar {
+      padding-right: 1.15rem;
+      border-right: 1px solid #e6ded3;
+    }
+
+    .range-list article + article {
+      border-top: 0;
+      border-left: 1px solid #e6ded3;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+</style>

@@ -6,7 +6,7 @@ description: Software engineer and technical consultant working across mobile, b
 
 # Hi, I'm Sdu
 
-[about](#about) · [selected work](#selected-work) · [current focus](#current-focus) · [community](#community) · [contact](#contact)
+[about](#about) · [selected work](#selected-work) · [current focus](#current-focus) · [community](#community) · [resume](/resume) · [contact](#contact)
 
 ## About
 
