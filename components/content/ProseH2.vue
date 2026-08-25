@@ -1,6 +1,6 @@
 <template>
-  <h2 class="text-2xl flex gap-1 py-4 font-bold">
-    <span class="pl-2 text-zinc-400">##</span>
+  <h2 class="mt-10 flex items-baseline gap-2 py-4 text-2xl font-bold tracking-tight">
+    <span aria-hidden="true" class="text-zinc-400">##</span>
     <slot></slot>
   </h2>
 </template>
