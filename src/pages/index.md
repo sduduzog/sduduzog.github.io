@@ -6,48 +6,24 @@ description: Software engineer and technical consultant working across mobile, b
 
 # Hi, I'm Sdu
 
-[about](#about) · [selected work](#selected-work) · [current focus](#current-focus) · [community](#community) · [resume](/resume) · [contact](#contact)
-
 ## About
 
 I am a software engineer and technical consultant based in Johannesburg, South Africa. Since 2019, I have worked across mobile applications, backend systems, web platforms, cloud infrastructure and systems integration.
 
-My strongest work tends to begin with an ambiguous technical problem and end with a practical foundation that other people can build on: an architecture decision, a reusable contract, a safer workflow or a clearer delivery path.
-
 TypeScript · Go · Kotlin · C#/.NET · Android · React Native · Vue · AWS
 
-## Selected work
+## Experience
 
-### Workflow systems
+**Consultant, [Daemon](https://www.dae.mn) — Dec 2023–present.** Embedded in UK client engineering teams across retail, fintech and insurance. Work includes Go services for Just Walk Out integrations, .NET case-management workflows at AJ Bell, and TypeScript services on AWS Lambda at Domestic & General.
 
-Evaluated several .NET workflow engines for a new financial-services platform, recommended WorkflowCore, built the proof of concept and helped carry the decision into production code. The foundation later supported multi-stage case processing, external automation and reliable email queueing and retries.
+**Software Engineer, [Codeo](https://www.codeo.co.za) — Mar 2019–Dec 2023.** Worked on Yumbi/Famous Brands and Spar platforms across React Native, Vue, AngularJS and .NET, including Android releases, back-office systems and backend workflows.
 
-### Mobile engineering
+## Open source & community
 
-Built and maintained retail applications across React Native, Android and Kotlin. Recent work includes improving operational analytics, designing safer event boundaries and creating emulator and ADB workflows that reduced dependence on specialised physical devices.
-
-### Integration platforms
-
-Delivered reusable Go provider integrations across GraphQL, REST and OAuth2 PKCE. I also helped mature the shared provider contract, wrote configuration guidance and introduced practical readiness checks and demo rehearsals.
-
-### Engineering foundations
-
-Introduced shared validation contracts, generated types, database tooling and reusable linting standards across TypeScript and AWS repositories. I pair these changes with documentation, presentations, code review and mentoring so that the improvement survives beyond one ticket.
-
-## Current focus
-
-I am currently focused on Android and cross-platform mobile engineering, Go-backed integration work, observable systems and broader technical direction. I am especially interested in work that joins mobile and backend concerns into one coherent outcome.
-
-## Community
+I publish and maintain [Slim Launcher](https://play.google.com/store/apps/details?id=com.sduduzog.slimlauncher), an open-source Kotlin Android app with 100K+ downloads, a 4.0 rating and 1.61K Google Play reviews. Its [GitHub repository](https://github.com/sduduzog/slim-launcher) has 351 stars and 128 forks; my other public projects are on [GitHub](https://github.com/sduduzog).
 
 I co-host [ZATechRadio](https://zatechradio.com), a podcast and community about entering, remaining in and thriving in South African technology.
 
 I also speak and contribute beyond client delivery. Past topics include Vue, Nuxt, Nitro and Slidev, and I have supported community conversations around cloud development, mobile architecture and engineering careers.
 
 Away from software, I enjoy family time, cooking, grilling and mixology.
-
-## Contact
-
-You can find my public work on [GitHub](https://github.com/sduduzog) or follow the conversations at [ZATechRadio](https://zatechradio.com).
-
-Johannesburg, South Africa · Available for thoughtful engineering conversations.
