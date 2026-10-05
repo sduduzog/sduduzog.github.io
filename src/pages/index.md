@@ -1,29 +1,19 @@
 ---
 layout: ../layouts/MarkdownLayout.astro
-title: Sdu Gumede — Software Engineer
-description: Software engineer and technical consultant working across mobile, backend systems, integrations and developer experience.
+title: Sdu Gumede — Senior Software Engineer
+description: Senior software engineer and consultant working across mobile, backend systems, integrations and developer experience.
 ---
 
 # Hi, I'm Sdu
 
-## About
+I'm a Senior Consultant at [Daemon](https://www.dae.mn), based in Johannesburg, South Africa. I work across mobile applications, backend systems, web platforms, cloud services and systems integration. That has taken me from Kotlin and React Native mobile apps to services built with C#/.NET, TypeScript, Go and Elixir, supported by Vue, PostgreSQL and AWS.
 
-I am a software engineer and technical consultant based in Johannesburg, South Africa. Since 2019, I have worked across mobile applications, backend systems, web platforms, cloud infrastructure and systems integration.
+I enjoy the kind of work where the problem is not neatly contained in a ticket. I like staying close to the code while helping a team make sound technical decisions and carry them through to a useful result.
 
-TypeScript · Go · Kotlin · C#/.NET · Android · React Native · Vue · AWS
+My work has spanned teams and products at Sainsbury's, Amazon Just Walk Out, AJ Bell, Domestic & General, Famous Brands and SPAR, across retail, financial services and insurance.
 
-## Experience
+Outside client work, I build things that I want to exist. [Duun](https://duun.app) is a task-management platform with a permission-scoped MCP server for working with tasks through AI tools. I also publish and maintain [Slim Launcher](https://play.google.com/store/apps/details?id=com.sduduzog.slimlauncher), an open-source Kotlin Android app with more than 100,000 downloads and over 350 stars on [GitHub](https://github.com/sduduzog/slim-launcher).
 
-**Consultant, [Daemon](https://www.dae.mn) — Dec 2023–present.** Embedded in UK client engineering teams across retail, fintech and insurance. Work includes Go services for Just Walk Out integrations, .NET case-management workflows at AJ Bell, and TypeScript services on AWS Lambda at Domestic & General.
+I have co-hosted 34 episodes of [ZATechRadio](https://zatechradio.com), spoken at JoziJS and shared what I have learned through engineering sessions and community conversations about building software, growing as an engineer and working in tech in South Africa.
 
-**Software Engineer, [Codeo](https://www.codeo.co.za) — Mar 2019–Dec 2023.** Worked on Yumbi/Famous Brands and Spar platforms across React Native, Vue, AngularJS and .NET, including Android releases, back-office systems and backend workflows.
-
-## Open source & community
-
-I publish and maintain [Slim Launcher](https://play.google.com/store/apps/details?id=com.sduduzog.slimlauncher), an open-source Kotlin Android app with 100K+ downloads, a 4.0 rating and 1.61K Google Play reviews. Its [GitHub repository](https://github.com/sduduzog/slim-launcher) has 351 stars and 128 forks; my other public projects are on [GitHub](https://github.com/sduduzog).
-
-I co-host [ZATechRadio](https://zatechradio.com), a podcast and community about entering, remaining in and thriving in South African technology.
-
-I also speak and contribute beyond client delivery. Past topics include Vue, Nuxt, Nitro and Slidev, and I have supported community conversations around cloud development, mobile architecture and engineering careers.
-
-Away from software, I enjoy family time, cooking, grilling and mixology.
+Away from software, I enjoy family time, cooking, grilling and mixology. If you would prefer the more formal version, you can read my [résumé](/resume/); the rest of my public work is on [GitHub](https://github.com/sduduzog).
