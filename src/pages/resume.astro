@@ -1,9 +1,9 @@
 ---
 import "../styles/global.css";
 
-const title = "Sdu Gumede — Resume";
+const title = "Sdu Gumede — Senior Consultant & Software Engineer";
 const description =
-  "Software engineer and technical consultant working across mobile, backend systems, integrations and developer experience.";
+  "Senior Consultant and software engineer with 7+ years of experience delivering production systems across backend, web, mobile, cloud and integrations.";
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin);
 ---
 
@@ -14,7 +14,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin)
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#f4f5f7" />
     <meta property="og:type" content="profile" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -23,314 +23,369 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin)
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <title>{title}</title>
   </head>
 
   <body class="resume-body">
-    <nav class="resume-controls" aria-label="Resume actions">
-      <a href="/">← portfolio</a>
-      <button type="button" data-print-resume>print / save PDF</button>
+    <nav class="resume-actions" aria-label="Résumé actions">
+      <a href="/">Back to portfolio</a>
+      <button type="button" data-print-resume>Print / save PDF</button>
     </nav>
 
-    <main class="resume-page">
-      <header class="resume-header">
-        <div>
-          <p class="eyebrow">software engineer / technical consultant</p>
-          <h1>Sdu Gumede</h1>
-        </div>
+    <main class="resume-document">
+      <section class="sheet sheet--first" aria-label="Résumé page 1 of 2">
+        <header class="identity">
+          <div class="identity__primary">
+            <p class="kicker">Senior Consultant · Senior Software Engineer</p>
+            <h1>Sdu Gumede</h1>
+          </div>
 
-        <div class="contact-block" aria-label="Contact details">
-          <span>Johannesburg, South Africa</span>
-          <a href="mailto:gumedesduduzo@gmail.com">gumedesduduzo@gmail.com</a>
-          <a href="https://sduu.dev">sduu.dev</a>
-          <a href="https://github.com/sduduzog">github.com/sduduzog</a>
-        </div>
-      </header>
+          <address class="contact" aria-label="Contact details">
+            <span>Johannesburg, South Africa</span>
+            <a href="mailto:gumedesduduzo@gmail.com">gumedesduduzo@gmail.com</a>
+            <a href="https://sduu.dev">sduu.dev</a>
+            <a href="https://github.com/sduduzog">github.com/sduduzog</a>
+          </address>
+        </header>
 
-      <div class="resume-grid">
-        <aside class="resume-sidebar">
-          <section aria-labelledby="profile-heading">
-            <h2 id="profile-heading"><span>#</span> profile</h2>
+        <section class="opening" aria-labelledby="profile-title">
+          <div class="summary">
+            <p class="section-label" id="profile-title">Profile</p>
             <p>
-              Software consultant with 7+ years of experience working on mobile
-              applications, backend services, web platforms and integrations.
-              Languages and frameworks include Kotlin/Android, React Native, Go,
-              C#/.NET, TypeScript, Vue, Node.js and Phoenix/Elixir.
+              Senior Consultant and software engineer with 6+ years of hands-on
+              engineering experience delivering and operating production systems
+              across retail, financial services and insurance. Owns complex client
+              problems from discovery and architecture through implementation, release
+              and measurable production outcomes. Works across mobile, backend and web
+              systems, choosing pragmatic designs, improving engineering standards and
+              remaining accountable for how software behaves in production.
             </p>
-          </section>
+          </div>
+        </section>
 
-          <section aria-labelledby="education-heading">
-            <h2 id="education-heading"><span>#</span> education</h2>
-            <p class="compact-copy">
-              <strong>BSc · Computer Science &amp; Hydrology</strong><br />University of Zululand
-            </p>
-          </section>
+        <section class="experience" aria-labelledby="experience-title">
+          <div class="section-title-row">
+            <h2 id="experience-title">Professional experience</h2>
+            <p>7+ years · South Africa and UK client teams</p>
+          </div>
 
-          <section aria-labelledby="role-heading">
-            <h2 id="role-heading"><span>#</span> employment</h2>
-            <p class="compact-copy">
-              <strong>Consultant, <a href="https://www.dae.mn">Daemon</a></strong><br />Dec 2023—present
-            </p>
-            <p class="compact-copy">
-              <strong>Software Engineer, <a href="https://www.codeo.co.za">Codeo</a></strong><br />Mar 2019—Dec 2023
-            </p>
-          </section>
+          <article class="employer">
+            <header class="employer__header">
+              <div>
+                <h3>Daemon</h3>
+              </div>
+              <p class="role-dates">
+                <span>Senior Consultant · Dec 2023–present</span>
+              </p>
+            </header>
 
-          <section aria-labelledby="public-work-heading">
-            <h2 id="public-work-heading"><span>#</span> public work</h2>
-            <p>
-              Published and maintained{" "}
-              <a href="https://play.google.com/store/apps/details?id=com.sduduzog.slimlauncher">Slim Launcher</a>,
-              an open-source Kotlin Android app with 100K+ downloads, a 4.0 rating
-              and 1.61K Google Play reviews.
+            <p class="employer__context">
+              Works directly with UK retail, fintech and insurance clients, leading
+              technical direction while remaining responsible for implementation,
+              production outcomes and mentoring.
             </p>
-            <p class="compact-copy">
-              Its{" "}<a href="https://github.com/sduduzog/slim-launcher">public repository</a>{" "}
-              has 351 stars, 128 forks and more than 500 commits.
-            </p>
-          </section>
 
-          <section aria-labelledby="community-heading">
-            <h2 id="community-heading"><span>#</span> community</h2>
-            <p>
-              Co-host of <a href="https://zatechradio.com">ZATechRadio</a>, a
-              community about entering, remaining in and thriving in South African
-              technology.
-            </p>
-            <p class="compact-copy">
-              Speaker and contributor on Vue, Nuxt, Nitro, Slidev, cloud
-              development, mobile architecture and engineering careers.
-            </p>
-          </section>
-        </aside>
+            <div class="engagements">
+              <article class="engagement">
+                <header class="engagement__header">
+                  <div>
+                    <h4>Sainsbury’s SmartShop</h4>
+                    <p>Senior Software Engineer</p>
+                  </div>
+                  <time datetime="2026-07">Jul 2026–present</time>
+                </header>
+                <ul>
+                  <li>
+                    Redesigned SmartShop’s Android connectivity handling around modern
+                    network callbacks and a single source of truth, eliminating false
+                    positives and stabilising handset behaviour; within 24 hours of
+                    release, New Relic events fell from approximately 11.4K to 468 and
+                    affected handsets from approximately 1.5K to 85.
+                  </li>
+                  <li>
+                    Consolidated fragmented handset-readiness events across application
+                    versions into one New Relic event with contextual attributes,
+                    simplifying dashboard reporting and enabling aggregate analysis
+                    without losing diagnostic detail.
+                  </li>
+                  <li>
+                    Resolved a production defect in SmartShop’s handset docking and
+                    session-reset flow by centralising logout and holding-screen
+                    navigation at the application level, eliminating screen-dependent
+                    lifecycle races and adding deterministic regression coverage for
+                    hardware events.
+                  </li>
+                  <li>
+                    Leads Daemon’s engagement at Sainsbury’s while continuing hands-on
+                    engineering, maintaining visibility of delivery progress,
+                    dependencies, risks and mitigations across both organisations.
+                  </li>
+                </ul>
+              </article>
 
-        <div class="resume-main">
-          <section aria-labelledby="experience-heading">
-            <div class="section-heading-row">
-              <h2 id="experience-heading"><span>##</span> experience</h2>
+              <article class="engagement">
+                <header class="engagement__header">
+                  <div>
+                    <h4>Amazon Just Walk Out</h4>
+                    <p>Senior Software Engineer</p>
+                  </div>
+                  <time>Jan–May 2026</time>
+                </header>
+                <ul>
+                  <li>
+                    Replaced a SwiftPOS-only connector with a configurable provider
+                    architecture, owning the shared contract as requirements evolved;
+                    delivered three completed, validated integrations that expanded
+                    point-of-sale options for future merchant onboarding, with Oracle
+                    ready for partner certification.
+                  </li>
+                  <li>
+                    Established manual end-to-end testing as part of the team’s delivery
+                    process, capturing findings as prioritised defects and creating a
+                    repeatable feedback loop that surfaced non-obvious integration bugs
+                    for iterative resolution.
+                  </li>
+                </ul>
+              </article>
+
+              <article class="engagement">
+                <header class="engagement__header">
+                  <div>
+                    <h4>AJ Bell</h4>
+                    <p>Senior Software Engineer</p>
+                  </div>
+                  <time>Feb–Nov 2025</time>
+                </header>
+                <ul>
+                  <li>
+                    Led the selection and initial production implementation of
+                    WorkflowCore for AJ Bell’s benefits case-management platform,
+                    defining its distributed AWS architecture, persistence, start and
+                    resume APIs, and testable workflow-action patterns; the resulting
+                    team platform completed its first payout the same day, with four
+                    more paid and 44 cases in final processing.
+                  </li>
+                  <li>
+                    Rebuilt the project’s Playwright test setup around composable
+                    builders and isolated data, eliminating flaky tests caused by shared
+                    setup, improving CI reliability and making the full suite easier to
+                    extend.
+                  </li>
+                </ul>
+              </article>
             </div>
+          </article>
+        </section>
 
-            <article class="experience-section">
-              <header class="experience-header">
+        <footer class="page-footer">
+          <span>sduu.dev/resume</span>
+          <span>01 / 02</span>
+        </footer>
+      </section>
+
+      <section class="sheet" aria-label="Résumé page 2 of 2">
+        <header class="continuation-header">
+          <div>
+            <strong>Sdu Gumede</strong>
+            <span>Senior Consultant · Senior Software Engineer</span>
+          </div>
+          <span>Professional experience, continued</span>
+        </header>
+
+        <section class="experience experience--continued" aria-label="Professional experience continued">
+          <article class="engagement engagement--standalone">
+            <header class="engagement__header">
+              <div>
+                <h4>Domestic &amp; General</h4>
+                <p>Software Engineer</p>
+              </div>
+              <time>Dec 2023–Nov 2024</time>
+            </header>
+            <ul>
+              <li>
+                Centralised duplicated profile and address validation across three
+                TypeScript repositories, giving producers and consumers one shared
+                contract; the work exposed conflicting address models and prompted the
+                business to clarify which properties were required.
+              </li>
+              <li>
+                Secured adoption of Drizzle-authored migrations for production schema
+                changes, replacing database introspection; applied and reinforced
+                testable Lambda data-access patterns through delivery, code review and
+                team guidance as the wider refactor progressed.
+              </li>
+              <li>
+                Introduced a layered testing approach for AWS Lambda services, testing
+                handlers against mocked dependencies, service logic independently and
+                selected handler-to-service paths, shifting tests from coverage targets
+                towards clear behavioural verification.
+              </li>
+              <li>
+                Mentored a junior engineer through pair programming, TDD and
+                behaviour-focused testing, improving her independence and ability to
+                verify the behaviour changed by her work.
+              </li>
+            </ul>
+          </article>
+
+          <article class="employer employer--secondary">
+            <header class="employer__header">
+              <div>
+                <h3>Codeo</h3>
+              </div>
+              <p class="role-dates"><span>Mar 2019–Dec 2023</span></p>
+            </header>
+
+            <p class="employer__context">
+              Worked across Famous Brands and SPAR products, moving from end-to-end
+              quality assurance into full-stack delivery spanning mobile, web and .NET
+              services.
+            </p>
+
+            <div class="codeo-roles">
+              <section class="codeo-role" aria-labelledby="codeo-software-engineer">
+                <header class="codeo-role__header">
+                  <h4 id="codeo-software-engineer">Software Engineer</h4>
+                  <time datetime="2020-02">Feb 2020–Dec 2023</time>
+                </header>
+                <ul class="employer__results">
+                  <li>
+                    Replaced hard-coded frontend and backend permissions in a multi-brand
+                    commerce platform with dynamic role-based access control scoped by
+                    store, brand and region, preventing access outside each user’s
+                    authorised operational scope.
+                  </li>
+                  <li>
+                    Modernised a legacy AngularJS back-office application by overhauling
+                    its build system, introducing Jest and enabling TypeScript, resulting
+                    in faster builds, more accessible testing and smoother onboarding.
+                  </li>
+                  <li>
+                    Built and maintained React Native applications for ordering and retail
+                    rewards, integrating push notifications, deep links, native modules and
+                    analytics while managing Android releases to Google Play.
+                  </li>
+                  <li>
+                    Built reusable .NET sagas and workflows for long-running ordering,
+                    campaign, promotion and voucher processes across Yumbi and SPAR,
+                    providing shared orchestration without duplicating flow logic between
+                    products.
+                  </li>
+                </ul>
+              </section>
+
+              <section class="codeo-role" aria-labelledby="codeo-quality-engineer">
+                <header class="codeo-role__header">
+                  <h4 id="codeo-quality-engineer">Junior Quality Assurance Engineer</h4>
+                  <time datetime="2019-03">Mar 2019–Jan 2020</time>
+                </header>
+                <ul class="employer__results">
+                  <li>
+                    Tested customer-facing web and mobile applications for Famous Brands
+                    and SPAR Rewards, alongside the Famous Brands management platform and
+                    franchisee dashboard; maintained feature and regression cases while
+                    helping resolve specification gaps from design through delivery.
+                  </li>
+                  <li>
+                    Introduced automated post-deployment checks into the delivery pipeline,
+                    reducing smoke-test time from 30–40 minutes to 5–10 minutes, and began
+                    contributing frontend production code before moving into software
+                    engineering.
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </article>
+        </section>
+
+        <section class="education-section" aria-labelledby="education-title">
+          <div class="section-title-row">
+            <h2 id="education-title">Education</h2>
+          </div>
+          <div class="education-entry">
+            <div>
+              <h3>Bachelor of Science in Computer Science</h3>
+              <p>University of Zululand</p>
+            </div>
+            <time datetime="2019">2019</time>
+          </div>
+        </section>
+
+        <section class="projects-section" aria-labelledby="projects-title">
+          <div class="section-title-row">
+            <h2 id="projects-title">Projects</h2>
+          </div>
+
+          <div class="engagements project-list">
+            <article class="engagement project">
+              <header class="engagement__header">
                 <div>
-                  <h3>Daemon</h3>
-                  <p>Consultant</p>
+                  <h4>Duun</h4>
                 </div>
-                <time datetime="2023-12">Dec 2023—present</time>
+                <div class="project-meta">
+                  <span>29 scoped MCP tools</span>
+                  <a href="https://duun.app">duun.app</a>
+                </div>
               </header>
-
-              <section class="client-item">
-                <h4>JWO (Just Walk Out) <span>Daemon</span></h4>
-                <ul class="client-facts">
-                  <li>Building the Go connector between POS providers and Amazon’s Just Walk Out platform.</li>
-                  <li>Implemented providers for Oracle Simphony, Shopify and Clover Sport.</li>
-                </ul>
-              </section>
-
-              <section class="client-item">
-                <h4>AJ Bell <span>Daemon</span></h4>
-                <ul class="client-facts">
-                  <li>Evaluated Hangfire, Quartz.NET, Elsa, Temporal and WorkflowCore; recommended WorkflowCore for the existing AWS and MongoDB stack.</li>
-                  <li>Built the proof of concept, initial API endpoints and hosted workflows for a pension-payout case-management service.</li>
-                  <li>The production service reduced a multi-day manual process to as little as one day when no manual intervention was required.</li>
-                  <li>Introduced a Playwright builder pattern for deterministic test data, removing failures caused by shared and duplicate setup data.</li>
-                </ul>
-              </section>
-
-              <section class="client-item">
-                <h4>Domestic &amp; General <span>Daemon</span></h4>
-                <ul class="client-facts">
-                  <li>Introduced Drizzle ORM, composable database connections and Drizzle-managed schema migrations for TypeScript services on AWS Lambda.</li>
-                  <li>Added isolated unit-testing patterns for Lambda handlers and services, plus shared Zod validation schemas.</li>
-                  <li>Modernised ESLint configuration in a shared repository used across the team’s services.</li>
-                  <li>Identified PostgreSQL connection exhaustion and documented the data-access patterns and pooling options for the team.</li>
-                </ul>
-              </section>
+              <ul>
+                <li>
+                  Designed, built and operates a production task-management platform
+                  using Elixir, Phoenix, Vue and PostgreSQL. Its permission-scoped MCP
+                  server gives AI agents structured access to task search, planning,
+                  scheduling and sharing through OAuth and granular read/write scopes.
+                  Used Amp, Claude Code, OpenCode with oh-my-opencode and GitHub Copilot
+                  across development, backed by automated backend and Playwright tests.
+                </li>
+              </ul>
             </article>
 
-            <article class="experience-section">
-              <header class="experience-header">
+            <article class="engagement project">
+              <header class="engagement__header">
                 <div>
-                  <h3>Codeo</h3>
-                  <p>Software Engineer</p>
+                  <h4>Slim Launcher</h4>
+                  <p>Open-source Android application</p>
                 </div>
-                <time datetime="2019-03">Mar 2019—Dec 2023</time>
+                <div class="project-meta">
+                  <span>100K+ downloads</span>
+                  <a href="https://github.com/sduduzog/slim-launcher">GitHub</a>
+                </div>
               </header>
-
-              <section class="client-item">
-                <h4>Yumbi / Famous Brands <span>Codeo</span></h4>
-                <ul class="client-facts">
-                  <li>Built and maintained the React Native Android application around a Vue.js food-ordering platform.</li>
-                  <li>Added AWS SNS push notifications, deep links and native modules, and managed Google Play releases.</li>
-                  <li>Modernised the AngularJS back office build, introduced Jest and TypeScript, and implemented dynamic RBAC scoped by store, brand and region.</li>
-                </ul>
-              </section>
-
-              <section class="client-item">
-                <h4>Spar <span>Codeo</span></h4>
-                <ul class="client-facts">
-                  <li>Worked on the React Native application wrapping the AngularJS frontend for Spar Rewards.</li>
-                  <li>Built .NET sagas and workflows for ordering, campaigns, promotions and vouchers across the Spar and Yumbi platforms.</li>
-                </ul>
-              </section>
-
-              <section class="client-item">
-                <h4>Backend infrastructure <span>Codeo</span></h4>
-                <ul class="client-facts">
-                  <li>Worked with Codeo’s in-house .NET orchestration framework across the Yumbi and Spar backends.</li>
-                  <li>Contributed to migrating services to a Nomad container cluster with Consul service discovery.</li>
-                </ul>
-              </section>
+              <ul>
+                <li>
+                  Published and maintains a Kotlin Android application with 350+ GitHub
+                  stars and 500+ commits, demonstrating sustained product ownership,
+                  public releases and collaboration with an open-source user community.
+                </li>
+              </ul>
             </article>
-          </section>
+          </div>
+        </section>
 
-        </div>
-      </div>
+        <section class="community-section" aria-labelledby="community-title">
+          <p class="section-label" id="community-title">Speaking and community</p>
+          <ul>
+            <li>
+              Presented “My Point of Vue” at JoziJS and delivered internal engineering
+              sessions that helped teams adopt new frontend, database-migration and
+              testing practices.
+            </li>
+            <li>
+              Co-hosted 34 episodes of <a href="https://zatechradio.com">ZATechRadio</a>
+              and helps run its South African technology community, hosting conversations
+              about engineering careers, workplace practice and the realities of working
+              in tech.
+            </li>
+          </ul>
+        </section>
 
-      <footer class="resume-footer">
-        <p>sduu.dev/resume</p>
-        <p>01 / 02</p>
-      </footer>
-    </main>
-
-    <main class="resume-page resume-page--continued">
-      <header class="resume-continuation">
-        <strong>Sdu Gumede</strong>
-        <span>gumedesduduzo@gmail.com · sduu.dev</span>
-        <span>02 / 02</span>
-      </header>
-
-      <div class="resume-grid resume-grid--full">
-        <div class="resume-main">
-          <section aria-labelledby="range-heading">
-            <div class="section-heading-row">
-              <h2 id="range-heading"><span>##</span> technical work</h2>
-            </div>
-
-            <article class="work-item">
-              <div>
-                <h3>Backend services <span>Go · C#/.NET · Node.js · Elixir</span></h3>
-                <p>
-                  Built Go POS providers for JWO, .NET APIs and hosted services for
-                  AJ Bell, and TypeScript Lambda services for Domestic &amp; General.
-                  Additional backend experience includes Node.js and Phoenix/Elixir.
-                </p>
-              </div>
-            </article>
-
-            <article class="work-item">
-              <div>
-                <h3>Workflow orchestration <span>WorkflowCore · .NET sagas</span></h3>
-                <p>
-                  Built AJ Bell’s pension-payout workflows with WorkflowCore and
-                  Codeo sagas covering ordering, campaigns, promotions and vouchers
-                  for the Yumbi and Spar platforms.
-                </p>
-              </div>
-            </article>
-
-            <article class="work-item">
-              <div>
-                <h3>Mobile applications <span>Kotlin · Android · React Native</span></h3>
-                <p>
-                  Worked on the Yumbi/Famous Brands and Spar applications, including
-                  push notifications, deep links, native modules, analytics and
-                  Google Play releases. Built Slim Launcher with Kotlin and Jetpack
-                  Compose.
-                </p>
-              </div>
-            </article>
-
-            <article class="work-item">
-              <div>
-                <h3>Web applications <span>Vue · Nuxt · TypeScript · AngularJS</span></h3>
-                <p>
-                  Worked on Yumbi’s Vue ordering application and AngularJS back
-                  office, including its TypeScript and Jest migration. Additional
-                  frontend work includes Nuxt applications and reusable libraries.
-                </p>
-              </div>
-            </article>
-
-            <article class="work-item">
-              <div>
-                <h3>Integrations <span>GraphQL · REST · OAuth2 PKCE</span></h3>
-                <p>
-                  Built reusable provider integrations and the JWO connectors for
-                  Oracle Simphony, Shopify and Clover Sport. Wrote configuration
-                  documentation and added readiness checks for provider work.
-                </p>
-              </div>
-            </article>
-
-            <article class="work-item">
-              <div>
-                <h3>Access control &amp; validation <span>RBAC · Zod · TypeScript</span></h3>
-                <p>
-                  Implemented dynamic permissions scoped by store, brand and region
-                  for Yumbi. Added shared Zod schemas and generated types for
-                  Domestic &amp; General services.
-                </p>
-              </div>
-            </article>
-
-            <article class="work-item">
-              <div>
-                <h3>Application releases &amp; production APIs <span>Android · AWS Lambda</span></h3>
-                <p>
-                  Managed Yumbi’s Android releases to Google Play, published and
-                  maintained Slim Launcher, and overhauled Yumbi’s back-office
-                  build system. At Domestic &amp; General, implemented APIs that had
-                  previously been mocked; the concrete implementations were
-                  deployed to production after unit and manual testing.
-                </p>
-              </div>
-            </article>
-          </section>
-
-          <section class="experience-range" aria-labelledby="tools-heading">
-            <div class="section-heading-row">
-              <h2 id="tools-heading"><span>##</span> tools &amp; infrastructure</h2>
-            </div>
-
-            <div class="range-list">
-              <article>
-                <span>01 / data</span>
-                <h3>Databases</h3>
-                <p>
-                  PostgreSQL, MySQL and MongoDB. Drizzle ORM, schema migrations,
-                  reusable connections and connection-pooling work.
-                </p>
-              </article>
-
-              <article>
-                <span>02 / cloud</span>
-                <h3>AWS &amp; infrastructure</h3>
-                <p>
-                  AWS Lambda, SNS and RDS; AWS CDK, Terraform, Nomad and Consul.
-                </p>
-              </article>
-
-              <article>
-                <span>03 / quality</span>
-                <h3>Testing</h3>
-                <p>
-                  Playwright, Jest and TDD; deterministic test-data builders and
-                  isolated handler and service tests.
-                </p>
-              </article>
-            </div>
-          </section>
-        </div>
-      </div>
-
-      <footer class="resume-footer">
-        <p>sduu.dev/resume</p>
-        <p>02 / 02</p>
-      </footer>
+        <footer class="page-footer">
+          <span>sduu.dev/resume</span>
+          <span>02 / 02</span>
+        </footer>
+      </section>
     </main>
 
     <script>
@@ -346,421 +401,553 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin)
     box-sizing: border-box;
   }
 
-  :global(.resume-body) {
-    min-width: 20rem;
-    margin: 0;
-    padding: 3rem 1rem 5rem;
-    background: #ffffff;
-    color: #2c2523;
-    font-family: var(--font-mono);
+  :global(html) {
+    background: #f4f5f7;
+    scroll-behavior: smooth;
   }
 
-  .resume-controls {
+  :global(.resume-body) {
+    --ink: #172033;
+    --ink-secondary: rgba(23, 32, 51, 0.72);
+    --ink-tertiary: rgba(23, 32, 51, 0.5);
+    --rule: #d9dee7;
+    --accent: #1d4ed8;
+    min-width: 20rem;
+    margin: 0;
+    padding: 2.5rem 1rem 4rem;
+    color: var(--ink);
+    background: #f4f5f7;
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    font-synthesis: none;
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  :global(.resume-body ::selection) {
+    color: #ffffff;
+    background: var(--accent);
+  }
+
+  .resume-actions {
     display: flex;
     width: min(210mm, calc(100vw - 2rem));
+    min-height: 2.75rem;
     margin: 0 auto 1rem;
     align-items: center;
     justify-content: space-between;
-    font-size: 0.75rem;
+    gap: 1rem;
+    font-size: 0.875rem;
   }
 
-  .resume-controls a,
-  .resume-controls button {
-    border: 0;
-    border-radius: 0.15rem;
-    color: #6c4f47;
+  .resume-actions a,
+  .resume-actions button {
+    display: inline-flex;
+    min-height: 2.75rem;
+    padding: 0 0.9rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    color: var(--ink-secondary);
     background: transparent;
     font: inherit;
-    font-weight: 700;
-    text-decoration: underline;
-    text-decoration-color: #c7a692;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
+    font-weight: 600;
+    text-decoration: none;
     cursor: pointer;
   }
 
-  .resume-controls button {
-    padding: 0.45rem 0.65rem;
-    color: #ffffff;
-    background: #6c4f47;
-    text-decoration: none;
+  .resume-actions a:hover {
+    color: var(--ink);
   }
 
-  .resume-page {
+  .resume-actions button {
+    border-color: var(--ink);
+    color: #ffffff;
+    background: var(--ink);
+  }
+
+  .resume-actions a:focus-visible,
+  .resume-actions button:focus-visible,
+  a:focus-visible {
+    outline: 3px solid rgba(29, 78, 216, 0.42);
+    outline-offset: 3px;
+  }
+
+  .resume-document {
     display: grid;
+    gap: 1.5rem;
+  }
+
+  .sheet {
+    display: flex;
     width: 210mm;
     min-height: 297mm;
     margin: 0 auto;
-    padding: 13mm 15mm 10mm;
-    grid-template-rows: auto minmax(0, 1fr) auto;
+    padding: 14mm 16mm 11mm;
+    flex-direction: column;
     background: #ffffff;
-    box-shadow: 0 1.25rem 4rem rgba(75, 55, 50, 0.12);
+    box-shadow: 0 1.5rem 4.5rem rgba(23, 32, 51, 0.1);
   }
 
-  .resume-page + .resume-page {
-    margin-top: 1.5rem;
-  }
-
-  .resume-page--continued {
-    grid-template-rows: auto minmax(0, 1fr) auto;
-  }
-
-  .resume-continuation {
+  .identity {
     display: grid;
-    margin-bottom: 0;
-    padding: 0.52rem 0;
-    grid-template-columns: 1fr 1.25fr auto;
-    gap: 1rem;
-    align-items: center;
-    border-top: 2px solid #71544c;
-    border-bottom: 1px solid #e6ded3;
-    color: #8b675c;
-    font-size: 0.58rem;
-    letter-spacing: 0.025em;
-  }
-
-  .resume-continuation strong {
-    color: #6c4f47;
-  }
-
-  .resume-continuation span:nth-child(2) {
-    text-align: center;
-  }
-
-  .resume-continuation span:last-child {
-    font-weight: 700;
-    text-align: right;
-  }
-
-  .resume-header {
-    display: grid;
-    padding-bottom: 0.85rem;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 1.5rem;
+    padding-bottom: 4.5mm;
+    grid-template-columns: minmax(0, 1.55fr) minmax(13rem, 0.7fr);
+    gap: 9mm;
     align-items: end;
-    border-bottom: 2px solid #71544c;
+    border-bottom: 3px solid var(--accent);
   }
 
-  .eyebrow {
-    margin: 0 0 0.2rem;
-    color: #a36f5d;
-    font-size: 0.66rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-  }
-
-  .resume-header h1 {
+  .kicker,
+  .section-label {
     margin: 0;
-    color: #2c2523;
-    font-size: 2.75rem;
-    line-height: 0.95;
-    letter-spacing: -0.065em;
+    color: var(--accent);
+    font-size: 0.67rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 1.3;
+    text-transform: none;
   }
 
-  .contact-block {
+  .kicker {
+    font-size: 0.7rem;
+  }
+
+  .identity h1 {
+    margin: 0.12rem 0 0;
+    font-size: 2.35rem;
+    font-weight: 700;
+    letter-spacing: -0.045em;
+    line-height: 1.02;
+    text-wrap: balance;
+  }
+
+  .contact {
     display: grid;
     gap: 0.18rem;
     justify-items: end;
-    color: #71645e;
-    font-size: 0.61rem;
-    line-height: 1.35;
-  }
-
-  .contact-block a,
-  .resume-sidebar a {
-    color: #704f46;
-    font-weight: 700;
-    text-decoration-color: #c7a692;
-    text-underline-offset: 2px;
-  }
-
-  .resume-grid {
-    display: grid;
-    min-height: 0;
-    margin-top: 1rem;
-    grid-template-columns: 31% minmax(0, 1fr);
-    gap: 1.25rem;
-    align-items: stretch;
-  }
-
-  .resume-grid--full {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .resume-sidebar {
-    display: flex;
-    padding-right: 1.15rem;
-    flex-direction: column;
-    gap: 1rem;
-    justify-content: space-between;
-    border-right: 1px solid #e6ded3;
-  }
-
-  .resume-main {
-    display: grid;
-    min-width: 0;
-    min-height: 0;
-    grid-template-rows: minmax(0, 1fr) auto;
-    gap: 1rem;
-  }
-
-  .resume-main > section:first-child {
-    display: flex;
-    min-height: 0;
-    flex-direction: column;
-  }
-
-  section,
-  article {
-    break-inside: avoid;
-  }
-
-  h2 {
-    margin: 0 0 0.55rem;
-    color: #2c2523;
-    font-size: 0.84rem;
-    line-height: 1.2;
-    letter-spacing: -0.035em;
-  }
-
-  h2 span {
-    color: #bd927f;
-    font-weight: 400;
-  }
-
-  .resume-sidebar p,
-  .work-item p,
-  .experience-range p {
-    margin: 0;
-    color: #4a403d;
-    font-size: 0.69rem;
-    line-height: 1.5;
-  }
-
-  .resume-sidebar .compact-copy {
-    margin-top: 0.5rem;
-  }
-
-  .stack-list {
-    display: grid;
-    margin: 0;
-    padding: 0;
-    gap: 0.48rem;
-    list-style: none;
-  }
-
-  .stack-list li {
-    display: grid;
-    gap: 0.05rem;
-  }
-
-  .stack-list strong {
-    color: #9b6b59;
-    font-size: 0.57rem;
-    letter-spacing: 0.06em;
-  }
-
-  .stack-list span {
-    color: #2c2523;
-    font-size: 0.67rem;
-    line-height: 1.4;
-  }
-
-  .section-heading-row {
-    display: flex;
-    margin-bottom: 0.15rem;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 1rem;
-  }
-
-  .section-heading-row p {
-    margin: 0;
-    color: #8a746b;
-    font-size: 0.55rem;
-  }
-
-  .experience-section {
-    padding: 0.7rem 0;
-    border-top: 1px solid #e9e2d9;
-  }
-
-  .experience-section:first-of-type {
-    padding-top: 0.62rem;
-  }
-
-  .experience-header {
-    display: flex;
-    margin-bottom: 0.2rem;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 1rem;
-  }
-
-  .experience-header h3,
-  .client-item h4 {
-    margin: 0;
-    color: #2c2523;
-    font-size: 0.76rem;
-    line-height: 1.35;
-    letter-spacing: -0.02em;
-  }
-
-  .experience-header p,
-  .client-item p {
-    margin: 0;
-    color: #4a403d;
-    font-size: 0.67rem;
+    color: var(--ink-secondary);
+    font-size: 0.64rem;
+    font-style: normal;
     line-height: 1.45;
   }
 
-  .experience-header time {
-    color: #a36f5d;
-    font-size: 0.54rem;
+  .contact a,
+  .project-meta a,
+  .community-section a {
+    color: inherit;
+    text-decoration-color: rgba(29, 78, 216, 0.5);
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: from-font;
+    text-underline-offset: 0.15em;
+    text-underline-position: from-font;
+  }
+
+  .opening {
+    padding: 4.2mm 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .summary > p:last-child {
+    max-width: 86ch;
+    margin: 0.45rem 0 0;
+    color: var(--ink-secondary);
+    font-size: 0.75rem;
+    line-height: 1.52;
+    text-wrap: pretty;
+  }
+
+  .experience {
+    padding-top: 4mm;
+  }
+
+  .section-title-row {
+    display: flex;
+    padding-bottom: 2.5mm;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .section-title-row h2 {
+    margin: 0;
+    font-size: 1.04rem;
     font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+  }
+
+  .section-title-row > p {
+    margin: 0;
+    color: var(--ink-tertiary);
+    font-size: 0.58rem;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.3;
+  }
+
+  .employer {
+    padding-top: 3mm;
+  }
+
+  .employer__header,
+  .engagement__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .employer__header h3,
+  .engagement__header h4 {
+    margin: 0;
+    color: var(--ink);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+  }
+
+  .employer__header h3 {
+    font-size: 0.96rem;
+  }
+
+  .employer__header p,
+  .engagement__header p {
+    margin: 0.08rem 0 0;
+    color: var(--ink-secondary);
+    font-size: 0.65rem;
+    line-height: 1.35;
+  }
+
+  .role-dates {
+    display: grid;
+    gap: 0.1rem;
+    justify-items: end;
+    color: var(--ink) !important;
+    font-variant-numeric: tabular-nums;
     white-space: nowrap;
   }
 
-  .client-item {
-    padding: 0.48rem 0 0.12rem;
+  .employer__context {
+    max-width: 94ch;
+    margin: 0.5rem 0 0;
+    color: var(--ink-secondary);
+    font-size: 0.67rem;
+    line-height: 1.48;
+    text-wrap: pretty;
   }
 
-  .client-item + .client-item {
-    margin-top: 0.28rem;
-    border-top: 1px solid #eee8e1;
-  }
-
-  .client-item h4 {
-    margin-bottom: 0.18rem;
-  }
-
-  .client-item h4 span {
-    margin-left: 0.25rem;
-    color: #8a746b;
-    font-size: 0.5rem;
-    font-weight: 400;
-  }
-
-  .client-facts {
+  .engagements {
     display: grid;
-    margin: 0.18rem 0 0;
-    padding-left: 1rem;
-    gap: 0.14rem;
-    color: #4a403d;
-    font-size: 0.63rem;
+    margin-top: 2.6mm;
+    border-top: 1px solid var(--rule);
+  }
+
+  .engagement {
+    padding: 2.9mm 0 2.6mm;
+    break-inside: avoid;
+  }
+
+  .engagement + .engagement {
+    border-top: 1px solid var(--rule);
+  }
+
+  .engagement__header h4 {
+    font-size: 0.78rem;
+  }
+
+  .engagement__header time {
+    flex: none;
+    color: var(--ink);
+    font-size: 0.57rem;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+
+  .engagement ul,
+  .employer__results,
+  .community-section ul {
+    display: grid;
+    margin: 0.42rem 0 0;
+    padding: 0;
+    gap: 0.24rem;
+    list-style: none;
+  }
+
+  .engagement li,
+  .employer__results li,
+  .community-section li {
+    position: relative;
+    margin: 0;
+    padding-left: 0.85rem;
+    color: var(--ink-secondary);
+    font-size: 0.67rem;
+    line-height: 1.42;
+    text-wrap: pretty;
+  }
+
+  .engagement li::before,
+  .employer__results li::before,
+  .community-section li::before {
+    position: absolute;
+    top: 0.62em;
+    left: 0;
+    width: 0.22rem;
+    height: 0.22rem;
+    border-radius: 50%;
+    background: var(--ink-tertiary);
+    content: "";
+  }
+
+  .page-footer {
+    display: flex;
+    margin-top: auto;
+    padding-top: 3mm;
+    align-items: end;
+    justify-content: space-between;
+    border-top: 1px solid var(--rule);
+    color: var(--ink-tertiary);
+    font-size: 0.55rem;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+  }
+
+  .continuation-header {
+    display: flex;
+    padding-bottom: 4mm;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 3px solid var(--accent);
+  }
+
+  .continuation-header > div {
+    display: grid;
+    gap: 0.12rem;
+  }
+
+  .continuation-header strong {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+
+  .continuation-header span {
+    color: var(--ink-tertiary);
+    font-size: 0.58rem;
+    line-height: 1.3;
+  }
+
+  .experience--continued {
+    padding-top: 3mm;
+  }
+
+  .engagement--standalone {
+    padding-top: 0;
+    padding-bottom: 3mm;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .employer--secondary {
+    padding: 3.5mm 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .employer__results {
+    margin-top: 0.55rem;
+  }
+
+  .codeo-roles {
+    display: grid;
+    margin-top: 0.55rem;
+  }
+
+  .codeo-role {
+    break-inside: avoid;
+  }
+
+  .codeo-role + .codeo-role {
+    margin-top: 0.6rem;
+    padding-top: 0.6rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .codeo-role__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .codeo-role__header h4 {
+    margin: 0;
+    color: var(--ink);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+
+  .codeo-role__header time {
+    flex: none;
+    color: var(--ink);
+    font-size: 0.57rem;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+
+  .codeo-role .employer__results {
+    margin-top: 0.4rem;
+  }
+
+  code {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 600;
+  }
+
+  .education-section {
+    padding-top: 3.5mm;
+  }
+
+  .education-entry {
+    display: flex;
+    padding: 3mm 0 3.4mm;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .education-entry h3 {
+    margin: 0;
+    color: var(--ink);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+
+  .education-entry p,
+  .education-entry time {
+    margin: 0.12rem 0 0;
+    color: var(--ink-secondary);
+    font-size: 0.62rem;
     line-height: 1.4;
   }
 
-  .client-facts li::marker {
-    color: #b88c78;
-  }
-
-  .work-item {
-    display: grid;
-    padding: 0.78rem 0;
-    flex: 1;
-    grid-template-columns: minmax(0, 1fr);
-    align-content: center;
-    border-top: 1px solid #e9e2d9;
-  }
-
-  .work-item h3,
-  .range-list h3 {
-    margin: 0 0 0.22rem;
-    color: #2c2523;
-    font-size: 0.76rem;
-    line-height: 1.35;
-    letter-spacing: -0.02em;
-  }
-
-  .work-item h3 span {
-    margin-left: 0.25rem;
-    color: #8a746b;
-    font-size: 0.52rem;
-    font-weight: 400;
-  }
-
-  .experience-range {
-    padding-top: 0.15rem;
-  }
-
-  .range-list {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    border: 1px solid #8c6a60;
-    background: #ffffff;
-  }
-
-  .range-list article {
-    padding: 0.72rem 0.65rem;
-  }
-
-  .range-list article + article {
-    border-left: 1px solid #e6ded3;
-  }
-
-  .range-list article > span {
-    display: block;
-    margin-bottom: 0.32rem;
-    color: #95766a;
-    font-size: 0.47rem;
-    font-weight: 700;
-    letter-spacing: 0.035em;
-  }
-
-  .range-list h3 {
-    min-height: 2em;
-  }
-
-  .resume-footer {
-    display: flex;
-    padding-top: 0.7rem;
-    align-items: end;
-    justify-content: space-between;
-    border-top: 1px solid #e6ded3;
-    color: #8b675c;
-    font-size: 0.55rem;
-    font-weight: 700;
-  }
-
-  .resume-footer p {
-    margin: 0;
+  .education-entry time {
+    flex: none;
+    margin-top: 0;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
     white-space: nowrap;
   }
 
-  .resume-page--continued .resume-footer p:last-child {
-    margin-right: 0.2rem;
+  .projects-section {
+    padding-top: 3.5mm;
   }
 
-  @media (max-width: 52rem) {
+  .project-list {
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .project {
+    padding-top: 2.8mm;
+    padding-bottom: 2.8mm;
+  }
+
+  .project-meta {
+    display: grid;
+    gap: 0.08rem;
+    justify-items: end;
+    color: var(--ink-tertiary);
+    font-size: 0.55rem;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.3;
+    white-space: nowrap;
+  }
+
+  .project-meta a {
+    color: var(--ink-tertiary);
+    font-size: 0.55rem;
+  }
+
+  .community-section {
+    padding: 3.8mm 0;
+  }
+
+  .community-section ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 0.45rem;
+    column-gap: 7mm;
+  }
+
+  .community-section li {
+    font-size: 0.62rem;
+    line-height: 1.46;
+  }
+
+  @media screen and (max-width: 52rem) {
     :global(.resume-body) {
       padding: 1rem;
     }
 
-    .resume-page {
+    .sheet {
       width: 100%;
       min-height: 0;
-      padding: 2rem;
+      padding: 2rem 1.25rem;
     }
 
-    .resume-header,
-    .resume-grid,
-    .range-list {
+    .identity,
+    .community-section ul {
       grid-template-columns: 1fr;
     }
 
-    .contact-block {
+    .identity {
+      gap: 1.5rem;
+    }
+
+    .identity h1 {
+      font-size: clamp(2.1rem, 11vw, 3.2rem);
+    }
+
+    .contact {
       justify-items: start;
     }
 
-    .resume-sidebar {
-      padding-right: 0;
-      border-right: 0;
+    .section-title-row,
+    .employer__header,
+    .engagement__header,
+    .codeo-role__header,
+    .education-entry,
+    .continuation-header {
+      align-items: flex-start;
+      flex-direction: column;
     }
 
-    .range-list article + article {
-      border-top: 1px solid #e6ded3;
-      border-left: 0;
+    .role-dates {
+      justify-items: start;
+    }
+
+    .summary > p:last-child,
+    .employer__context,
+    .engagement li,
+    .employer__results li {
+      font-size: 0.9rem;
+    }
+
+    .contact,
+    .engagement__header p,
+    .employer__header p,
+    .community-section li,
+    .education-entry p,
+    .education-entry time {
+      font-size: 0.78rem;
     }
   }
 
@@ -773,7 +960,6 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin)
     :global(html),
     :global(.resume-body) {
       width: 210mm;
-      height: auto;
       margin: 0;
       padding: 0;
       background: #ffffff;
@@ -784,14 +970,18 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin)
       -webkit-print-color-adjust: exact;
     }
 
-    .resume-controls {
+    .resume-actions {
       display: none;
     }
 
-    .resume-page {
+    .resume-document {
+      display: block;
+    }
+
+    .sheet {
       width: 210mm;
-      height: 296mm;
-      min-height: 296mm;
+      height: 297mm;
+      min-height: 297mm;
       margin: 0;
       overflow: hidden;
       break-inside: avoid-page;
@@ -799,40 +989,9 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin)
       box-shadow: none;
     }
 
-    .resume-page + .resume-page {
-      margin-top: 0;
+    .sheet + .sheet {
       break-before: page;
       page-break-before: always;
-    }
-
-    .resume-header {
-      grid-template-columns: minmax(0, 1fr) auto;
-    }
-
-    .resume-grid {
-      grid-template-columns: 31% minmax(0, 1fr);
-    }
-
-    .resume-grid--full {
-      grid-template-columns: minmax(0, 1fr);
-    }
-
-    .range-list {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .contact-block {
-      justify-items: end;
-    }
-
-    .resume-sidebar {
-      padding-right: 1.15rem;
-      border-right: 1px solid #e6ded3;
-    }
-
-    .range-list article + article {
-      border-top: 0;
-      border-left: 1px solid #e6ded3;
     }
 
     a {
